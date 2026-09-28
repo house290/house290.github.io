@@ -1,0 +1,2231 @@
+<!DOCTYPE HTML>
+<html lang="uk" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Паспорт будинку - STEM-курс «Власний будинок»</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon-de23e50b.svg">
+        <link rel="shortcut icon" href="favicon-8114d1fc.png">
+        <link rel="stylesheet" href="css/variables-8adf115d.css">
+        <link rel="stylesheet" href="css/general-e96d0476.css">
+        <link rel="stylesheet" href="css/chrome-d279d366.css">
+        <link rel="stylesheet" href="css/print-9e4910d8.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="fonts/fonts-9644e21d.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="mdbook-highlight-css" href="highlight-493f70e1.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="tomorrow-night-4c0ae647.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="ayu-highlight-3fdfc3ac.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+            window.path_to_searchindex_js = "searchindex-3a161fba.js";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc-4e6ab9c4.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="mdbook-body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="mdbook-sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("mdbook-sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+                sidebar_toggle.checked = false;
+            }
+            if (sidebar === 'visible') {
+                sidebar_toggle.checked = true;
+            } else {
+                html.classList.remove('sidebar-visible');
+            }
+        </script>
+
+        <nav id="mdbook-sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="mdbook-sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="mdbook-page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="mdbook-menu-bar-hover-placeholder"></div>
+                <div id="mdbook-menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="mdbook-sidebar-toggle" class="icon-button" for="mdbook-sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="mdbook-sidebar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg></span>
+                        </label>
+                        <button id="mdbook-theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="mdbook-theme-list">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M371.3 367.1c27.3-3.9 51.9-19.4 67.2-42.9L600.2 74.1c12.6-19.5 9.4-45.3-7.6-61.2S549.7-4.4 531.1 9.6L294.4 187.2c-24 18-38.2 46.1-38.4 76.1L371.3 367.1zm-19.6 25.4l-116-104.4C175.9 290.3 128 339.6 128 400c0 3.9 .2 7.8 .6 11.6c1.8 17.5-10.2 36.4-27.8 36.4H96c-17.7 0-32 14.3-32 32s14.3 32 32 32H240c61.9 0 112-50.1 112-112c0-2.5-.1-5-.2-7.5z"/></svg></span>
+                        </button>
+                        <ul id="mdbook-theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-ayu">Ayu</button></li>
+                        </ul>
+                        <button id="mdbook-search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="mdbook-searchbar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg></span>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">STEM-курс «Власний будинок»</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <span class=fa-svg id="print-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M128 0C92.7 0 64 28.7 64 64v96h64V64H354.7L384 93.3V160h64V93.3c0-17-6.7-33.3-18.7-45.3L400 18.7C388 6.7 371.7 0 354.7 0H128zM384 352v32 64H128V384 368 352H384zm64 32h32c17.7 0 32-14.3 32-32V256c0-35.3-28.7-64-64-64H64c-35.3 0-64 28.7-64 64v96c0 17.7 14.3 32 32 32H64v64c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V384zm-16-88c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z"/></svg></span>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="mdbook-search-wrapper" class="hidden">
+                    <form id="mdbook-searchbar-outer" class="searchbar-outer">
+                        <div class="search-wrapper">
+                            <input type="search" id="mdbook-searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="mdbook-searchresults-outer" aria-describedby="searchresults-header">
+                            <div class="spinner-wrapper">
+                                <span class=fa-svg id="fa-spin"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M304 48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zm0 416c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM48 304c26.5 0 48-21.5 48-48s-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48zm464-48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM142.9 437c18.7-18.7 18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zm0-294.2c18.7-18.7 18.7-49.1 0-67.9S93.7 56.2 75 75s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zM369.1 437c18.7 18.7 49.1 18.7 67.9 0s18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9z"/></svg></span>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="mdbook-searchresults-outer" class="searchresults-outer hidden">
+                        <div id="mdbook-searchresults-header" class="searchresults-header"></div>
+                        <ul id="mdbook-searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('mdbook-sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('mdbook-sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#mdbook-sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="mdbook-content" class="content">
+                    <main>
+                        <h1 id="паспорт-будинку"><a class="header" href="#паспорт-будинку">Паспорт будинку</a></h1>
+<p>Нижче — чернетка структури <strong>навчального паспорта-портфоліо приватного будинку з ділянкою»</strong>, який буде використаний як основа великого міжпредметного проєкту для учнів 5–9 класів. Структурв спеціально побудована так, щоб школярі могли поступово збирати дані, робити вимірювання, креслення, розрахунки, схеми, фотографії та висновки.</p>
+<h2 id="паспорт-портфоліо-приватного-будинку-з-ділянкою"><a class="header" href="#паспорт-портфоліо-приватного-будинку-з-ділянкою">Паспорт-портфоліо приватного будинку з ділянкою</a></h2>
+<h4 id="навчальний-проєкт-для-учнів-59-класів"><a class="header" href="#навчальний-проєкт-для-учнів-59-класів">Навчальний проєкт для учнів 5–9 класів</a></h4>
+<blockquote>
+<p><strong>Призначення:</strong> комплексне дослідження будинку, земельної ділянки та середовища навколо них.
+<strong>Результат:</strong> оформлений паспорт-портфоліо із текстами, таблицями, схемами, кресленнями, фотографіями, розрахунками, діаграмами та висновками.</p>
+</blockquote>
+<hr>
+<h2 id="1-загальна-інформація-про-обєкт"><a class="header" href="#1-загальна-інформація-про-обєкт">1. Загальна інформація про об’єкт</a></h2>
+<h3 id="11-основні-відомості"><a class="header" href="#11-основні-відомості">1.1. Основні відомості</a></h3>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Параметр</th><th>Значення</th></tr>
+</thead>
+<tbody>
+<tr><td>Назва об’єкта</td><td></td></tr>
+<tr><td>Тип об’єкта</td><td></td></tr>
+<tr><td>Адреса / умовне місце розташування</td><td></td></tr>
+<tr><td>Населений пункт</td><td></td></tr>
+<tr><td>Район / громада</td><td></td></tr>
+<tr><td>Рік будівництва</td><td></td></tr>
+<tr><td>Рік реконструкції / ремонту</td><td></td></tr>
+<tr><td>Призначення будинку</td><td></td></tr>
+<tr><td>Кількість поверхів</td><td></td></tr>
+<tr><td>Наявність мансарди</td><td></td></tr>
+<tr><td>Наявність підвалу</td><td></td></tr>
+<tr><td>Наявність гаража</td><td></td></tr>
+<tr><td>Кількість мешканців</td><td></td></tr>
+<tr><td>Сезонність проживання</td><td></td></tr>
+<tr><td>Загальний стан</td><td></td></tr>
+<tr><td>Автор / команда дослідження</td><td></td></tr>
+<tr><td>Дата обстеження</td><td></td></tr>
+</tbody>
+</table>
+</div>
+<h3 id="12-короткий-опис"><a class="header" href="#12-короткий-опис">1.2. Короткий опис</a></h3>
+<ul>
+<li>Назва або умовна назва будинку.</li>
+<li>Історія будинку.</li>
+<li>Хто ним користується.</li>
+<li>Для чого він використовується.</li>
+<li>Які особливості має.</li>
+<li>Що було змінено з моменту будівництва.</li>
+<li>Які проблеми або цікаві особливості виявлено.</li>
+</ul>
+<hr>
+<h2 id="2-паспорт-земельної-ділянки"><a class="header" href="#2-паспорт-земельної-ділянки">2. Паспорт земельної ділянки</a></h2>
+<h3 id="21-основні-характеристики"><a class="header" href="#21-основні-характеристики">2.1. Основні характеристики</a></h3>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Параметр</th><th>Значення</th></tr>
+</thead>
+<tbody>
+<tr><td>Площа ділянки</td><td></td></tr>
+<tr><td>Форма ділянки</td><td></td></tr>
+<tr><td>Довжина</td><td></td></tr>
+<tr><td>Ширина</td><td></td></tr>
+<tr><td>Периметр</td><td></td></tr>
+<tr><td>Орієнтація за сторонами світу</td><td></td></tr>
+<tr><td>Рельєф</td><td></td></tr>
+<tr><td>Середній ухил</td><td></td></tr>
+<tr><td>Найвища точка</td><td></td></tr>
+<tr><td>Найнижча точка</td><td></td></tr>
+<tr><td>Тип ґрунту</td><td></td></tr>
+<tr><td>Рівень ґрунтових вод, якщо відомий</td><td></td></tr>
+<tr><td>Тип огорожі</td><td></td></tr>
+<tr><td>Довжина огорожі</td><td></td></tr>
+<tr><td>В’їзд на ділянку</td><td></td></tr>
+<tr><td>Пішохідний вхід</td><td></td></tr>
+</tbody>
+</table>
+</div>
+<h3 id="22-оточення"><a class="header" href="#22-оточення">2.2. Оточення</a></h3>
+<p>Дослідити:</p>
+<ul>
+<li>сусідні ділянки;</li>
+<li>дороги;</li>
+<li>тротуари;</li>
+<li>громадський транспорт;</li>
+<li>магазини;</li>
+<li>школи;</li>
+<li>медичні заклади;</li>
+<li>парки;</li>
+<li>водойми;</li>
+<li>промислові об’єкти;</li>
+<li>лінії електропередач;</li>
+<li>інші важливі об’єкти.</li>
+</ul>
+<h3 id="23-ситуаційний-план"><a class="header" href="#23-ситуаційний-план">2.3. Ситуаційний план</a></h3>
+<p>На схемі показати:</p>
+<ul>
+<li>ділянку;</li>
+<li>будинок;</li>
+<li>сусідні будинки;</li>
+<li>дорогу;</li>
+<li>вхід;</li>
+<li>в’їзд;</li>
+<li>господарські споруди;</li>
+<li>дерева;</li>
+<li>кущі;</li>
+<li>город;</li>
+<li>сад;</li>
+<li>дитячий майданчик;</li>
+<li>терасу;</li>
+<li>паркування;</li>
+<li>водойми;</li>
+<li>інші об’єкти.</li>
+</ul>
+<hr>
+<h2 id="3-геометрія-та-вимірювання-ділянки"><a class="header" href="#3-геометрія-та-вимірювання-ділянки">3. Геометрія та вимірювання ділянки</a></h2>
+<h3 id="31-що-виміряти"><a class="header" href="#31-що-виміряти">3.1. Що виміряти</a></h3>
+<ul>
+<li>довжину кожної сторони;</li>
+<li>відстані між будинком і межами ділянки;</li>
+<li>ширину в’їзду;</li>
+<li>ширину хвіртки;</li>
+<li>довжину доріжок;</li>
+<li>площу окремих зон;</li>
+<li>перепад висот;</li>
+<li>ухили.</li>
+</ul>
+<h3 id="32-геометричні-розрахунки"><a class="header" href="#32-геометричні-розрахунки">3.2. Геометричні розрахунки</a></h3>
+<p>Учні можуть визначити:</p>
+<ul>
+<li>площу прямокутних частин;</li>
+<li>площу трикутних частин;</li>
+<li>площу клумб;</li>
+<li>площу газону;</li>
+<li>довжину огорожі;</li>
+<li>довжину доріжок;</li>
+<li>кількість матеріалів для покриття.</li>
+</ul>
+<hr>
+<h2 id="4-генеральний-план-ділянки"><a class="header" href="#4-генеральний-план-ділянки">4. Генеральний план ділянки</a></h2>
+<p>Створити план із позначенням:</p>
+<ol>
+<li>земельної ділянки;</li>
+<li>будинку;</li>
+<li>гаража;</li>
+<li>господарських споруд;</li>
+<li>огорожі;</li>
+<li>воріт;</li>
+<li>хвіртки;</li>
+<li>доріжок;</li>
+<li>паркування;</li>
+<li>саду;</li>
+<li>городу;</li>
+<li>газону;</li>
+<li>клумб;</li>
+<li>дерев;</li>
+<li>кущів;</li>
+<li>тераси;</li>
+<li>альтанки;</li>
+<li>дитячої зони;</li>
+<li>освітлення;</li>
+<li>систем водовідведення;</li>
+<li>джерел води;</li>
+<li>контейнерів для відходів.</li>
+</ol>
+<hr>
+<h2 id="5-орієнтація-будинку"><a class="header" href="#5-орієнтація-будинку">5. Орієнтація будинку</a></h2>
+<p>Визначити:</p>
+<ul>
+<li>де північ;</li>
+<li>де південь;</li>
+<li>де схід;</li>
+<li>де захід;</li>
+<li>куди орієнтовані основні вікна;</li>
+<li>куди виходять двері;</li>
+<li>де розташована тераса;</li>
+<li>де сонце з’являється вранці;</li>
+<li>де сонце буває опівдні;</li>
+<li>де сонце ввечері;</li>
+<li>які приміщення отримують найбільше природного світла.</li>
+</ul>
+<h4 id="додатково"><a class="header" href="#додатково">Додатково</a></h4>
+<p>Можна дослідити:</p>
+<ul>
+<li>тривалість освітлення;</li>
+<li>сезонну зміну висоти сонця;</li>
+<li>затінення сусідніми будинками;</li>
+<li>затінення деревами.</li>
+</ul>
+<hr>
+<h2 id="6-архітектурний-паспорт-будинку"><a class="header" href="#6-архітектурний-паспорт-будинку">6. Архітектурний паспорт будинку</a></h2>
+<h3 id="61-загальні-параметри"><a class="header" href="#61-загальні-параметри">6.1. Загальні параметри</a></h3>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Параметр</th><th>Значення</th></tr>
+</thead>
+<tbody>
+<tr><td>Довжина будинку</td><td></td></tr>
+<tr><td>Ширина будинку</td><td></td></tr>
+<tr><td>Висота</td><td></td></tr>
+<tr><td>Площа забудови</td><td></td></tr>
+<tr><td>Загальна площа</td><td></td></tr>
+<tr><td>Житлова площа</td><td></td></tr>
+<tr><td>Кількість приміщень</td><td></td></tr>
+<tr><td>Кількість входів</td><td></td></tr>
+<tr><td>Кількість вікон</td><td></td></tr>
+<tr><td>Кількість зовнішніх дверей</td><td></td></tr>
+<tr><td>Форма даху</td><td></td></tr>
+<tr><td>Наявність балкона</td><td></td></tr>
+<tr><td>Наявність тераси</td><td></td></tr>
+</tbody>
+</table>
+</div>
+<h3 id="62-форма-будинку"><a class="header" href="#62-форма-будинку">6.2. Форма будинку</a></h3>
+<p>Описати:</p>
+<ul>
+<li>загальну геометричну форму;</li>
+<li>симетрію / асиметрію;</li>
+<li>виступи;</li>
+<li>прибудови;</li>
+<li>еркери;</li>
+<li>лоджії;</li>
+<li>тераси;</li>
+<li>гараж;</li>
+<li>навіси.</li>
+</ul>
+<hr>
+<h2 id="7-фасади"><a class="header" href="#7-фасади">7. Фасади</a></h2>
+<p>Окремо дослідити кожен фасад:</p>
+<ul>
+<li>північний;</li>
+<li>південний;</li>
+<li>східний;</li>
+<li>західний.</li>
+</ul>
+<p>Для кожного фасаду визначити:</p>
+<ul>
+<li>довжину;</li>
+<li>висоту;</li>
+<li>кількість вікон;</li>
+<li>кількість дверей;</li>
+<li>матеріал оздоблення;</li>
+<li>колір;</li>
+<li>тип декоративних елементів;</li>
+<li>стан поверхні;</li>
+<li>ознаки пошкодження;</li>
+<li>ознаки вологи;</li>
+<li>тріщини;</li>
+<li>забруднення;</li>
+<li>рослини на фасаді.</li>
+</ul>
+<h4 id="фото"><a class="header" href="#фото">Фото</a></h4>
+<p>Додати фотографії:</p>
+<ul>
+<li>загальний вигляд;</li>
+<li>кожен фасад;</li>
+<li>вхід;</li>
+<li>вікна;</li>
+<li>фундамент;</li>
+<li>цоколь;</li>
+<li>покрівля.</li>
+</ul>
+<hr>
+<h2 id="8-планування-приміщень"><a class="header" href="#8-планування-приміщень">8. Планування приміщень</a></h2>
+<p>Створити поетажний план.</p>
+<h3 id="для-кожного-приміщення-зазначити"><a class="header" href="#для-кожного-приміщення-зазначити">Для кожного приміщення зазначити:</a></h3>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Параметр</th><th>Значення</th></tr>
+</thead>
+<tbody>
+<tr><td>Назва кімнати</td><td></td></tr>
+<tr><td>Поверх</td><td></td></tr>
+<tr><td>Довжина</td><td></td></tr>
+<tr><td>Ширина</td><td></td></tr>
+<tr><td>Площа</td><td></td></tr>
+<tr><td>Висота стелі</td><td></td></tr>
+<tr><td>Кількість вікон</td><td></td></tr>
+<tr><td>Площа вікон</td><td></td></tr>
+<tr><td>Кількість дверей</td><td></td></tr>
+<tr><td>Тип підлоги</td><td></td></tr>
+<tr><td>Тип стелі</td><td></td></tr>
+<tr><td>Озеленення / декор</td><td></td></tr>
+<tr><td>Природне освітлення</td><td></td></tr>
+<tr><td>Штучне освітлення</td><td></td></tr>
+<tr><td>Опалення</td><td></td></tr>
+<tr><td>Вентиляція</td><td></td></tr>
+<tr><td>Інше обладнання</td><td></td></tr>
+</tbody>
+</table>
+</div>
+<h3 id="можливі-приміщення"><a class="header" href="#можливі-приміщення">Можливі приміщення</a></h3>
+<ul>
+<li>передпокій;</li>
+<li>кухня;</li>
+<li>вітальня;</li>
+<li>спальня;</li>
+<li>дитяча;</li>
+<li>кабінет;</li>
+<li>санвузол;</li>
+<li>ванна кімната;</li>
+<li>коридор;</li>
+<li>гардероб;</li>
+<li>комора;</li>
+<li>котельня;</li>
+<li>технічне приміщення;</li>
+<li>пральня;</li>
+<li>майстерня;</li>
+<li>гараж;</li>
+<li>підвал;</li>
+<li>мансарда.</li>
+</ul>
+<hr>
+<h2 id="9-геометричний-паспорт-будинку"><a class="header" href="#9-геометричний-паспорт-будинку">9. Геометричний паспорт будинку</a></h2>
+<p>Визначити:</p>
+<ul>
+<li>площу кожного приміщення;</li>
+<li>загальну площу;</li>
+<li>об’єм приміщень;</li>
+<li>периметр кімнат;</li>
+<li>довжину стін;</li>
+<li>площу підлоги;</li>
+<li>площу стелі;</li>
+<li>площу стін;</li>
+<li>площу вікон;</li>
+<li>площу дверей.</li>
+</ul>
+<h4 id="для-старших-учнів"><a class="header" href="#для-старших-учнів">Для старших учнів</a></h4>
+<p>Розрахувати:</p>
+<ul>
+<li>співвідношення житлової та загальної площі;</li>
+<li>частку площі окремих приміщень;</li>
+<li>об’єм будинку;</li>
+<li>орієнтовну площу зовнішніх стін.</li>
+</ul>
+<hr>
+<h2 id="10-фундамент"><a class="header" href="#10-фундамент">10. Фундамент</a></h2>
+<p>Дослідити те, що можливо визначити без руйнівних робіт:</p>
+<ul>
+<li>тип фундаменту;</li>
+<li>матеріал;</li>
+<li>видима висота;</li>
+<li>ширина, якщо відома;</li>
+<li>тип цоколя;</li>
+<li>ознаки гідроізоляції;</li>
+<li>утеплення;</li>
+<li>тріщини;</li>
+<li>деформації;</li>
+<li>сліди вологи;</li>
+<li>висоли;</li>
+<li>відшарування матеріалу;</li>
+<li>стан вимощення.</li>
+</ul>
+<blockquote>
+<p>Для школярів важливо розділяти <strong>встановлений факт</strong>, <strong>вимірювання</strong> та <strong>припущення</strong>.</p>
+</blockquote>
+<hr>
+<h2 id="11-стіни"><a class="header" href="#11-стіни">11. Стіни</a></h2>
+<p>Для стін визначити:</p>
+<ul>
+<li>матеріал;</li>
+<li>товщину, якщо відома;</li>
+<li>кількість шарів;</li>
+<li>тип облицювання;</li>
+<li>утеплення;</li>
+<li>колір;</li>
+<li>фактуру;</li>
+<li>стан;</li>
+<li>тріщини;</li>
+<li>сліди вологи;</li>
+<li>місця ремонту;</li>
+<li>декоративні елементи.</li>
+</ul>
+<h4 id="можливі-матеріали"><a class="header" href="#можливі-матеріали">Можливі матеріали</a></h4>
+<ul>
+<li>цегла;</li>
+<li>газоблок;</li>
+<li>піноблок;</li>
+<li>бетон;</li>
+<li>дерево;</li>
+<li>каркасні конструкції;</li>
+<li>камінь;</li>
+<li>комбіновані матеріали.</li>
+</ul>
+<hr>
+<h2 id="12-вікна"><a class="header" href="#12-вікна">12. Вікна</a></h2>
+<p>Для кожного вікна:</p>
+<ul>
+<li>номер;</li>
+<li>приміщення;</li>
+<li>ширина;</li>
+<li>висота;</li>
+<li>площа;</li>
+<li>орієнтація;</li>
+<li>кількість стулок;</li>
+<li>матеріал рами;</li>
+<li>кількість камер, якщо відома;</li>
+<li>тип скла;</li>
+<li>відкривання;</li>
+<li>наявність підвіконня;</li>
+<li>штори / жалюзі;</li>
+<li>зовнішні укоси;</li>
+<li>стан;</li>
+<li>наявність тріщин або пошкоджень.</li>
+</ul>
+<h4 id="додаткові-дослідження"><a class="header" href="#додаткові-дослідження">Додаткові дослідження</a></h4>
+<ul>
+<li>яке вікно найкраще освітлює кімнату;</li>
+<li>яке отримує найбільше сонця;</li>
+<li>яке найменше затінене;</li>
+<li>чи є сонцезахист.</li>
+</ul>
+<hr>
+<h2 id="13-двері"><a class="header" href="#13-двері">13. Двері</a></h2>
+<p>Для кожних дверей визначити:</p>
+<ul>
+<li>призначення;</li>
+<li>ширину;</li>
+<li>висоту;</li>
+<li>матеріал;</li>
+<li>напрямок відкривання;</li>
+<li>тип ручки;</li>
+<li>замок;</li>
+<li>теплоізоляційні властивості, якщо відомі;</li>
+<li>стан;</li>
+<li>поріг.</li>
+</ul>
+<hr>
+<h2 id="14-перекриття-та-підлоги"><a class="header" href="#14-перекриття-та-підлоги">14. Перекриття та підлоги</a></h2>
+<p>Дослідити:</p>
+<ul>
+<li>тип перекриття;</li>
+<li>матеріал;</li>
+<li>товщину, якщо відома;</li>
+<li>теплоізоляцію;</li>
+<li>звукоізоляцію;</li>
+<li>матеріал підлоги;</li>
+<li>стан покриття.</li>
+</ul>
+<h4 id="варіанти-покриття"><a class="header" href="#варіанти-покриття">Варіанти покриття</a></h4>
+<ul>
+<li>ламінат;</li>
+<li>паркет;</li>
+<li>плитка;</li>
+<li>дерево;</li>
+<li>бетон;</li>
+<li>лінолеум;</li>
+<li>ковролін;</li>
+<li>інше.</li>
+</ul>
+<hr>
+<h2 id="15-дах"><a class="header" href="#15-дах">15. Дах</a></h2>
+<h3 id="основні-параметри"><a class="header" href="#основні-параметри">Основні параметри</a></h3>
+<ul>
+<li>тип даху;</li>
+<li>форма;</li>
+<li>кількість скатів;</li>
+<li>кут нахилу;</li>
+<li>площа покрівлі;</li>
+<li>матеріал;</li>
+<li>колір;</li>
+<li>термін експлуатації;</li>
+<li>теплоізоляція;</li>
+<li>гідроізоляція;</li>
+<li>водостічна система;</li>
+<li>снігозатримання;</li>
+<li>вентиляція;</li>
+<li>мансардні вікна;</li>
+<li>стан покриття.</li>
+</ul>
+<h3 id="матеріали"><a class="header" href="#матеріали">Матеріали</a></h3>
+<ul>
+<li>металочерепиця;</li>
+<li>бітумна черепиця;</li>
+<li>керамічна черепиця;</li>
+<li>профнастил;</li>
+<li>шифер;</li>
+<li>мембранна покрівля;</li>
+<li>інші матеріали.</li>
+</ul>
+<hr>
+<h2 id="16-водостік-і-дощова-вода"><a class="header" href="#16-водостік-і-дощова-вода">16. Водостік і дощова вода</a></h2>
+<p>Дослідити:</p>
+<ul>
+<li>жолоби;</li>
+<li>водостічні труби;</li>
+<li>кількість труб;</li>
+<li>місця відведення води;</li>
+<li>зливову каналізацію;</li>
+<li>дренаж;</li>
+<li>накопичення дощової води;</li>
+<li>можливість повторного використання води;</li>
+<li>ділянки підтоплення.</li>
+</ul>
+<hr>
+<h2 id="17-внутрішнє-та-зовнішнє-водопостачання"><a class="header" href="#17-внутрішнє-та-зовнішнє-водопостачання">17. Внутрішнє та зовнішнє водопостачання</a></h2>
+<p>Визначити:</p>
+<ul>
+<li>джерело води;</li>
+<li>центральне водопостачання;</li>
+<li>свердловина;</li>
+<li>колодязь;</li>
+<li>насос;</li>
+<li>накопичувальна ємність;</li>
+<li>фільтри;</li>
+<li>бойлер;</li>
+<li>гаряче водопостачання.</li>
+</ul>
+<h3 id="для-кожної-точки-води"><a class="header" href="#для-кожної-точки-води">Для кожної точки води</a></h3>
+<ul>
+<li>місце;</li>
+<li>тип;</li>
+<li>призначення;</li>
+<li>кількість;</li>
+<li>приблизна частота використання.</li>
+</ul>
+<hr>
+<h2 id="18-каналізація"><a class="header" href="#18-каналізація">18. Каналізація</a></h2>
+<p>Дослідити:</p>
+<ul>
+<li>центральну каналізацію;</li>
+<li>септик;</li>
+<li>локальну очисну систему;</li>
+<li>вигрібну яму;</li>
+<li>внутрішні точки зливу;</li>
+<li>труби;</li>
+<li>ревізійні колодязі;</li>
+<li>відведення стоків;</li>
+<li>проблемні місця.</li>
+</ul>
+<hr>
+<h2 id="19-опалення"><a class="header" href="#19-опалення">19. Опалення</a></h2>
+<p>Визначити:</p>
+<ul>
+<li>джерело тепла;</li>
+<li>тип системи;</li>
+<li>вид палива;</li>
+<li>котел;</li>
+<li>тепловий насос;</li>
+<li>електричне опалення;</li>
+<li>газове опалення;</li>
+<li>твердопаливне опалення;</li>
+<li>радіатори;</li>
+<li>тепла підлога;</li>
+<li>камін / піч;</li>
+<li>автоматику;</li>
+<li>температурний режим.</li>
+</ul>
+<h3 id="додатково-1"><a class="header" href="#додатково-1">Додатково</a></h3>
+<p>Дослідити:</p>
+<ul>
+<li>температура в різних кімнатах;</li>
+<li>різниця температур;</li>
+<li>найтепліша кімната;</li>
+<li>найхолодніша кімната;</li>
+<li>сезонні зміни.</li>
+</ul>
+<hr>
+<h2 id="20-вентиляція-та-якість-повітря"><a class="header" href="#20-вентиляція-та-якість-повітря">20. Вентиляція та якість повітря</a></h2>
+<p>Визначити:</p>
+<ul>
+<li>природну вентиляцію;</li>
+<li>механічну вентиляцію;</li>
+<li>витяжки;</li>
+<li>припливні клапани;</li>
+<li>вентиляційні канали;</li>
+<li>місця повітрообміну.</li>
+</ul>
+<h4 id="можливі-вимірювання"><a class="header" href="#можливі-вимірювання">Можливі вимірювання</a></h4>
+<ul>
+<li>температура;</li>
+<li>відносна вологість;</li>
+<li>концентрація CO₂ за наявності приладу;</li>
+<li>швидкість руху повітря, якщо є прилад.</li>
+</ul>
+<hr>
+<h2 id="21-електропостачання"><a class="header" href="#21-електропостачання">21. Електропостачання</a></h2>
+<p>Дослідити:</p>
+<ul>
+<li>джерело електроенергії;</li>
+<li>місце введення;</li>
+<li>електричний щит;</li>
+<li>лічильник;</li>
+<li>автомати;</li>
+<li>розетки;</li>
+<li>вимикачі;</li>
+<li>зовнішнє освітлення;</li>
+<li>резервне живлення;</li>
+<li>генератор;</li>
+<li>акумуляторна система;</li>
+<li>сонячні панелі.</li>
+</ul>
+<h3 id="для-навчального-проєкту"><a class="header" href="#для-навчального-проєкту">Для навчального проєкту</a></h3>
+<p>Можна створити схему:</p>
+<pre><code class="language-text">Електромережа
+      ↓
+Лічильник
+      ↓
+Електричний щит
+      ↓
+ ┌────┼────┬────┐
+ ↓    ↓    ↓    ↓
+Світло Розетки Кухня Вулиця
+</code></pre>
+<blockquote>
+<p>Не потрібно дозволяти учням самостійно втручатися в електрощит або проводити небезпечні вимірювання.</p>
+</blockquote>
+<hr>
+<h2 id="22-освітлення"><a class="header" href="#22-освітлення">22. Освітлення</a></h2>
+<h3 id="природне-освітлення"><a class="header" href="#природне-освітлення">Природне освітлення</a></h3>
+<p>Для кожної кімнати:</p>
+<ul>
+<li>кількість вікон;</li>
+<li>орієнтація;</li>
+<li>час найбільшого освітлення;</li>
+<li>час найменшого освітлення;</li>
+<li>затінення.</li>
+</ul>
+<h3 id="штучне-освітлення"><a class="header" href="#штучне-освітлення">Штучне освітлення</a></h3>
+<ul>
+<li>кількість світильників;</li>
+<li>тип ламп;</li>
+<li>потужність;</li>
+<li>місце розташування;</li>
+<li>призначення;</li>
+<li>керування;</li>
+<li>датчики руху;</li>
+<li>автоматизація.</li>
+</ul>
+<hr>
+<h2 id="23-побутове-енергоспоживання"><a class="header" href="#23-побутове-енергоспоживання">23. Побутове енергоспоживання</a></h2>
+<p>Створити перелік приладів:</p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Прилад</th><th style="text-align: right">Кількість</th><th style="text-align: right">Потужність</th><th style="text-align: right">Орієнтовний час роботи</th><th style="text-align: right">Орієнтовне споживання</th></tr>
+</thead>
+<tbody>
+<tr><td>Холодильник</td><td style="text-align: right"></td><td style="text-align: right"></td><td style="text-align: right"></td><td style="text-align: right"></td></tr>
+<tr><td>Пральна машина</td><td style="text-align: right"></td><td style="text-align: right"></td><td style="text-align: right"></td><td style="text-align: right"></td></tr>
+<tr><td>Освітлення</td><td style="text-align: right"></td><td style="text-align: right"></td><td style="text-align: right"></td><td style="text-align: right"></td></tr>
+<tr><td>Комп’ютер</td><td style="text-align: right"></td><td style="text-align: right"></td><td style="text-align: right"></td><td style="text-align: right"></td></tr>
+<tr><td>Телевізор</td><td style="text-align: right"></td><td style="text-align: right"></td><td style="text-align: right"></td><td style="text-align: right"></td></tr>
+<tr><td>Електрочайник</td><td style="text-align: right"></td><td style="text-align: right"></td><td style="text-align: right"></td><td style="text-align: right"></td></tr>
+<tr><td>Бойлер</td><td style="text-align: right"></td><td style="text-align: right"></td><td style="text-align: right"></td><td style="text-align: right"></td></tr>
+<tr><td>Інше</td><td style="text-align: right"></td><td style="text-align: right"></td><td style="text-align: right"></td><td style="text-align: right"></td></tr>
+</tbody>
+</table>
+</div>
+<h4 id="учні-можуть-дослідити"><a class="header" href="#учні-можуть-дослідити">Учні можуть дослідити</a></h4>
+<ul>
+<li>що споживає найбільше електроенергії;</li>
+<li>як змінюється споживання протягом доби;</li>
+<li>як змінюється протягом тижня;</li>
+<li>як можна зменшити споживання.</li>
+</ul>
+<hr>
+<h2 id="24-енергоефективність-будинку"><a class="header" href="#24-енергоефективність-будинку">24. Енергоефективність будинку</a></h2>
+<p>Оцінити:</p>
+<ul>
+<li>утеплення стін;</li>
+<li>утеплення даху;</li>
+<li>утеплення підлоги;</li>
+<li>стан вікон;</li>
+<li>герметичність дверей;</li>
+<li>сонячні теплоприпливи;</li>
+<li>затінення;</li>
+<li>вентиляцію;</li>
+<li>джерело опалення;</li>
+<li>енергоспоживання.</li>
+</ul>
+<h4 id="розрахункові-показники"><a class="header" href="#розрахункові-показники">Розрахункові показники</a></h4>
+<ul>
+<li>споживання електроенергії за місяць;</li>
+<li>споживання за рік;</li>
+<li>витрати на опалення;</li>
+<li>витрати на гарячу воду;</li>
+<li>умовне енергоспоживання на 1 м².</li>
+</ul>
+<hr>
+<h2 id="25-відновлювана-енергія"><a class="header" href="#25-відновлювана-енергія">25. Відновлювана енергія</a></h2>
+<p>Перевірити наявність:</p>
+<ul>
+<li>сонячних панелей;</li>
+<li>сонячного колектора;</li>
+<li>теплового насоса;</li>
+<li>систем накопичення енергії;</li>
+<li>інших технологій.</li>
+</ul>
+<p>Для кожної системи:</p>
+<ul>
+<li>кількість;</li>
+<li>площа;</li>
+<li>орієнтація;</li>
+<li>потужність;</li>
+<li>місце встановлення;</li>
+<li>призначення;</li>
+<li>приблизна продуктивність;</li>
+<li>спосіб використання енергії.</li>
+</ul>
+<hr>
+<h2 id="26-безпека-будинку"><a class="header" href="#26-безпека-будинку">26. Безпека будинку</a></h2>
+<p>Дослідити наявність:</p>
+<ul>
+<li>датчиків диму;</li>
+<li>датчиків чадного газу;</li>
+<li>вогнегасників;</li>
+<li>сигналізації;</li>
+<li>відеоспостереження;</li>
+<li>освітлення входу;</li>
+<li>замків;</li>
+<li>домофона;</li>
+<li>аварійного освітлення;</li>
+<li>запасного виходу;</li>
+<li>плану евакуації;</li>
+<li>аптечки.</li>
+</ul>
+<h3 id="план-евакуації"><a class="header" href="#план-евакуації">План евакуації</a></h3>
+<p>На плані показати:</p>
+<ul>
+<li>кімнати;</li>
+<li>двері;</li>
+<li>основний вихід;</li>
+<li>резервний вихід;</li>
+<li>шлях евакуації;</li>
+<li>місце зустрічі на вулиці.</li>
+</ul>
+<hr>
+<h2 id="27-пожежна-безпека"><a class="header" href="#27-пожежна-безпека">27. Пожежна безпека</a></h2>
+<p>Оцінити:</p>
+<ul>
+<li>легкозаймисті матеріали;</li>
+<li>джерела відкритого вогню;</li>
+<li>стан димоходів;</li>
+<li>місця з електричним навантаженням;</li>
+<li>наявність вогнегасників;</li>
+<li>доступність виходів.</li>
+</ul>
+<hr>
+<h2 id="28-доступність-та-безбарєрність"><a class="header" href="#28-доступність-та-безбарєрність">28. Доступність та безбар’єрність</a></h2>
+<p>Дослідити:</p>
+<ul>
+<li>ширину входу;</li>
+<li>сходи;</li>
+<li>пороги;</li>
+<li>пандус;</li>
+<li>поручні;</li>
+<li>ширину коридорів;</li>
+<li>доступ до санвузла;</li>
+<li>доступність двору;</li>
+<li>освітлення проходів;</li>
+<li>можливість пересування людини з інвалідністю.</li>
+</ul>
+<hr>
+<h2 id="29-меблі-та-функціональність-приміщень"><a class="header" href="#29-меблі-та-функціональність-приміщень">29. Меблі та функціональність приміщень</a></h2>
+<p>Для кожної кімнати визначити:</p>
+<ul>
+<li>меблі;</li>
+<li>кількість;</li>
+<li>призначення;</li>
+<li>площу, яку займають меблі;</li>
+<li>вільну площу;</li>
+<li>основні проходи;</li>
+<li>зони зберігання;</li>
+<li>робочу зону;</li>
+<li>зону відпочинку.</li>
+</ul>
+<h4 id="навчальне-завдання"><a class="header" href="#навчальне-завдання">Навчальне завдання</a></h4>
+<p>Порівняти:</p>
+<p><strong>площа кімнати → площа меблів → вільна площа.</strong></p>
+<hr>
+<h2 id="30-інженерні-комунікації"><a class="header" href="#30-інженерні-комунікації">30. Інженерні комунікації</a></h2>
+<p>Створити окрему карту комунікацій:</p>
+<ul>
+<li>електрика;</li>
+<li>вода;</li>
+<li>каналізація;</li>
+<li>опалення;</li>
+<li>вентиляція;</li>
+<li>газ;</li>
+<li>інтернет;</li>
+<li>сигналізація;</li>
+<li>зовнішнє освітлення;</li>
+<li>дренаж.</li>
+</ul>
+<p>Для кожної системи показати:</p>
+<ul>
+<li>джерело;</li>
+<li>напрямок;</li>
+<li>основні вузли;</li>
+<li>точки споживання;</li>
+<li>спосіб керування.</li>
+</ul>
+<hr>
+<h2 id="31-цифрові-технології-та-розумний-будинок"><a class="header" href="#31-цифрові-технології-та-розумний-будинок">31. Цифрові технології та «розумний будинок»</a></h2>
+<p>Перевірити наявність:</p>
+<ul>
+<li>розумного освітлення;</li>
+<li>розумних розеток;</li>
+<li>термостатів;</li>
+<li>датчиків температури;</li>
+<li>датчиків вологості;</li>
+<li>датчиків руху;</li>
+<li>камер;</li>
+<li>автоматичних воріт;</li>
+<li>системи поливу;</li>
+<li>дистанційного керування опаленням;</li>
+<li>голосового керування.</li>
+</ul>
+<h4 id="можливий-проєкт"><a class="header" href="#можливий-проєкт">Можливий проєкт</a></h4>
+<p>Розробити власну концепцію «розумного будинку»:</p>
+<ul>
+<li>які датчики встановити;</li>
+<li>що вони вимірюють;</li>
+<li>що автоматично вмикається;</li>
+<li>які дані збираються;</li>
+<li>яку проблему вирішує кожне рішення.</li>
+</ul>
+<hr>
+<h2 id="32-інтернет-та-цифрова-інфраструктура"><a class="header" href="#32-інтернет-та-цифрова-інфраструктура">32. Інтернет та цифрова інфраструктура</a></h2>
+<p>Визначити:</p>
+<ul>
+<li>тип підключення;</li>
+<li>місце маршрутизатора;</li>
+<li>точки доступу Wi-Fi;</li>
+<li>кабельні підключення;</li>
+<li>зони слабкого сигналу;</li>
+<li>пристрої, які використовують мережу.</li>
+</ul>
+<hr>
+<h2 id="33-ландшафт-ділянки"><a class="header" href="#33-ландшафт-ділянки">33. Ландшафт ділянки</a></h2>
+<h3 id="зонування"><a class="header" href="#зонування">Зонування</a></h3>
+<p>Поділити територію на:</p>
+<ul>
+<li>житлову;</li>
+<li>вхідну;</li>
+<li>господарську;</li>
+<li>рекреаційну;</li>
+<li>садову;</li>
+<li>городню;</li>
+<li>дитячу;</li>
+<li>паркувальну;</li>
+<li>технічну.</li>
+</ul>
+<h3 id="для-кожної-зони"><a class="header" href="#для-кожної-зони">Для кожної зони</a></h3>
+<ul>
+<li>площа;</li>
+<li>призначення;</li>
+<li>покриття;</li>
+<li>рослини;</li>
+<li>меблі;</li>
+<li>освітлення;</li>
+<li>полив;</li>
+<li>стан.</li>
+</ul>
+<hr>
+<h2 id="34-дерева-та-кущі"><a class="header" href="#34-дерева-та-кущі">34. Дерева та кущі</a></h2>
+<p>Для кожної рослини створити картку:</p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Параметр</th><th>Значення</th></tr>
+</thead>
+<tbody>
+<tr><td>Номер</td><td></td></tr>
+<tr><td>Назва</td><td></td></tr>
+<tr><td>Вид</td><td></td></tr>
+<tr><td>Приблизний вік</td><td></td></tr>
+<tr><td>Висота</td><td></td></tr>
+<tr><td>Діаметр стовбура</td><td></td></tr>
+<tr><td>Ширина крони</td><td></td></tr>
+<tr><td>Стан</td><td></td></tr>
+<tr><td>Місце на плані</td><td></td></tr>
+<tr><td>Потреба у догляді</td><td></td></tr>
+</tbody>
+</table>
+</div>
+<h4 id="додатково-2"><a class="header" href="#додатково-2">Додатково</a></h4>
+<p>Можна дослідити:</p>
+<ul>
+<li>які рослини люблять сонце;</li>
+<li>які люблять тінь;</li>
+<li>які рослини є місцевими;</li>
+<li>які приваблюють комах;</li>
+<li>які потребують багато води.</li>
+</ul>
+<hr>
+<h2 id="35-газон-сад-і-город"><a class="header" href="#35-газон-сад-і-город">35. Газон, сад і город</a></h2>
+<p>Визначити:</p>
+<ul>
+<li>площу;</li>
+<li>види рослин;</li>
+<li>схему посадки;</li>
+<li>періоди цвітіння;</li>
+<li>потребу у воді;</li>
+<li>потребу в добривах;</li>
+<li>врожайність;</li>
+<li>сезонність робіт.</li>
+</ul>
+<hr>
+<h2 id="36-полив"><a class="header" href="#36-полив">36. Полив</a></h2>
+<p>Дослідити:</p>
+<ul>
+<li>джерело води;</li>
+<li>спосіб поливу;</li>
+<li>ручний полив;</li>
+<li>крапельний полив;</li>
+<li>автоматичний полив;</li>
+<li>кількість зон;</li>
+<li>витрати води;</li>
+<li>графік поливу.</li>
+</ul>
+<hr>
+<h2 id="37-покриття-території"><a class="header" href="#37-покриття-території">37. Покриття території</a></h2>
+<p>Порахувати площі:</p>
+<ul>
+<li>газону;</li>
+<li>ґрунту;</li>
+<li>плитки;</li>
+<li>бетону;</li>
+<li>асфальту;</li>
+<li>гравію;</li>
+<li>дерев’яного настилу;</li>
+<li>інших поверхонь.</li>
+</ul>
+<h4 id="додаткове-дослідження"><a class="header" href="#додаткове-дослідження">Додаткове дослідження</a></h4>
+<p>Порівняти:</p>
+<ul>
+<li>проникні поверхні;</li>
+<li>непроникні поверхні;</li>
+<li>нагрівання різних покриттів;</li>
+<li>відведення дощової води.</li>
+</ul>
+<hr>
+<h2 id="38-екологічний-паспорт"><a class="header" href="#38-екологічний-паспорт">38. Екологічний паспорт</a></h2>
+<p>Дослідити:</p>
+<h3 id="вода"><a class="header" href="#вода">Вода</a></h3>
+<ul>
+<li>споживання;</li>
+<li>повторне використання;</li>
+<li>дощова вода;</li>
+<li>фільтрація.</li>
+</ul>
+<h3 id="енергія"><a class="header" href="#енергія">Енергія</a></h3>
+<ul>
+<li>джерела;</li>
+<li>споживання;</li>
+<li>втрати;</li>
+<li>відновлювана енергія.</li>
+</ul>
+<h3 id="відходи"><a class="header" href="#відходи">Відходи</a></h3>
+<ul>
+<li>побутове сміття;</li>
+<li>сортування;</li>
+<li>органічні відходи;</li>
+<li>компост;</li>
+<li>вторинна сировина.</li>
+</ul>
+<h3 id="природа"><a class="header" href="#природа">Природа</a></h3>
+<ul>
+<li>дерева;</li>
+<li>кущі;</li>
+<li>квіти;</li>
+<li>птахи;</li>
+<li>комахи;</li>
+<li>інші живі організми.</li>
+</ul>
+<hr>
+<h2 id="39-мікроклімат-ділянки"><a class="header" href="#39-мікроклімат-ділянки">39. Мікроклімат ділянки</a></h2>
+<p>Зробити спостереження:</p>
+<ul>
+<li>температура;</li>
+<li>вологість;</li>
+<li>освітленість;</li>
+<li>вітер;</li>
+<li>затінення;</li>
+<li>температура різних покриттів;</li>
+<li>температура біля стіни;</li>
+<li>температура на газоні;</li>
+<li>температура під деревом.</li>
+</ul>
+<h4 id="порівняльний-експеримент"><a class="header" href="#порівняльний-експеримент">Порівняльний експеримент</a></h4>
+<p>Наприклад:</p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Місце</th><th style="text-align: right">Температура</th><th style="text-align: right">Вологість</th><th style="text-align: right">Освітленість</th></tr>
+</thead>
+<tbody>
+<tr><td>Газон</td><td style="text-align: right"></td><td style="text-align: right"></td><td style="text-align: right"></td></tr>
+<tr><td>Асфальт</td><td style="text-align: right"></td><td style="text-align: right"></td><td style="text-align: right"></td></tr>
+<tr><td>Під деревом</td><td style="text-align: right"></td><td style="text-align: right"></td><td style="text-align: right"></td></tr>
+<tr><td>Біля стіни</td><td style="text-align: right"></td><td style="text-align: right"></td><td style="text-align: right"></td></tr>
+</tbody>
+</table>
+</div>
+<hr>
+<h2 id="40-акустичне-середовище"><a class="header" href="#40-акустичне-середовище">40. Акустичне середовище</a></h2>
+<p>Дослідити:</p>
+<ul>
+<li>дорожній шум;</li>
+<li>шум сусідів;</li>
+<li>роботу техніки;</li>
+<li>шум у різний час доби;</li>
+<li>найспокійніші місця;</li>
+<li>найгучніші місця.</li>
+</ul>
+<p>За наявності вимірювача можна записати:</p>
+<ul>
+<li>рівень шуму вдень;</li>
+<li>рівень шуму ввечері;</li>
+<li>рівень шуму вночі.</li>
+</ul>
+<hr>
+<h2 id="41-освітленість-ділянки-в-темний-час"><a class="header" href="#41-освітленість-ділянки-в-темний-час">41. Освітленість ділянки в темний час</a></h2>
+<p>Позначити:</p>
+<ul>
+<li>ліхтарі;</li>
+<li>освітлення входу;</li>
+<li>освітлення доріжок;</li>
+<li>освітлення паркування;</li>
+<li>декоративне освітлення;</li>
+<li>темні ділянки;</li>
+<li>датчики руху.</li>
+</ul>
+<hr>
+<h2 id="42-матеріали-будинку"><a class="header" href="#42-матеріали-будинку">42. Матеріали будинку</a></h2>
+<p>Створити каталог матеріалів:</p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Елемент</th><th>Матеріал</th><th>Стан</th><th>Орієнтовний термін експлуатації</th><th>Де використано</th></tr>
+</thead>
+<tbody>
+<tr><td>Стіни</td><td></td><td></td><td></td><td></td></tr>
+<tr><td>Дах</td><td></td><td></td><td></td><td></td></tr>
+<tr><td>Вікна</td><td></td><td></td><td></td><td></td></tr>
+<tr><td>Підлога</td><td></td><td></td><td></td><td></td></tr>
+<tr><td>Двері</td><td></td><td></td><td></td><td></td></tr>
+<tr><td>Огорожа</td><td></td><td></td><td></td><td></td></tr>
+<tr><td>Доріжки</td><td></td><td></td><td></td><td></td></tr>
+</tbody>
+</table>
+</div>
+<hr>
+<h2 id="43-колірний-паспорт"><a class="header" href="#43-колірний-паспорт">43. Колірний паспорт</a></h2>
+<p>Зібрати основні кольори:</p>
+<ul>
+<li>фасаду;</li>
+<li>даху;</li>
+<li>вікон;</li>
+<li>дверей;</li>
+<li>огорожі;</li>
+<li>доріжок;</li>
+<li>ландшафту.</li>
+</ul>
+<p>Можна створити <strong>кольорову палітру</strong> будинку.</p>
+<hr>
+<h2 id="44-стиль-будинку"><a class="header" href="#44-стиль-будинку">44. Стиль будинку</a></h2>
+<p>Учні можуть дослідити:</p>
+<ul>
+<li>геометрію;</li>
+<li>пропорції;</li>
+<li>симетрію;</li>
+<li>матеріали;</li>
+<li>кольори;</li>
+<li>декоративні елементи;</li>
+<li>форму даху;</li>
+<li>тип вікон;</li>
+<li>характерні ознаки архітектурного стилю.</li>
+</ul>
+<blockquote>
+<p>Висновок краще формулювати як аргументований опис: <strong>«Які ознаки дозволяють віднести будинок до певного стилю?»</strong></p>
+</blockquote>
+<hr>
+<h2 id="45-історія-обєкта"><a class="header" href="#45-історія-обєкта">45. Історія об’єкта</a></h2>
+<p>Зібрати:</p>
+<ul>
+<li>дату будівництва;</li>
+<li>попередній вигляд;</li>
+<li>старі фотографії;</li>
+<li>інформацію про реконструкції;</li>
+<li>зміни ділянки;</li>
+<li>зміни планування;</li>
+<li>зміни інженерних систем.</li>
+</ul>
+<p>Створити:</p>
+<h4 id="хронологію"><a class="header" href="#хронологію">Хронологію</a></h4>
+<pre><code class="language-text">Рік → будівництво
+   ↓
+Рік → перша реконструкція
+   ↓
+Рік → утеплення
+   ↓
+Рік → зміна опалення
+   ↓
+Сьогодні → поточний стан
+</code></pre>
+<hr>
+<h2 id="46-економічний-паспорт"><a class="header" href="#46-економічний-паспорт">46. Економічний паспорт</a></h2>
+<h3 id="основні-витрати"><a class="header" href="#основні-витрати">Основні витрати</a></h3>
+<p>Дослідити або змоделювати:</p>
+<ul>
+<li>будівництво;</li>
+<li>ремонт;</li>
+<li>опалення;</li>
+<li>електроенергію;</li>
+<li>воду;</li>
+<li>каналізацію;</li>
+<li>інтернет;</li>
+<li>охорону;</li>
+<li>обслуговування;</li>
+<li>догляд за садом;</li>
+<li>ремонт техніки.</li>
+</ul>
+<h3 id="таблиця"><a class="header" href="#таблиця">Таблиця</a></h3>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Категорія</th><th style="text-align: right">За місяць</th><th style="text-align: right">За рік</th></tr>
+</thead>
+<tbody>
+<tr><td>Електроенергія</td><td style="text-align: right"></td><td style="text-align: right"></td></tr>
+<tr><td>Вода</td><td style="text-align: right"></td><td style="text-align: right"></td></tr>
+<tr><td>Опалення</td><td style="text-align: right"></td><td style="text-align: right"></td></tr>
+<tr><td>Інтернет</td><td style="text-align: right"></td><td style="text-align: right"></td></tr>
+<tr><td>Обслуговування</td><td style="text-align: right"></td><td style="text-align: right"></td></tr>
+<tr><td>Сад</td><td style="text-align: right"></td><td style="text-align: right"></td></tr>
+<tr><td>Інше</td><td style="text-align: right"></td><td style="text-align: right"></td></tr>
+</tbody>
+</table>
+</div>
+<hr>
+<h2 id="47-облік-ресурсів"><a class="header" href="#47-облік-ресурсів">47. Облік ресурсів</a></h2>
+<p>Створити показники:</p>
+<ul>
+<li>літри води на день;</li>
+<li>кВт·год електроенергії;</li>
+<li>кількість сміття;</li>
+<li>кількість органічних відходів;</li>
+<li>площа озеленення;</li>
+<li>кількість дерев.</li>
+</ul>
+<p>Можна розрахувати:</p>
+<blockquote>
+<p><strong>ресурс на 1 мешканця</strong></p>
+</blockquote>
+<p>або</p>
+<blockquote>
+<p><strong>ресурс на 1 м² будинку.</strong></p>
+</blockquote>
+<hr>
+<h2 id="48-ремонт-і-технічний-стан"><a class="header" href="#48-ремонт-і-технічний-стан">48. Ремонт і технічний стан</a></h2>
+<p>Для кожного елемента:</p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Елемент</th><th>Стан</th><th>Проблема</th><th>Терміновість</th><th>Рекомендована дія</th></tr>
+</thead>
+<tbody>
+<tr><td>Фасад</td><td></td><td></td><td></td><td></td></tr>
+<tr><td>Дах</td><td></td><td></td><td></td><td></td></tr>
+<tr><td>Вікна</td><td></td><td></td><td></td><td></td></tr>
+<tr><td>Двері</td><td></td><td></td><td></td><td></td></tr>
+<tr><td>Огорожа</td><td></td><td></td><td></td><td></td></tr>
+<tr><td>Доріжки</td><td></td><td></td><td></td><td></td></tr>
+<tr><td>Водостік</td><td></td><td></td><td></td><td></td></tr>
+</tbody>
+</table>
+</div>
+<p>Можна застосувати умовну шкалу:</p>
+<ul>
+<li><strong>добрий стан</strong>;</li>
+<li><strong>потребує спостереження</strong>;</li>
+<li><strong>потребує ремонту</strong>.</li>
+</ul>
+<hr>
+<h2 id="49-фотографічний-паспорт"><a class="header" href="#49-фотографічний-паспорт">49. Фотографічний паспорт</a></h2>
+<p>Створити каталог фотографій:</p>
+<h3 id="обовязкові-фото"><a class="header" href="#обовязкові-фото">Обов’язкові фото</a></h3>
+<ul>
+<li>загальний вигляд;</li>
+<li>кожен фасад;</li>
+<li>ділянка;</li>
+<li>ворота;</li>
+<li>хвіртка;</li>
+<li>дах;</li>
+<li>фундамент;</li>
+<li>вікна;</li>
+<li>двері;</li>
+<li>тераса;</li>
+<li>господарські споруди;</li>
+<li>сад;</li>
+<li>город;</li>
+<li>дерева;</li>
+<li>інженерні системи;</li>
+<li>характерні деталі.</li>
+</ul>
+<p>Для кожної фотографії:</p>
+<ul>
+<li>номер;</li>
+<li>дата;</li>
+<li>місце;</li>
+<li>що зображено;</li>
+<li>напрямок зйомки;</li>
+<li>короткий коментар.</li>
+</ul>
+<hr>
+<h2 id="50-креслярський-пакет"><a class="header" href="#50-креслярський-пакет">50. Креслярський пакет</a></h2>
+<p>Портфоліо може містити:</p>
+<ol>
+<li>ситуаційний план;</li>
+<li>генеральний план;</li>
+<li>план 1-го поверху;</li>
+<li>план 2-го поверху;</li>
+<li>план підвалу;</li>
+<li>план мансарди;</li>
+<li>чотири фасади;</li>
+<li>розріз будинку;</li>
+<li>схема даху;</li>
+<li>схема комунікацій;</li>
+<li>схема озеленення;</li>
+<li>схема освітлення;</li>
+<li>схема евакуації;</li>
+<li>функціональне зонування.</li>
+</ol>
+<hr>
+<h2 id="51-масштаб"><a class="header" href="#51-масштаб">51. Масштаб</a></h2>
+<p>Для кожного креслення зазначити:</p>
+<ul>
+<li>масштаб;</li>
+<li>одиниці вимірювання;</li>
+<li>легенду;</li>
+<li>позначення сторін світу;</li>
+<li>назву креслення;</li>
+<li>дату;</li>
+<li>автора.</li>
+</ul>
+<h4 id="приклади-навчальних-масштабів"><a class="header" href="#приклади-навчальних-масштабів">Приклади навчальних масштабів</a></h4>
+<ul>
+<li>1:50;</li>
+<li>1:100;</li>
+<li>1:200;</li>
+<li>1:500.</li>
+</ul>
+<hr>
+<h2 id="52-математичний-блок"><a class="header" href="#52-математичний-блок">52. Математичний блок</a></h2>
+<p>Учні можуть виконати:</p>
+<ul>
+<li>обчислення площ;</li>
+<li>обчислення периметрів;</li>
+<li>обчислення об’ємів;</li>
+<li>роботу з масштабом;</li>
+<li>пропорції;</li>
+<li>відсотки;</li>
+<li>середні значення;</li>
+<li>графіки;</li>
+<li>діаграми;</li>
+<li>порівняння витрат;</li>
+<li>розрахунок матеріалів.</li>
+</ul>
+<hr>
+<h2 id="53-фізика"><a class="header" href="#53-фізика">53. Фізика</a></h2>
+<p>Можливі дослідження:</p>
+<ul>
+<li>теплопередача;</li>
+<li>теплоізоляція;</li>
+<li>освітленість;</li>
+<li>електроенергія;</li>
+<li>потужність;</li>
+<li>робота приладів;</li>
+<li>рух повітря;</li>
+<li>звук;</li>
+<li>механічні навантаження;</li>
+<li>сонячна енергія.</li>
+</ul>
+<hr>
+<h2 id="54-хімія"><a class="header" href="#54-хімія">54. Хімія</a></h2>
+<p>Дослідження:</p>
+<ul>
+<li>властивості будівельних матеріалів;</li>
+<li>вода та її якість;</li>
+<li>побутова хімія;</li>
+<li>очищення води;</li>
+<li>склад ґрунту;</li>
+<li>мінеральні матеріали;</li>
+<li>процеси корозії;</li>
+<li>властивості фарб і покриттів.</li>
+</ul>
+<hr>
+<h2 id="55-біологія"><a class="header" href="#55-біологія">55. Біологія</a></h2>
+<p>Дослідити:</p>
+<ul>
+<li>види рослин;</li>
+<li>стан рослин;</li>
+<li>екосистему ділянки;</li>
+<li>комах;</li>
+<li>птахів;</li>
+<li>взаємодію організмів;</li>
+<li>біорізноманіття;</li>
+<li>сезонні зміни.</li>
+</ul>
+<hr>
+<h2 id="56-географія"><a class="header" href="#56-географія">56. Географія</a></h2>
+<p>Визначити:</p>
+<ul>
+<li>сторони світу;</li>
+<li>координати;</li>
+<li>рельєф;</li>
+<li>ґрунти;</li>
+<li>кліматичні умови;</li>
+<li>напрямки вітру;</li>
+<li>сезонність;</li>
+<li>розташування відносно місцевих об’єктів.</li>
+</ul>
+<hr>
+<h2 id="57-інформатика"><a class="header" href="#57-інформатика">57. Інформатика</a></h2>
+<p>Можна створити:</p>
+<ul>
+<li>цифровий план;</li>
+<li>3D-модель будинку;</li>
+<li>електронну таблицю;</li>
+<li>базу даних;</li>
+<li>графіки;</li>
+<li>інфографіку;</li>
+<li>інтерактивну карту;</li>
+<li>QR-коди;</li>
+<li>цифровий архів фото;</li>
+<li>презентацію.</li>
+</ul>
+<hr>
+<h2 id="58-технології-та-дизайн"><a class="header" href="#58-технології-та-дизайн">58. Технології та дизайн</a></h2>
+<p>Розробити:</p>
+<ul>
+<li>новий фасад;</li>
+<li>нове зонування ділянки;</li>
+<li>ескіз реконструкції;</li>
+<li>дизайн дитячої зони;</li>
+<li>дизайн саду;</li>
+<li>систему навісу;</li>
+<li>систему освітлення;</li>
+<li>систему зберігання;</li>
+<li>модель «будинку майбутнього».</li>
+</ul>
+<hr>
+<h2 id="59-екологічна-модернізація"><a class="header" href="#59-екологічна-модернізація">59. Екологічна модернізація</a></h2>
+<p>Розробити перелік можливих покращень:</p>
+<ul>
+<li>утеплення;</li>
+<li>сонячні панелі;</li>
+<li>збір дощової води;</li>
+<li>компостування;</li>
+<li>сортування відходів;</li>
+<li>енергоощадне освітлення;</li>
+<li>автоматичний полив;</li>
+<li>висаджування дерев;</li>
+<li>проникні покриття;</li>
+<li>тіньові зони;</li>
+<li>зменшення споживання води.</li>
+</ul>
+<p>Для кожного запропонованого рішення:</p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Рішення</th><th>Яку проблему вирішує</th><th>Ресурси</th><th>Орієнтовна складність</th><th>Очікуваний результат</th></tr>
+</thead>
+<tbody>
+<tr><td></td><td></td><td></td><td></td><td></td></tr>
+</tbody>
+</table>
+</div>
+<hr>
+<h2 id="60-будинок-майбутнього"><a class="header" href="#60-будинок-майбутнього">60. «Будинок майбутнього»</a></h2>
+<p>У фінальній частині учні можуть створити власний проєкт модернізації.</p>
+<h4 id="потрібно-показати"><a class="header" href="#потрібно-показати">Потрібно показати:</a></h4>
+<ul>
+<li>що залишити;</li>
+<li>що змінити;</li>
+<li>що додати;</li>
+<li>що прибрати;</li>
+<li>які технології використати;</li>
+<li>як зміниться споживання ресурсів;</li>
+<li>як зміниться комфорт;</li>
+<li>як зміниться зовнішній вигляд;</li>
+<li>як зміниться екологічність.</li>
+</ul>
+<hr>
+<h2 id="61-порівняння-було--є--має-бути"><a class="header" href="#61-порівняння-було--є--має-бути">61. Порівняння «Було → Є → Має бути»</a></h2>
+<p>Окремий розділ:</p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Показник</th><th>Було</th><th>Є зараз</th><th>Проєктне рішення</th></tr>
+</thead>
+<tbody>
+<tr><td>Опалення</td><td></td><td></td><td></td></tr>
+<tr><td>Вікна</td><td></td><td></td><td></td></tr>
+<tr><td>Освітлення</td><td></td><td></td><td></td></tr>
+<tr><td>Вода</td><td></td><td></td><td></td></tr>
+<tr><td>Озеленення</td><td></td><td></td><td></td></tr>
+<tr><td>Паркування</td><td></td><td></td><td></td></tr>
+<tr><td>Безпека</td><td></td><td></td><td></td></tr>
+<tr><td>Енергоефективність</td><td></td><td></td><td></td></tr>
+</tbody>
+</table>
+</div>
+<hr>
+<h2 id="62-проблеми-обєкта"><a class="header" href="#62-проблеми-обєкта">62. Проблеми об’єкта</a></h2>
+<p>Скласти список виявлених проблем:</p>
+<ul>
+<li>технічних;</li>
+<li>функціональних;</li>
+<li>екологічних;</li>
+<li>енергетичних;</li>
+<li>безпекових;</li>
+<li>естетичних;</li>
+<li>організаційних.</li>
+</ul>
+<p>Для кожної проблеми визначити:</p>
+<ol>
+<li>у чому проблема;</li>
+<li>чому вона виникла;</li>
+<li>які наслідки;</li>
+<li>як її можна вирішити;</li>
+<li>скільки приблизно ресурсів потрібно.</li>
+</ol>
+<hr>
+<h2 id="63-позитивні-особливості"><a class="header" href="#63-позитивні-особливості">63. Позитивні особливості</a></h2>
+<p>Описати сильні сторони об’єкта:</p>
+<ul>
+<li>зручне планування;</li>
+<li>хороше освітлення;</li>
+<li>озеленення;</li>
+<li>енергоефективність;</li>
+<li>використання природних матеріалів;</li>
+<li>безпека;</li>
+<li>зручне зонування;</li>
+<li>цікава архітектура;</li>
+<li>використання відновлюваної енергії.</li>
+</ul>
+<hr>
+<h2 id="64-порівняльне-дослідження"><a class="header" href="#64-порівняльне-дослідження">64. Порівняльне дослідження</a></h2>
+<p>Для навчального проєкту можна порівняти:</p>
+<ul>
+<li>два будинки;</li>
+<li>два типи утеплення;</li>
+<li>два типи покрівлі;</li>
+<li>різні види вікон;</li>
+<li>різні системи опалення;</li>
+<li>різні варіанти освітлення;</li>
+<li>різні види покриття двору;</li>
+<li>різні способи поливу.</li>
+</ul>
+<hr>
+<h2 id="65-візуалізація-даних"><a class="header" href="#65-візуалізація-даних">65. Візуалізація даних</a></h2>
+<p>Підготувати:</p>
+<ul>
+<li>кругові діаграми;</li>
+<li>стовпчикові діаграми;</li>
+<li>лінійні графіки;</li>
+<li>інфографіку;</li>
+<li>теплові карти;</li>
+<li>карти освітленості;</li>
+<li>карти функціонального зонування.</li>
+</ul>
+<hr>
+<h2 id="66-щоденник-спостережень"><a class="header" href="#66-щоденник-спостережень">66. Щоденник спостережень</a></h2>
+<p>Протягом тижня або місяця можна записувати:</p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Дата</th><th>Погода</th><th style="text-align: right">Температура</th><th style="text-align: right">Вологість</th><th style="text-align: right">Освітленість</th><th>Спостереження</th></tr>
+</thead>
+<tbody>
+<tr><td></td><td></td><td style="text-align: right"></td><td style="text-align: right"></td><td style="text-align: right"></td><td></td></tr>
+</tbody>
+</table>
+</div>
+<hr>
+<h2 id="67-сезонний-паспорт"><a class="header" href="#67-сезонний-паспорт">67. Сезонний паспорт</a></h2>
+<p>Зробити окремі спостереження:</p>
+<h4 id="весна"><a class="header" href="#весна">Весна</a></h4>
+<ul>
+<li>рослини;</li>
+<li>вода;</li>
+<li>температура;</li>
+<li>сонце;</li>
+<li>стан ділянки.</li>
+</ul>
+<h4 id="літо"><a class="header" href="#літо">Літо</a></h4>
+<ul>
+<li>перегрів;</li>
+<li>полив;</li>
+<li>сонячне навантаження;</li>
+<li>використання тіні.</li>
+</ul>
+<h4 id="осінь"><a class="header" href="#осінь">Осінь</a></h4>
+<ul>
+<li>опале листя;</li>
+<li>вологість;</li>
+<li>дощі;</li>
+<li>підготовка саду.</li>
+</ul>
+<h4 id="зима"><a class="header" href="#зима">Зима</a></h4>
+<ul>
+<li>сніг;</li>
+<li>обігрів;</li>
+<li>тепловтрати;</li>
+<li>освітлення;</li>
+<li>стан даху.</li>
+</ul>
+<hr>
+<h2 id="68-план-обслуговування-будинку"><a class="header" href="#68-план-обслуговування-будинку">68. План обслуговування будинку</a></h2>
+<p>Створити календар:</p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Завдання</th><th>Періодичність</th><th>Хто виконує</th><th>Останнє виконання</th></tr>
+</thead>
+<tbody>
+<tr><td>Очищення водостоків</td><td></td><td></td><td></td></tr>
+<tr><td>Перевірка даху</td><td></td><td></td><td></td></tr>
+<tr><td>Догляд за садом</td><td></td><td></td><td></td></tr>
+<tr><td>Обслуговування опалення</td><td></td><td></td><td></td></tr>
+<tr><td>Перевірка датчиків</td><td></td><td></td><td></td></tr>
+<tr><td>Прибирання території</td><td></td><td></td><td></td></tr>
+</tbody>
+</table>
+</div>
+<hr>
+<h2 id="69-реєстр-обладнання"><a class="header" href="#69-реєстр-обладнання">69. Реєстр обладнання</a></h2>
+<p>Створити каталог:</p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Обладнання</th><th>Модель / тип</th><th style="text-align: right">Кількість</th><th style="text-align: right">Потужність</th><th>Місце</th><th>Призначення</th><th>Стан</th></tr>
+</thead>
+<tbody>
+<tr><td>Котел</td><td></td><td style="text-align: right"></td><td style="text-align: right"></td><td></td><td></td><td></td></tr>
+<tr><td>Бойлер</td><td></td><td style="text-align: right"></td><td style="text-align: right"></td><td></td><td></td><td></td></tr>
+<tr><td>Насос</td><td></td><td style="text-align: right"></td><td style="text-align: right"></td><td></td><td></td><td></td></tr>
+<tr><td>Холодильник</td><td></td><td style="text-align: right"></td><td style="text-align: right"></td><td></td><td></td><td></td></tr>
+<tr><td>Пральна машина</td><td></td><td style="text-align: right"></td><td style="text-align: right"></td><td></td><td></td><td></td></tr>
+</tbody>
+</table>
+</div>
+<hr>
+<h2 id="70-реєстр-дефектів"><a class="header" href="#70-реєстр-дефектів">70. Реєстр дефектів</a></h2>
+<p>Для кожної проблеми:</p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>№</th><th>Місце</th><th>Опис</th><th>Фото</th><th>Можлива причина</th><th>Запропоноване рішення</th></tr>
+</thead>
+<tbody>
+<tr><td>1</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>2</td><td></td><td></td><td></td><td></td><td></td></tr>
+</tbody>
+</table>
+</div>
+<hr>
+<h2 id="71-реєстр-вимірювань"><a class="header" href="#71-реєстр-вимірювань">71. Реєстр вимірювань</a></h2>
+<p>Усі фактичні вимірювання звести в одну таблицю:</p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>№</th><th>Що вимірювали</th><th style="text-align: right">Значення</th><th>Одиниця</th><th>Прилад / метод</th><th>Дата</th></tr>
+</thead>
+<tbody>
+<tr><td>1</td><td>Довжина будинку</td><td style="text-align: right"></td><td>м</td><td>рулетка</td><td></td></tr>
+<tr><td>2</td><td>Ширина будинку</td><td style="text-align: right"></td><td>м</td><td>рулетка</td><td></td></tr>
+<tr><td>3</td><td>Температура</td><td style="text-align: right"></td><td>°C</td><td>термометр</td><td></td></tr>
+<tr><td>4</td><td>Вологість</td><td style="text-align: right"></td><td>%</td><td>гігрометр</td><td></td></tr>
+</tbody>
+</table>
+</div>
+<hr>
+<h2 id="72-джерела-даних"><a class="header" href="#72-джерела-даних">72. Джерела даних</a></h2>
+<p>Для кожного показника позначати його походження:</p>
+<ul>
+<li><strong>В</strong> — власне вимірювання;</li>
+<li><strong>Ф</strong> — фотографія;</li>
+<li><strong>Д</strong> — документ;</li>
+<li><strong>О</strong> — опитування мешканців;</li>
+<li><strong>Р</strong> — розрахунок;</li>
+<li><strong>С</strong> — спостереження;</li>
+<li><strong>М</strong> — модель / припущення.</li>
+</ul>
+<p>Це дозволить учням відрізняти <strong>факт від розрахунку та припущення</strong>.</p>
+<hr>
+<h2 id="73-документи-обєкта"><a class="header" href="#73-документи-обєкта">73. Документи об’єкта</a></h2>
+<p>Якщо вони доступні, можна вивчати:</p>
+<ul>
+<li>план будинку;</li>
+<li>технічні документи;</li>
+<li>документи на землю;</li>
+<li>креслення;</li>
+<li>паспорти обладнання;</li>
+<li>чеки / кошториси;</li>
+<li>фотографії до ремонту;</li>
+<li>інструкції з експлуатації.</li>
+</ul>
+<blockquote>
+<p>У шкільному проєкті не потрібно публікувати конфіденційні персональні дані, номери документів чи іншу приватну інформацію.</p>
+</blockquote>
+<hr>
+<h2 id="74-портфоліо-фотографій-до--після"><a class="header" href="#74-портфоліо-фотографій-до--після">74. Портфоліо фотографій «до / після»</a></h2>
+<p>Для кожного покращення:</p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Було</th><th>Після</th><th>Що змінилося</th></tr>
+</thead>
+<tbody>
+<tr><td>Фото</td><td>Фото</td><td>Опис</td></tr>
+</tbody>
+</table>
+</div>
+<hr>
+<h2 id="75-3d-модель"><a class="header" href="#75-3d-модель">75. 3D-модель</a></h2>
+<p>За можливості створити:</p>
+<ul>
+<li>3D-модель будинку;</li>
+<li>модель ділянки;</li>
+<li>модель рельєфу;</li>
+<li>модель саду;</li>
+<li>модель майбутньої реконструкції.</li>
+</ul>
+<p>У моделі бажано показати:</p>
+<ul>
+<li>стіни;</li>
+<li>дах;</li>
+<li>вікна;</li>
+<li>двері;</li>
+<li>терасу;</li>
+<li>огорожу;</li>
+<li>дерева;</li>
+<li>доріжки;</li>
+<li>господарські споруди.</li>
+</ul>
+<hr>
+<h2 id="76-підсумкові-індикатори-будинку"><a class="header" href="#76-підсумкові-індикатори-будинку">76. Підсумкові індикатори будинку</a></h2>
+<p>Наприкінці паспорта сформувати набір показників:</p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Група</th><th>Показник</th></tr>
+</thead>
+<tbody>
+<tr><td>Ділянка</td><td>Площа</td></tr>
+<tr><td>Будинок</td><td>Загальна площа</td></tr>
+<tr><td>Будинок</td><td>Кількість поверхів</td></tr>
+<tr><td>Приміщення</td><td>Кількість</td></tr>
+<tr><td>Мешканці</td><td>Кількість</td></tr>
+<tr><td>Енергія</td><td>Споживання</td></tr>
+<tr><td>Вода</td><td>Споживання</td></tr>
+<tr><td>Озеленення</td><td>Площа</td></tr>
+<tr><td>Дерева</td><td>Кількість</td></tr>
+<tr><td>Паркування</td><td>Кількість місць</td></tr>
+<tr><td>Безпека</td><td>Кількість засобів</td></tr>
+<tr><td>Освітлення</td><td>Кількість точок</td></tr>
+<tr><td>Екологія</td><td>Основні показники</td></tr>
+</tbody>
+</table>
+</div>
+<hr>
+<h2 id="77-висновки-учня"><a class="header" href="#77-висновки-учня">77. Висновки учня</a></h2>
+<p>Фінальна сторінка може містити відповіді на запитання:</p>
+<ol>
+<li>Який це будинок?</li>
+<li>Які його головні характеристики?</li>
+<li>Які особливості має ділянка?</li>
+<li>Які математичні розрахунки було виконано?</li>
+<li>Які фізичні явища досліджено?</li>
+<li>Які біологічні об’єкти вивчено?</li>
+<li>Які інженерні системи працюють у будинку?</li>
+<li>Які проблеми виявлено?</li>
+<li>Які рішення запропоновано?</li>
+<li>Що було найцікавішим під час дослідження?</li>
+<li>Які дані вдалося виміряти самостійно?</li>
+<li>Які дані довелося отримати з інших джерел?</li>
+<li>Що можна було б дослідити глибше?</li>
+</ol>
+<hr>
+<h2 id="78-рекомендована-структура-готового-портфоліо"><a class="header" href="#78-рекомендована-структура-готового-портфоліо">78. Рекомендована структура готового портфоліо</a></h2>
+<h3 id="розділ-1-обкладинка"><a class="header" href="#розділ-1-обкладинка">Розділ 1. Обкладинка</a></h3>
+<ul>
+<li>назва;</li>
+<li>фото;</li>
+<li>автори;</li>
+<li>клас;</li>
+<li>школа;</li>
+<li>навчальний рік.</li>
+</ul>
+<h3 id="розділ-2-загальна-інформація"><a class="header" href="#розділ-2-загальна-інформація">Розділ 2. Загальна інформація</a></h3>
+<ul>
+<li>короткий опис;</li>
+<li>основні параметри.</li>
+</ul>
+<h3 id="розділ-3-ділянка"><a class="header" href="#розділ-3-ділянка">Розділ 3. Ділянка</a></h3>
+<ul>
+<li>план;</li>
+<li>розміри;</li>
+<li>зонування;</li>
+<li>рельєф.</li>
+</ul>
+<h3 id="розділ-4-будинок"><a class="header" href="#розділ-4-будинок">Розділ 4. Будинок</a></h3>
+<ul>
+<li>геометрія;</li>
+<li>площі;</li>
+<li>поверхи;</li>
+<li>приміщення.</li>
+</ul>
+<h3 id="розділ-5-конструкції"><a class="header" href="#розділ-5-конструкції">Розділ 5. Конструкції</a></h3>
+<ul>
+<li>фундамент;</li>
+<li>стіни;</li>
+<li>перекриття;</li>
+<li>дах;</li>
+<li>вікна;</li>
+<li>двері.</li>
+</ul>
+<h3 id="розділ-6-інженерні-системи"><a class="header" href="#розділ-6-інженерні-системи">Розділ 6. Інженерні системи</a></h3>
+<ul>
+<li>вода;</li>
+<li>каналізація;</li>
+<li>опалення;</li>
+<li>вентиляція;</li>
+<li>електрика;</li>
+<li>інтернет.</li>
+</ul>
+<h3 id="розділ-7-енергетика"><a class="header" href="#розділ-7-енергетика">Розділ 7. Енергетика</a></h3>
+<ul>
+<li>споживання;</li>
+<li>енергоефективність;</li>
+<li>відновлювана енергія.</li>
+</ul>
+<h3 id="розділ-8-ландшафт"><a class="header" href="#розділ-8-ландшафт">Розділ 8. Ландшафт</a></h3>
+<ul>
+<li>рослини;</li>
+<li>сад;</li>
+<li>город;</li>
+<li>газон;</li>
+<li>освітлення.</li>
+</ul>
+<h3 id="розділ-9-екологія"><a class="header" href="#розділ-9-екологія">Розділ 9. Екологія</a></h3>
+<ul>
+<li>вода;</li>
+<li>енергія;</li>
+<li>відходи;</li>
+<li>біорізноманіття.</li>
+</ul>
+<h3 id="розділ-10-безпека"><a class="header" href="#розділ-10-безпека">Розділ 10. Безпека</a></h3>
+<ul>
+<li>пожежна безпека;</li>
+<li>евакуація;</li>
+<li>освітлення;</li>
+<li>захист.</li>
+</ul>
+<h3 id="розділ-11-економіка"><a class="header" href="#розділ-11-економіка">Розділ 11. Економіка</a></h3>
+<ul>
+<li>витрати;</li>
+<li>обслуговування;</li>
+<li>ресурси.</li>
+</ul>
+<h3 id="розділ-12-проблеми-та-рішення"><a class="header" href="#розділ-12-проблеми-та-рішення">Розділ 12. Проблеми та рішення</a></h3>
+<ul>
+<li>недоліки;</li>
+<li>пропозиції;</li>
+<li>модернізація.</li>
+</ul>
+<h3 id="розділ-13-будинок-майбутнього"><a class="header" href="#розділ-13-будинок-майбутнього">Розділ 13. «Будинок майбутнього»</a></h3>
+<ul>
+<li>концепція;</li>
+<li>креслення;</li>
+<li>3D-модель;</li>
+<li>розрахунки.</li>
+</ul>
+<h3 id="розділ-14-висновки"><a class="header" href="#розділ-14-висновки">Розділ 14. Висновки</a></h3>
+<ul>
+<li>головні результати;</li>
+<li>нові знання;</li>
+<li>особистий внесок учня.</li>
+</ul>
+<hr>
+<h2 id="79-розподіл-складності-за-класами"><a class="header" href="#79-розподіл-складності-за-класами">79. Розподіл складності за класами</a></h2>
+<h3 id="5-клас"><a class="header" href="#5-клас">5 клас</a></h3>
+<p>Основний акцент:</p>
+<ul>
+<li>спостереження;</li>
+<li>фотографування;</li>
+<li>вимірювання простих відстаней;</li>
+<li>площа;</li>
+<li>форма;</li>
+<li>план ділянки;</li>
+<li>рослини;</li>
+<li>опис будинку.</li>
+</ul>
+<h4 id="результат"><a class="header" href="#результат">Результат</a></h4>
+<p><strong>Простий паспорт + план + фотоальбом.</strong></p>
+<hr>
+<h3 id="6-клас"><a class="header" href="#6-клас">6 клас</a></h3>
+<p>Додати:</p>
+<ul>
+<li>масштаб;</li>
+<li>периметр;</li>
+<li>площі;</li>
+<li>діаграми;</li>
+<li>класифікацію матеріалів;</li>
+<li>спостереження за рослинами;</li>
+<li>облік води та електроенергії.</li>
+</ul>
+<h4 id="результат-1"><a class="header" href="#результат-1">Результат</a></h4>
+<p><strong>Паспорт із таблицями та розрахунками.</strong></p>
+<hr>
+<h3 id="7-клас"><a class="header" href="#7-клас">7 клас</a></h3>
+<p>Додати:</p>
+<ul>
+<li>фізичні вимірювання;</li>
+<li>температуру;</li>
+<li>вологість;</li>
+<li>освітленість;</li>
+<li>енергоспоживання;</li>
+<li>теплоізоляцію;</li>
+<li>властивості матеріалів.</li>
+</ul>
+<h4 id="результат-2"><a class="header" href="#результат-2">Результат</a></h4>
+<p><strong>Аналітичний технічний паспорт.</strong></p>
+<hr>
+<h3 id="8-клас"><a class="header" href="#8-клас">8 клас</a></h3>
+<p>Додати:</p>
+<ul>
+<li>інженерні системи;</li>
+<li>моделювання;</li>
+<li>енергоефективність;</li>
+<li>екологічний аналіз;</li>
+<li>мікроклімат;</li>
+<li>графіки;</li>
+<li>цифрові карти;</li>
+<li>3D-модель.</li>
+</ul>
+<h4 id="результат-3"><a class="header" href="#результат-3">Результат</a></h4>
+<p><strong>Цифровий техніко-екологічний паспорт.</strong></p>
+<hr>
+<h3 id="9-клас"><a class="header" href="#9-клас">9 клас</a></h3>
+<p>Додати:</p>
+<ul>
+<li>комплексні розрахунки;</li>
+<li>економічну оцінку;</li>
+<li>порівняння варіантів;</li>
+<li>оптимізацію;</li>
+<li>проєкт реконструкції;</li>
+<li>концепцію «розумного будинку»;</li>
+<li>оцінювання екологічного ефекту;</li>
+<li>презентацію проєкту.</li>
+</ul>
+<h4 id="результат-4"><a class="header" href="#результат-4">Результат</a></h4>
+<p><strong>Повноцінний комплексний проєкт «Будинок + ділянка + модернізація».</strong></p>
+<hr>
+<h2 id="80-міжпредметний-характер-проєкту"><a class="header" href="#80-міжпредметний-характер-проєкту">80. Міжпредметний характер проєкту</a></h2>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Предмет</th><th>Що досліджується</th></tr>
+</thead>
+<tbody>
+<tr><td>Математика</td><td>площі, об’єми, масштаб, відсотки</td></tr>
+<tr><td>Фізика</td><td>тепло, світло, електроенергія, звук</td></tr>
+<tr><td>Хімія</td><td>матеріали, вода, ґрунт</td></tr>
+<tr><td>Біологія</td><td>рослини, тварини, екосистема</td></tr>
+<tr><td>Географія</td><td>рельєф, орієнтація, клімат</td></tr>
+<tr><td>Інформатика</td><td>таблиці, графіки, 3D, карти</td></tr>
+<tr><td>Технології</td><td>матеріали, конструкції, проєктування</td></tr>
+<tr><td>Мистецтво</td><td>композиція, колір, стиль</td></tr>
+<tr><td>Українська мова</td><td>опис, звіт, презентація</td></tr>
+<tr><td>Громадянська освіта</td><td>безпека, відповідальність, сталий розвиток</td></tr>
+</tbody>
+</table>
+</div>
+<hr>
+<h2 id="81-мінімальний-набір-для-обовязкового-виконання"><a class="header" href="#81-мінімальний-набір-для-обовязкового-виконання">81. Мінімальний набір для обов’язкового виконання</a></h2>
+<p>Для одного шкільного проєкту достатньо виміряти та представити:</p>
+<ul>
+<li>площу ділянки;</li>
+<li>габарити будинку;</li>
+<li>площі кімнат;</li>
+<li>план ділянки;</li>
+<li>план будинку;</li>
+<li>фотографії фасадів;</li>
+<li>кількість і тип вікон;</li>
+<li>основні будівельні матеріали;</li>
+<li>тип даху;</li>
+<li>джерело води;</li>
+<li>систему опалення;</li>
+<li>систему електропостачання;</li>
+<li>основні прилади;</li>
+<li>дерева та інші великі рослини;</li>
+<li>основні зони ділянки;</li>
+<li>приблизне споживання ресурсів;</li>
+<li>проблеми об’єкта;</li>
+<li>3–5 пропозицій щодо покращення.</li>
+</ul>
+<hr>
+<h2 id="82-максимальний-набір-для-масштабного-проєкту"><a class="header" href="#82-максимальний-набір-для-масштабного-проєкту">82. Максимальний набір для масштабного проєкту</a></h2>
+<p>Для поглибленого командного проєкту можна включити <strong>всі 80 розділів</strong> і сформувати єдиний цифровий архів:</p>
+<pre><code class="language-text">ПОРТФОЛІО
+│
+├── 01_Загальні_дані
+├── 02_Ділянка
+├── 03_Генеральний_план
+├── 04_Будинок
+├── 05_Приміщення
+├── 06_Конструкції
+├── 07_Дах
+├── 08_Вікна_двері
+├── 09_Вода
+├── 10_Каналізація
+├── 11_Опалення
+├── 12_Вентиляція
+├── 13_Електрика
+├── 14_Освітлення
+├── 15_Енергія
+├── 16_Безпека
+├── 17_Ландшафт
+├── 18_Рослини
+├── 19_Екологія
+├── 20_Мікроклімат
+├── 21_Економіка
+├── 22_Технічний_стан
+├── 23_Фотографії
+├── 24_Креслення
+├── 25_Розрахунки
+├── 26_Діаграми
+├── 27_3D_модель
+├── 28_Проблеми
+├── 29_Рішення
+├── 30_Будинок_майбутнього
+└── 31_Висновки
+</code></pre>
+<hr>
+<h2 id="83-кінцевий-продукт-учнівського-проєкту"><a class="header" href="#83-кінцевий-продукт-учнівського-проєкту">83. Кінцевий продукт учнівського проєкту</a></h2>
+<p>У фіналі команда може здати пакет із:</p>
+<ul>
+<li><strong>1 цифрового паспорта у PDF;</strong></li>
+<li><strong>1 плану ділянки;</strong></li>
+<li><strong>1–4 планів поверхів;</strong></li>
+<li><strong>4 фасадів;</strong></li>
+<li><strong>1 розрізу;</strong></li>
+<li><strong>1 карти комунікацій;</strong></li>
+<li><strong>1 екологічного паспорта;</strong></li>
+<li><strong>1 енергетичного паспорта;</strong></li>
+<li><strong>1 фотокаталогу;</strong></li>
+<li><strong>1 набору розрахунків;</strong></li>
+<li><strong>1 набору діаграм;</strong></li>
+<li><strong>1 3D-моделі;</strong></li>
+<li><strong>1 проєкту модернізації;</strong></li>
+<li><strong>1 презентації результатів.</strong></li>
+</ul>
+<hr>
+<h2 id="84-важливий-принцип-для-шкільного-дослідження"><a class="header" href="#84-важливий-принцип-для-шкільного-дослідження">84. Важливий принцип для шкільного дослідження</a></h2>
+<p>Кожне твердження в паспорті бажано позначати одним із трьох статусів:</p>
+<h4 id="факт"><a class="header" href="#факт">ФАКТ</a></h4>
+<p>Безпосередньо виміряно або підтверджено документом.</p>
+<h4 id="розрахунок"><a class="header" href="#розрахунок">РОЗРАХУНОК</a></h4>
+<p>Отримано математичним розрахунком на основі відомих даних.</p>
+<h4 id="припущення"><a class="header" href="#припущення">ПРИПУЩЕННЯ</a></h4>
+<p>Орієнтовна оцінка, яку ще потрібно перевірити.</p>
+<p>Це привчає учнів не просто <strong>збирати інформацію</strong>, а працювати як дослідники: спостерігати → вимірювати → перевіряти → обчислювати → робити висновки.</p>
+<hr>
+<h2 id="85-загальна-формула-проєкту"><a class="header" href="#85-загальна-формула-проєкту">85. Загальна формула проєкту</a></h2>
+<pre><code class="language-text">ДІЛЯНКА
+   +
+БУДИНОК
+   +
+ЛЮДИ
+   +
+ПРИРОДА
+   +
+РЕСУРСИ
+   +
+ІНЖЕНЕРНІ СИСТЕМИ
+   +
+ЕКОНОМІКА
+   +
+БЕЗПЕКА
+   +
+ЕКОЛОГІЯ
+   +
+ДИЗАЙН
+   +
+МАТЕМАТИЧНІ РОЗРАХУНКИ
+   +
+ЦИФРОВА МОДЕЛЬ
+   =
+КОМПЛЕКСНИЙ НАВЧАЛЬНИЙ ПРОЄКТ
+</code></pre>
+<h3 id="підсумок"><a class="header" href="#підсумок">Підсумок</a></h3>
+<p><strong>Портфоліо-паспорт приватного будинку з ділянкою</strong> може стати фактично навчальною моделлю реального об’єкта, де учні 5–9 класів послідовно досліджують <strong>архітектуру, геометрію, фізику, біологію, географію, екологію, технології, економіку та цифрове моделювання</strong>.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="opys_kursu.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
+                            </a>
+
+                            <a rel="next prefetch" href="korysni_materialy.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="opys_kursu.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
+                    </a>
+
+                    <a rel="next prefetch" href="korysni_materialy.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
+                    </a>
+            </nav>
+
+        </div>
+
+        <template id=fa-eye><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z"/></svg></span></template>
+        <template id=fa-eye-slash><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7L525.6 386.7c39.6-40.6 66.4-86.1 79.9-118.4c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C465.5 68.8 400.8 32 320 32c-68.2 0-125 26.3-169.3 60.8L38.8 5.1zM223.1 149.5C248.6 126.2 282.7 112 320 112c79.5 0 144 64.5 144 144c0 24.9-6.3 48.3-17.4 68.7L408 294.5c5.2-11.8 8-24.8 8-38.5c0-53-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6c0 10.2-2.4 19.8-6.6 28.3l-90.3-70.8zm223.1 298L373 389.9c-16.4 6.5-34.3 10.1-53 10.1c-79.5 0-144-64.5-144-144c0-6.9 .5-13.6 1.4-20.2L83.1 161.5C60.3 191.2 44 220.8 34.5 243.7c-3.3 7.9-3.3 16.7 0 24.6c14.9 35.7 46.2 87.7 93 131.1C174.5 443.2 239.2 480 320 480c47.8 0 89.9-12.9 126.2-32.5z"/></svg></span></template>
+        <template id=fa-copy><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M502.6 70.63l-61.25-61.25C435.4 3.371 427.2 0 418.7 0H255.1c-35.35 0-64 28.66-64 64l.0195 256C192 355.4 220.7 384 256 384h192c35.2 0 64-28.8 64-64V93.25C512 84.77 508.6 76.63 502.6 70.63zM464 320c0 8.836-7.164 16-16 16H255.1c-8.838 0-16-7.164-16-16L239.1 64.13c0-8.836 7.164-16 16-16h128L384 96c0 17.67 14.33 32 32 32h47.1V320zM272 448c0 8.836-7.164 16-16 16H63.1c-8.838 0-16-7.164-16-16L47.98 192.1c0-8.836 7.164-16 16-16H160V128H63.99c-35.35 0-64 28.65-64 64l.0098 256C.002 483.3 28.66 512 64 512h192c35.2 0 64-28.8 64-64v-32h-47.1L272 448z"/></svg></span></template>
+        <template id=fa-play><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></span></template>
+        <template id=fa-clock-rotate-left><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9V168c0 13.3 10.7 24 24 24H134.1c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24V256c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65V152c0-13.3-10.7-24-24-24z"/></svg></span></template>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr-ef4e11c1.min.js"></script>
+        <script src="mark-09e88c2c.min.js"></script>
+        <script src="searcher-09f2665d.js"></script>
+
+        <script src="clipboard-1626706a.min.js"></script>
+        <script src="highlight-abc7f01d.js"></script>
+        <script src="book-609e4cb8.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+
+    </div>
+    </body>
+</html>
