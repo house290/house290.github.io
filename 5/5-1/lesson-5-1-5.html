@@ -1,0 +1,278 @@
+<!DOCTYPE HTML>
+<html lang="uk" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>5-1-5 — Форма ділянки та її можливості - STEM-курс «Власний будинок»</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../../favicon-de23e50b.svg">
+        <link rel="shortcut icon" href="../../favicon-8114d1fc.png">
+        <link rel="stylesheet" href="../../css/variables-8adf115d.css">
+        <link rel="stylesheet" href="../../css/general-e96d0476.css">
+        <link rel="stylesheet" href="../../css/chrome-d279d366.css">
+        <link rel="stylesheet" href="../../css/print-9e4910d8.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../fonts/fonts-9644e21d.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="mdbook-highlight-css" href="../../highlight-493f70e1.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../../tomorrow-night-4c0ae647.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../../ayu-highlight-3fdfc3ac.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../../";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+            window.path_to_searchindex_js = "../../searchindex-77e8efd8.js";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../../toc-c1e1addd.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="mdbook-body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="mdbook-sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("mdbook-sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+                sidebar_toggle.checked = false;
+            }
+            if (sidebar === 'visible') {
+                sidebar_toggle.checked = true;
+            } else {
+                html.classList.remove('sidebar-visible');
+            }
+        </script>
+
+        <nav id="mdbook-sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../../toc.html"></iframe>
+            </noscript>
+            <div id="mdbook-sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="mdbook-page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="mdbook-menu-bar-hover-placeholder"></div>
+                <div id="mdbook-menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="mdbook-sidebar-toggle" class="icon-button" for="mdbook-sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="mdbook-sidebar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg></span>
+                        </label>
+                        <button id="mdbook-theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="mdbook-theme-list">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M371.3 367.1c27.3-3.9 51.9-19.4 67.2-42.9L600.2 74.1c12.6-19.5 9.4-45.3-7.6-61.2S549.7-4.4 531.1 9.6L294.4 187.2c-24 18-38.2 46.1-38.4 76.1L371.3 367.1zm-19.6 25.4l-116-104.4C175.9 290.3 128 339.6 128 400c0 3.9 .2 7.8 .6 11.6c1.8 17.5-10.2 36.4-27.8 36.4H96c-17.7 0-32 14.3-32 32s14.3 32 32 32H240c61.9 0 112-50.1 112-112c0-2.5-.1-5-.2-7.5z"/></svg></span>
+                        </button>
+                        <ul id="mdbook-theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-ayu">Ayu</button></li>
+                        </ul>
+                        <button id="mdbook-search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="mdbook-searchbar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg></span>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">STEM-курс «Власний будинок»</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <span class=fa-svg id="print-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M128 0C92.7 0 64 28.7 64 64v96h64V64H354.7L384 93.3V160h64V93.3c0-17-6.7-33.3-18.7-45.3L400 18.7C388 6.7 371.7 0 354.7 0H128zM384 352v32 64H128V384 368 352H384zm64 32h32c17.7 0 32-14.3 32-32V256c0-35.3-28.7-64-64-64H64c-35.3 0-64 28.7-64 64v96c0 17.7 14.3 32 32 32H64v64c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V384zm-16-88c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z"/></svg></span>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="mdbook-search-wrapper" class="hidden">
+                    <form id="mdbook-searchbar-outer" class="searchbar-outer">
+                        <div class="search-wrapper">
+                            <input type="search" id="mdbook-searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="mdbook-searchresults-outer" aria-describedby="searchresults-header">
+                            <div class="spinner-wrapper">
+                                <span class=fa-svg id="fa-spin"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M304 48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zm0 416c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM48 304c26.5 0 48-21.5 48-48s-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48zm464-48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM142.9 437c18.7-18.7 18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zm0-294.2c18.7-18.7 18.7-49.1 0-67.9S93.7 56.2 75 75s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zM369.1 437c18.7 18.7 49.1 18.7 67.9 0s18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9z"/></svg></span>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="mdbook-searchresults-outer" class="searchresults-outer hidden">
+                        <div id="mdbook-searchresults-header" class="searchresults-header"></div>
+                        <ul id="mdbook-searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('mdbook-sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('mdbook-sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#mdbook-sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="mdbook-content" class="content">
+                    <main>
+                        <h1 id="5-1-5--форма-ділянки-та-її-можливості"><a class="header" href="#5-1-5--форма-ділянки-та-її-можливості">5-1-5 — Форма ділянки та її можливості</a></h1>
+<p><strong>Підтеми:</strong> Проста і складна форма; що можна розмістити на ділянці.</p>
+<p><strong>Навчальна мета:</strong> Порівнювати прості й складні контури та оцінювати, як форма ділянки впливає на розміщення будинку й двору.</p>
+<p><strong>Ключові поняття:</strong> проста форма; складна форма; простір для руху; обмеження; варіант планування.</p>
+<h2 id="пояснення-теми"><a class="header" href="#пояснення-теми">Пояснення теми</a></h2>
+<p>Форма ділянки визначає, як її площа доступна для використання. Прямокутник легко поділити на умовні частини, а ділянка з виступами або вузькими проходами потребує уважнішого планування. Важливо дивитися не лише на зовнішній контур, а й на ширину корисних частин. Довгий вузький «рукав» може бути придатний для доріжки або зеленого рядка, але непридатний для великого об’єкта. Форма сама по собі не робить ділянку доброю чи поганою — вона створює певний набір можливостей і обмежень.</p>
+<p>Коли плануєш простір, виділяй місце для основних потреб: будинку, входу, пересування людей, відпочинку та, за потреби, господарських справ. Залишай між об’єктами вільні проміжки. На малюнку маленькі символи можуть здаватися віддаленими, але в реальності проходу може не вистачити. Поки що можна використовувати картонні прямокутники або паперові вирізки, які зображують об’єкти. Пересуваючи їх, легше побачити, де виникають конфлікти.</p>
+<p>Не обов’язково займати весь простір. Вільна частина ділянки має цінність: там можна пройти, погратися, посадити рослини або залишити місце для майбутніх змін. Проєктування — не змагання, у якому треба розмістити якомога більше речей. Краще менше об’єктів, між якими зручно рухатися, ніж щільний план без ясної логіки. Це особливо важливо для дітей, людей старшого віку та тих, кому складно долати сходинки або вузькі проходи.</p>
+<p>Для порівняння форм використовуй однаковий набір умов. Наприклад, на обох ділянках потрібно розташувати будинок, вхід, місце відпочинку та сад. Зміни тільки форму контуру, а решту умов залиш однаковими. Тоді висновок буде чеснішим: ти побачиш, що саме спричинило відмінності. Якщо одночасно змінювати форму, розмір і кількість об’єктів, буде важко зрозуміти причину кращого результату.</p>
+<p>У складної форми може бути й перевага: виступ контуру іноді дає місце для затишного куточка, а широка частина — для будинку. Та сама форма може вимагати довшої доріжки або ускладнювати доступ. Тому оцінюй варіант за критеріями: чи поміщаються потрібні об’єкти, чи є безпечні проходи, чи зручний вхід, чи залишається вільний простір. Це перше знайомство з багатокритеріальним вибором.</p>
+<h3 id="1-проста-й-складна-форма-у-чому-різниця"><a class="header" href="#1-проста-й-складна-форма-у-чому-різниця">1. Проста й складна форма: у чому різниця</a></h3>
+<p>Проста форма має контур, який легко описати невеликою кількістю відрізків, наприклад прямокутник або квадрат. Складна форма може мати багато кутів, виступів, вузьких частин або зміну напрямку межі. Простота контуру полегшує креслення та розрахунки, але сама собою не визначає зручність використання. Прямокутна ділянка може бути надто вузькою для бажаних зон, а складна — містити затишне місце для саду чи природний куточок. Порівнюй форму не лише на око, а й за тим, що реально треба розмістити: будинок, вхід, доріжки, місця відпочинку, рослини та господарські елементи. Форма задає можливості й обмеження, але результат залежить також від розмірів та інших умов.</p>
+<h3 id="2-внутрішні-кути-виступи-й-вузькі-частини"><a class="header" href="#2-внутрішні-кути-виступи-й-вузькі-частини">2. Внутрішні кути, виступи й вузькі частини</a></h3>
+<p>Виступ або гострий кут може створювати невеликий простір, який важко використати для великої споруди, але він може підходити для насаджень або декоративного елементу. Вузька частина ділянки інколи працює як прохід, проте її ширини може бути недостатньо для одночасного руху людей та обслуговування. Заглиблення контуру може утворити захищене подвір’я, але також ускладнити доступ або відведення води. Щоб не робити поспішних висновків, кожну особливість пов’яжи з конкретною потребою. Не потрібно вміщувати об’єкт у кожен кут лише для того, щоб використати весь простір. Іноді вільна площа — це корисне рішення, якщо вона допомагає зберегти прохід, освітлення або доступ до інших частин території.</p>
+<h3 id="3-простір-має-не-тільки-вмістити-а-й-працювати"><a class="header" href="#3-простір-має-не-тільки-вмістити-а-й-працювати">3. Простір має не тільки вмістити, а й працювати</a></h3>
+<p>На плані будинок може поміститися в межах ділянки, але це не означає, що план зручний. Після розміщення будівлі люди мають потрапляти до входу, обходити будинок, користуватися двором і мати доступ до необхідних зон. Між окремими об’єктами потрібен простір для руху та обслуговування. Тому при розгляді форми думай про «негативний простір» — вільну частину між будівлями, парканом і маршрутами. Це не марно втрачена земля. Вільний простір потрібен для проходу, безпеки, світла, провітрювання та гнучкого користування територією. У реальному проєкті розміри проходів та відстані встановлюють з урахуванням призначення й чинних вимог, а в навчальній моделі використовують задані умови.</p>
+<h3 id="4-зони-різної-форми"><a class="header" href="#4-зони-різної-форми">4. Зони різної форми</a></h3>
+<p>Форма ділянки впливає на те, де зручно розмістити різні види діяльності. Відносно регулярна частина може підійти для будинку, а кутова або нерівна — для рослин чи місця відпочинку, якщо це відповідає освітленню й умовам ґрунту. Довга вузька ділянка може вимагати продуманої послідовності зон, щоб маршрут від входу до будинку не проходив через місце, де люди відпочивають. Якщо ділянка має кілька широких частин, можна подумати про відокремлення господарської та тихої житлової зон. Однак форма не замінює перевірки ґрунту, води, меж і доступу. Не роби висновок, що певна частина придатна для будівництва лише через те, що вона має зручний прямокутний вигляд.</p>
+<h3 id="5-варіанти-використання-складної-геометрії"><a class="header" href="#5-варіанти-використання-складної-геометрії">5. Варіанти використання складної геометрії</a></h3>
+<p>Якщо контур складний, спробуй уявити кілька способів організації однакових потреб. В одному варіанті будинок може стояти ближче до широкої частини, у другому — трохи далі, а вузька смуга залишатиметься для проходу чи зелених насаджень. Порівнювати варто не за тим, який ескіз виглядає симетричніше, а за тим, чи не перекриваються маршрути, чи зберігається доступ і чи можна використати основні частини без зайвих перешкод. Важливо залишати місце для невідомих умов: якщо дані про рельєф або мережі ще не визначені, поки не закріплюй у цьому місці важливий елемент. Добрий попередній план має допускати виправлення після отримання нових відомостей.</p>
+<h3 id="6-чому-вся-площа-використана--не-завжди-добре"><a class="header" href="#6-чому-вся-площа-використана--не-завжди-добре">6. Чому «вся площа використана» — не завжди добре</a></h3>
+<p>На малюнку може здаватися ефективним розмістити споруди й доріжки на кожному вільному клаптику. Але надмірне заповнення території зменшує гнучкість, може ускладнити рух і залишити замало місця для зелені, води та побутових потреб. Відкриті поверхні також відрізняються: газон, ґрунт, бетон і плитка по-різному пропускають воду та нагріваються на сонці. Отже, при аналізі форми треба враховувати не тільки геометрію, а й призначення поверхонь. Частина землі може бути навмисно залишена незабудованою. Висновок має спиратися на потреби мешканців і умови ділянки, а не на прагнення заповнити простір заради самого заповнення.</p>
+<h3 id="7-перехід-від-контуру-до-планування"><a class="header" href="#7-перехід-від-контуру-до-планування">7. Перехід від контуру до планування</a></h3>
+<p>У 5 класі корисно спершу назвати форму, помітити вузькі частини та великі відкриті ділянки. Далі вимірювання допоможуть перевірити реальні розміри, а масштаб у 6 класі дозволить порівнювати варіанти на одному аркуші. Пізніше до геометрії додадуться ґрунт, рельєф, вода, маршрути та обмеження. Через це перша оцінка можливостей ділянки залишається попередньою. Не треба одразу вирішувати, куди ставити всі споруди: важливіше зрозуміти, які зони взагалі можливі, а які частини потребують додаткової інформації. Такий порядок зменшує ризик того, що пізніше доведеться повністю перемальовувати план через не враховану вузьку смугу або незручний доступ.</p>
+<h3 id="8-збереження-простору-для-майбутніх-змін"><a class="header" href="#8-збереження-простору-для-майбутніх-змін">8. Збереження простору для майбутніх змін</a></h3>
+<p>На початку проєкту не всі потреби можуть бути відомі. Якщо розмістити всі елементи дуже щільно, пізніше буде важко додати маршрут, дерево або господарську функцію без повного перероблення схеми. Вільний простір можна вважати запасом гнучкості, а не невикористаною землею. Особливо корисно зберігати можливість змінити призначення невеликої частини двору, якщо потреби мешканців зміняться. Водночас не можна довільно резервувати місце, потрібне для обов’язкового проходу чи технічного доступу. У навчальному завданні варто пояснити, які частини плану є сталими, а які можуть змінюватися після отримання нової інформації. Так планування стає процесом розвитку, а не одноразовим розташуванням фігур.</p>
+<h3 id="9-однакова-форма-не-означає-однакову-придатність"><a class="header" href="#9-однакова-форма-не-означає-однакову-придатність">9. Однакова форма не означає однакову придатність</a></h3>
+<p>Дві ділянки можуть мати однаковий прямокутний контур, але відрізнятися шириною, загальною площею, рельєфом, доступом і оточенням. Навіть ділянки зі схожими формами можуть мати різні можливості для зонування, якщо одна має вузький в’їзд, а друга — широкий. Тому форма — лише одна характеристика. Порівнюючи території, уникай висновку «ця краща, бо рівніші кути». Краще назвати конкретну перевагу й умови, за яких вона має значення. Ця думка підготує до тем 6 класу, коли форма розглядатиметься разом із масштабом і площею, а далі — разом з природними й правовими обмеженнями.</p>
+<h3 id="10-потреби-мешканців-впливають-на-використання-форми"><a class="header" href="#10-потреби-мешканців-впливають-на-використання-форми">10. Потреби мешканців впливають на використання форми</a></h3>
+<p>Універсального способу використати ділянку не існує. Родині з маленькими дітьми може бути потрібен оглядовий простір для гри, комусь іншому — зручний город, місце для велосипедів або тихий куточок для читання. Тому перед пропозицією розміщення корисно визначити, які дії мають відбуватися на ділянці та які з них потребують тиші, сонця, тіні або короткого маршруту. Вузька ділянка може ускладнювати поділ на зони, однак це можна компенсувати продуманим розташуванням. Важливо не переносити власні вподобання на всіх: хороший план спочатку відповідає на потреби мешканців.</p>
+<h3 id="11-порівняння-ескізів-без-поспішного-вибору"><a class="header" href="#11-порівняння-ескізів-без-поспішного-вибору">11. Порівняння ескізів без поспішного вибору</a></h3>
+<p>Коли маєш кілька варіантів, спочатку перевір, чи кожен із них задовольняє однакові основні потреби. Потім відзнач відмінності: де довший шлях до входу, де більше затінення, де складніше дістатися до господарської зони або зберегти відкритий простір. Не треба відразу надавати кожному варіанту складні числові оцінки. Для 5 класу достатньо порівняти два-три зрозумілі критерії й пояснити вибір кількома реченнями. Якщо бракує інформації, зафіксуй, що рішення попереднє. Пізніше результати вимірювань і спостережень можуть змінити первісну думку — це нормальна частина проєктування.</p>
+<h2 id="розглянь-приклад"><a class="header" href="#розглянь-приклад">Розглянь приклад</a></h2>
+<p>Для Г-подібної ділянки можна розмістити будинок у широкій частині, а вужчий відросток використати як зелений коридор або доріжку. Однак якщо вузьке місце є єдиним входом, його потрібно залишити вільним. Учень створює два планувальні варіанти й виявляє, що другий, хоча й має більше декоративних об’єктів, гірший через перекритий прохід. Отже, кількість елементів не дорівнює якості плану.</p>
+<h2 id="типові-помилки-й-поради"><a class="header" href="#типові-помилки-й-поради">Типові помилки й поради</a></h2>
+<p>Не розміщуй будинок просто тому, що він красиво виглядає в центрі; не забувай про підхід; не змішуй «більше об’єктів» із «краще планування»; не порівнюй дві форми, якщо для них задано різну кількість вимог. Паперовий макет — це попередня перевірка, а не підтвердження технічної можливості реального будівництва.</p>
+<h2 id="запитання-для-самоперевірки"><a class="header" href="#запитання-для-самоперевірки">Запитання для самоперевірки</a></h2>
+<ol>
+<li>Чому однакова площа не означає однакові можливості?</li>
+<li>Які чотири критерії можна застосувати до плану?</li>
+<li>Чому потрібно залишати вільний простір?</li>
+<li>Як чесно порівняти прямокутну та складну ділянки?</li>
+<li>Що може бути перевагою складної форми?</li>
+</ol>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../5/5-1/lesson-5-1-4.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
+                            </a>
+
+                            <a rel="next prefetch" href="../../5/5-1/lesson-5-1-6.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../5/5-1/lesson-5-1-4.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
+                    </a>
+
+                    <a rel="next prefetch" href="../../5/5-1/lesson-5-1-6.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
+                    </a>
+            </nav>
+
+        </div>
+
+        <template id=fa-eye><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z"/></svg></span></template>
+        <template id=fa-eye-slash><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7L525.6 386.7c39.6-40.6 66.4-86.1 79.9-118.4c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C465.5 68.8 400.8 32 320 32c-68.2 0-125 26.3-169.3 60.8L38.8 5.1zM223.1 149.5C248.6 126.2 282.7 112 320 112c79.5 0 144 64.5 144 144c0 24.9-6.3 48.3-17.4 68.7L408 294.5c5.2-11.8 8-24.8 8-38.5c0-53-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6c0 10.2-2.4 19.8-6.6 28.3l-90.3-70.8zm223.1 298L373 389.9c-16.4 6.5-34.3 10.1-53 10.1c-79.5 0-144-64.5-144-144c0-6.9 .5-13.6 1.4-20.2L83.1 161.5C60.3 191.2 44 220.8 34.5 243.7c-3.3 7.9-3.3 16.7 0 24.6c14.9 35.7 46.2 87.7 93 131.1C174.5 443.2 239.2 480 320 480c47.8 0 89.9-12.9 126.2-32.5z"/></svg></span></template>
+        <template id=fa-copy><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M502.6 70.63l-61.25-61.25C435.4 3.371 427.2 0 418.7 0H255.1c-35.35 0-64 28.66-64 64l.0195 256C192 355.4 220.7 384 256 384h192c35.2 0 64-28.8 64-64V93.25C512 84.77 508.6 76.63 502.6 70.63zM464 320c0 8.836-7.164 16-16 16H255.1c-8.838 0-16-7.164-16-16L239.1 64.13c0-8.836 7.164-16 16-16h128L384 96c0 17.67 14.33 32 32 32h47.1V320zM272 448c0 8.836-7.164 16-16 16H63.1c-8.838 0-16-7.164-16-16L47.98 192.1c0-8.836 7.164-16 16-16H160V128H63.99c-35.35 0-64 28.65-64 64l.0098 256C.002 483.3 28.66 512 64 512h192c35.2 0 64-28.8 64-64v-32h-47.1L272 448z"/></svg></span></template>
+        <template id=fa-play><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></span></template>
+        <template id=fa-clock-rotate-left><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9V168c0 13.3 10.7 24 24 24H134.1c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24V256c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65V152c0-13.3-10.7-24-24-24z"/></svg></span></template>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../../elasticlunr-ef4e11c1.min.js"></script>
+        <script src="../../mark-09e88c2c.min.js"></script>
+        <script src="../../searcher-09f2665d.js"></script>
+
+        <script src="../../clipboard-1626706a.min.js"></script>
+        <script src="../../highlight-abc7f01d.js"></script>
+        <script src="../../book-609e4cb8.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+
+    </div>
+    </body>
+</html>
