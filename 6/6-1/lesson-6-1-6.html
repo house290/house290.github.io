@@ -1,0 +1,377 @@
+<!DOCTYPE HTML>
+<html lang="uk" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>6-1-6 — Розміщення об’єктів на ділянці - STEM-курс «Власний будинок»</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../../favicon-de23e50b.svg">
+        <link rel="shortcut icon" href="../../favicon-8114d1fc.png">
+        <link rel="stylesheet" href="../../css/variables-8adf115d.css">
+        <link rel="stylesheet" href="../../css/general-e96d0476.css">
+        <link rel="stylesheet" href="../../css/chrome-d279d366.css">
+        <link rel="stylesheet" href="../../css/print-9e4910d8.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../fonts/fonts-9644e21d.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="mdbook-highlight-css" href="../../highlight-493f70e1.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../../tomorrow-night-4c0ae647.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../../ayu-highlight-3fdfc3ac.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../../";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+            window.path_to_searchindex_js = "../../searchindex-0f1fee5c.js";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../../toc-c1e1addd.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="mdbook-body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="mdbook-sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("mdbook-sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+                sidebar_toggle.checked = false;
+            }
+            if (sidebar === 'visible') {
+                sidebar_toggle.checked = true;
+            } else {
+                html.classList.remove('sidebar-visible');
+            }
+        </script>
+
+        <nav id="mdbook-sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../../toc.html"></iframe>
+            </noscript>
+            <div id="mdbook-sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="mdbook-page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="mdbook-menu-bar-hover-placeholder"></div>
+                <div id="mdbook-menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="mdbook-sidebar-toggle" class="icon-button" for="mdbook-sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="mdbook-sidebar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg></span>
+                        </label>
+                        <button id="mdbook-theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="mdbook-theme-list">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M371.3 367.1c27.3-3.9 51.9-19.4 67.2-42.9L600.2 74.1c12.6-19.5 9.4-45.3-7.6-61.2S549.7-4.4 531.1 9.6L294.4 187.2c-24 18-38.2 46.1-38.4 76.1L371.3 367.1zm-19.6 25.4l-116-104.4C175.9 290.3 128 339.6 128 400c0 3.9 .2 7.8 .6 11.6c1.8 17.5-10.2 36.4-27.8 36.4H96c-17.7 0-32 14.3-32 32s14.3 32 32 32H240c61.9 0 112-50.1 112-112c0-2.5-.1-5-.2-7.5z"/></svg></span>
+                        </button>
+                        <ul id="mdbook-theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-ayu">Ayu</button></li>
+                        </ul>
+                        <button id="mdbook-search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="mdbook-searchbar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg></span>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">STEM-курс «Власний будинок»</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <span class=fa-svg id="print-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M128 0C92.7 0 64 28.7 64 64v96h64V64H354.7L384 93.3V160h64V93.3c0-17-6.7-33.3-18.7-45.3L400 18.7C388 6.7 371.7 0 354.7 0H128zM384 352v32 64H128V384 368 352H384zm64 32h32c17.7 0 32-14.3 32-32V256c0-35.3-28.7-64-64-64H64c-35.3 0-64 28.7-64 64v96c0 17.7 14.3 32 32 32H64v64c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V384zm-16-88c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z"/></svg></span>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="mdbook-search-wrapper" class="hidden">
+                    <form id="mdbook-searchbar-outer" class="searchbar-outer">
+                        <div class="search-wrapper">
+                            <input type="search" id="mdbook-searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="mdbook-searchresults-outer" aria-describedby="searchresults-header">
+                            <div class="spinner-wrapper">
+                                <span class=fa-svg id="fa-spin"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M304 48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zm0 416c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM48 304c26.5 0 48-21.5 48-48s-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48zm464-48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM142.9 437c18.7-18.7 18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zm0-294.2c18.7-18.7 18.7-49.1 0-67.9S93.7 56.2 75 75s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zM369.1 437c18.7 18.7 49.1 18.7 67.9 0s18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9z"/></svg></span>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="mdbook-searchresults-outer" class="searchresults-outer hidden">
+                        <div id="mdbook-searchresults-header" class="searchresults-header"></div>
+                        <ul id="mdbook-searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('mdbook-sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('mdbook-sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#mdbook-sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="mdbook-content" class="content">
+                    <main>
+                        <h1 id="6-1-6--розміщення-обєктів-на-ділянці"><a class="header" href="#6-1-6--розміщення-обєктів-на-ділянці">6-1-6 — Розміщення об’єктів на ділянці</a></h1>
+<p><strong>У цьому уроці ти:</strong></p>
+<ul>
+<li>навчишся визначати взаємне розташування об’єктів;</li>
+<li>дізнаєшся, чому відстані між об’єктами так важливі;</li>
+<li>перевірятимеш свої рішення за таблицею відстаней;</li>
+<li>розставиш на плані всі об’єкти свого проєкту.</li>
+</ul>
+<h2 id="-1-від-зон-до-конкретних-обєктів"><a class="header" href="#-1-від-зон-до-конкретних-обєктів">📖 1. Від зон до конкретних об’єктів</a></h2>
+<p>Минулого уроку ти поділив ділянку на зони: як на мапі «країн». Тепер наступний крок: у кожній зоні потрібно розмістити <strong>конкретні об’єкти</strong> — будинок, гараж, сарай, колодязь, теплицю, альтанку. І тут важливі два запитання:</p>
+<ol>
+<li><strong>З ким поруч</strong> стоїть об’єкт (взаємне розташування)?</li>
+<li><strong>На якій відстані</strong> він від інших і від меж (відстані)?</li>
+</ol>
+<p>Якщо відповісти правильно, на ділянці буде зручно, безпечно й красиво. Неправильні рішення потім важко виправити.</p>
+<h2 id="-2-взаємне-розташування-обєктів"><a class="header" href="#-2-взаємне-розташування-обєктів">📖 2. Взаємне розташування об’єктів</a></h2>
+<p><strong>Взаємне розташування</strong> показує, де об’єкт розташований відносно інших: «поруч», «на північ від», «навпроти», «за будинком». Проєктувальник описує його точно, використовуючи <strong>сторони світу</strong> й <strong>відстані</strong>: «Гараж стоїть за 5 м на схід від будинку».</p>
+<p>Ось кілька правил, які виникають із логіки й життєвого досвіду:</p>
+<p><strong>Гараж або парковка</strong> — ближче до в’їзду, щоб автомобіль не їздив по всій ділянці. Не варто ставити їх під вікнами спальні, бо двигун шумить.</p>
+<p><strong>Колодязь або свердловина</strong> мають бути <strong>вище за схилом</strong> від усього, що може забруднити воду (компост, септик, місце для сміття). Адже вода стікає вниз і може потягти за собою забруднення.</p>
+<p><strong>Компостна яма</strong> — подалі від вікон і колодязя, у напівтіні, зручна для переносу відходів з городу.</p>
+<p><strong>Теплиця</strong> — на відкритому сонячному місці, не під деревами й не в затіненій стороні будинку.</p>
+<p><strong>Місце для вогню (мангал, багаття)</strong> — подалі від будинку, дерев, сараїв і сухої трави, на майданчику з негорючим покриттям. Зважай на вітер: дим не повинен іти у вікна.</p>
+<p><strong>Дерева.</strong> Високі дерева розташовують так, щоб вони не затінювали вікна й не загрожували будівлям. Влітку тінь від дерева коротка, а взимку у кілька разів довша, тому будинок може опинитися в тіні саме тоді, коли найбільше потрібне сонце.</p>
+<p><strong>Дитячий майданчик</strong> — там, де його видно з вікон, подалі від дороги, брами, води й господарської зони.</p>
+<p><strong>Сарай і господарські будівлі</strong> — не посеред ділянки, а з краю, не затуляючи гарних видів і сонячних місць.</p>
+<h2 id="-3-відстані-між-обєктами"><a class="header" href="#-3-відстані-між-обєктами">📖 3. Відстані між об’єктами</a></h2>
+<p>Відстань — це не просто «трохи далі». Її обирають свідомо, бо вона відповідає за три речі:</p>
+<ul>
+<li><strong>Безпека</strong> (пожежа, обвалення дерева, забруднення води);</li>
+<li><strong>Зручність</strong> (проходи, проїзд, відстані до користування);</li>
+<li><strong>Комфорт</strong> (світло, приватність, тиша).</li>
+</ul>
+<h3 id="навчальна-таблиця-відстаней"><a class="header" href="#навчальна-таблиця-відстаней">Навчальна таблиця відстаней</a></h3>
+<blockquote>
+<p><strong>Увага.</strong> Це <strong>навчальні домовленості</strong> нашого курсу, зручні для проєктування в школі. Справжні державні норми будівництва набагато докладніші, ти вивчатимеш їх пізніше (а у 9 класі зведеш остаточні вимоги до свого проєкту). Деякі значення з 5 класу повторюються, і це нормально.</p>
+</blockquote>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Між чим і чим</th><th>Відстань</th></tr>
+</thead>
+<tbody>
+<tr><td>Будинок — межа ділянки</td><td>не менше 3 м</td></tr>
+<tr><td>Будинок — вулиця (фасадна межа)</td><td>не менше 5 м</td></tr>
+<tr><td>Сарай, гараж — межа ділянки</td><td>не менше 1 м</td></tr>
+<tr><td>Будинок — сарай, гараж, інші будівлі</td><td>не менше 6 м (якщо вони не з’єднані з будинком)</td></tr>
+<tr><td>Будинок — місце для вогню (мангал, багаття)</td><td>не менше 5 м</td></tr>
+<tr><td>Колодязь — компост, септик, місце для сміття</td><td>не менше 20 м</td></tr>
+<tr><td>Будинок — високе дерево</td><td>не менше висоти дерева</td></tr>
+<tr><td>Будинок — край яру, крутого схилу</td><td>не менше 5 м</td></tr>
+<tr><td>Будинок — лінія електропередач</td><td>під лінією ставити не можна</td></tr>
+<tr><td>Ширина стежки</td><td>1 м</td></tr>
+<tr><td>Ширина проїзду для автомобіля</td><td>не менше 3 м</td></tr>
+<tr><td>Брама для автомобіля</td><td>близько 4 м</td></tr>
+</tbody>
+</table>
+</div>
+<p>Якщо якась вимога не виконується, треба змінити розташування або пояснити, чому ти порушив правило та чим це компенсується (в навчальному проєкті — лише у виняткових випадках).</p>
+<h2 id="-4-як-перевіряти-відстані-на-плані"><a class="header" href="#-4-як-перевіряти-відстані-на-плані">📖 4. Як перевіряти відстані на плані</a></h2>
+<p>На плані в масштабі відстані зменшені, але ми легко можемо їх <strong>перерахувати</strong>:</p>
+<blockquote>
+<p><strong>відстань на плані = реальна відстань : число з масштабу</strong></p>
+</blockquote>
+<p>У масштабі 1 : 200:</p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Реальна відстань</th><th>На плані</th></tr>
+</thead>
+<tbody>
+<tr><td>1 м</td><td>0,5 см</td></tr>
+<tr><td>3 м</td><td>1,5 см</td></tr>
+<tr><td>5 м</td><td>2,5 см</td></tr>
+<tr><td>6 м</td><td>3 см</td></tr>
+<tr><td>20 м</td><td>10 см</td></tr>
+</tbody>
+</table>
+</div>
+<h3 id="кола-безпеки"><a class="header" href="#кола-безпеки">«Кола безпеки»</a></h3>
+<p>Зручний спосіб перевірити відстань: накреслити циркулем навколо об’єкта <strong>коло</strong> з радіусом, що дорівнює потрібній відстані. Наприклад, навколо мангала в масштабі 1 : 200 коло радіусом 2,5 см (це 5 м). Якщо в коло потрапляє будинок чи дерево — треба перенести мангал.</p>
+<p>А щоб перевірити відстань від будинку до межі, виміряй лінійкою відрізок від найближчого кута будинку до межі та переведи в метри.</p>
+<h2 id="-5-шляхи-руху"><a class="header" href="#-5-шляхи-руху">📖 5. Шляхи руху</a></h2>
+<p>Об’єкти потрібно з’єднати <strong>стежками й проїздами</strong>. Правила простіші, ніж здається:</p>
+<ul>
+<li>шлях має бути <strong>коротким і прямим</strong>, там, де люди ходять щодня (брама — двері, двері — гараж, будинок — город);</li>
+<li>стежки не повинні <strong>перетинатися з проїздом техніки</strong> без потреби;</li>
+<li>для автомобіля треба передбачити місце, де він розвернеться, щоб виїхати з ділянки <strong>передом</strong>, а не заднім ходом на дорогу. Для цього потрібен вільний майданчик орієнтовно 6 м × 6 м;</li>
+<li>біля входу до будинку лишай вільний майданчик (ґанок).</li>
+</ul>
+<h2 id="-6-приклад-перевірка-розташування"><a class="header" href="#-6-приклад-перевірка-розташування">📖 6. Приклад: перевірка розташування</a></h2>
+<p>Ділянка 30 м × 20 м, вулиця — з західного боку. Школяр розмістив:</p>
+<ul>
+<li>будинок 10 м × 8 м: 4 м від вулиці, 3 м від північної межі;</li>
+<li>гараж 3 м × 6 м: на відстані 1,5 м від південної межі, 4 м від будинку;</li>
+<li>мангал: на відстані 3 м від будинку, під кроною яблуні;</li>
+<li>колодязь: за 12 м від компосту, вище за схилом.</li>
+</ul>
+<p><strong>Перевірка:</strong></p>
+<ol>
+<li>Будинок — вулиця: 4 м, а треба не менше 5 м. ✖ Порушення. Треба відсунути будинок щонайменше ще на 1 м.</li>
+<li>Будинок — північна межа 3 м: ✔.</li>
+<li>Гараж — межа 1,5 м (≥ 1 м): ✔. Гараж — будинок: 4 м, а треба не менше 6 м, якщо вони окремі. ✖ Порушення. Збільшити відстань до 6 м або з’єднати гараж із будинком.</li>
+<li>Мангал — будинок: 3 м (треба ≥ 5 м). ✖ Порушення, до того ж під деревом — небезпечно.</li>
+<li>Колодязь — компост: 12 м (треба ≥ 20 м). ✖ Порушення, але розташування вище за схилом правильне.</li>
+</ol>
+<p>Із шести перевірок виконано лише дві. Розстановку треба переглянути. Бачиш, як корисна ця перевірка? Без неї помилки лишилися б непоміченими.</p>
+<h2 id="-7-метод-день-із-життя"><a class="header" href="#-7-метод-день-із-життя">📖 7. Метод «День із життя»</a></h2>
+<p>Є простий спосіб перевірити, чи зручно розставлено об’єкти: уявити <strong>звичайний день</strong> мешканців і простежити їхні маршрути.</p>
+<ol>
+<li>Склади список щоденних справ: вийти з дому до автомобіля, винести сміття, піти в город по зелень, забрати пошту, погратися на майданчику, відпочити в альтанці.</li>
+<li>Для кожної справи проведи на плані лінію маршруту й <strong>виміряй її довжину</strong> лінійкою. Переведи в метри за масштабом.</li>
+<li>Познач, які маршрути трапляються <strong>щодня</strong>, а які — раз на тиждень чи сезон.</li>
+<li>Головне правило: <strong>що частіше — те ближче</strong>. Щоденні маршрути мають бути найкоротшими, а рідкісні (привезти дрова чи вивезти листя) можуть бути довшими.</li>
+</ol>
+<p><em>Приклад.</em> Від дверей до гаража на плані 1 : 200 виміряно 4 см. Реальна відстань: 4 · 200 = 800 см = <strong>8 м</strong>. Мешканці ходять туди двічі на день, тобто 16 м щодня. А до компосту — 7 см на плані, 14 м, але ходять туди раз на два дні. Усе виглядає розумно. Якби було навпаки, і до гаража доводилося б іти по 40 м, виникло б запитання: чи не варто його перенести?</p>
+<p>Метод «День із життя» нагадує інженерам про головне: будинок і ділянка створюються для людей, а не лише для красивого плану.</p>
+<h2 id="-спробуй-сам"><a class="header" href="#-спробуй-сам">🧪 Спробуй сам</a></h2>
+<ol>
+<li><strong>Знайди помилки.</strong> На ділянці стоїть будинок за 2 м від межі, поруч дрова складено під вікном спальні, а колодязь розміщено нижче компосту. Які правила порушено?</li>
+<li><strong>Перерахунки.</strong> У масштабі 1 : 500 потрібно намалювати відстань 15 м. Скільки це сантиметрів на плані?</li>
+<li><strong>Кола безпеки.</strong> Накресли в масштабі 1 : 200 мангал і радіус безпеки 5 м (скільки це в см?). Постав поруч будинок так, щоб він не потрапив у коло.</li>
+<li><strong>Гра «Розстав об’єкти».</strong> Візьми паперові моделі з 5 класу (у масштабі ділянки) і розстав їх на плані двома різними способами. Перевір кожний варіант за таблицею відстаней і порівняй кількість порушень.</li>
+</ol>
+<p><strong>Відповіді:</strong> 1) Порушено відстань до межі (треба 3 м), розміщення дров під вікном (не можна ставити поруч із вікном спальні) та розташування колодязя (має бути вище за схилом). 2) 15 м = 1500 см; 1500 : 500 = 3 см. 3) 5 м = 500 см; 500 : 200 = 2,5 см.</p>
+<h2 id="-ключові-слова"><a class="header" href="#-ключові-слова">🔑 Ключові слова</a></h2>
+<ul>
+<li><strong>Взаємне розташування</strong> — положення об’єктів відносно один одного.</li>
+<li><strong>Безпечна відстань</strong> — мінімально допустима відстань між об’єктами.</li>
+<li><strong>Коло безпеки</strong> — коло навколо об’єкта, в яке не можна ставити інші.</li>
+<li><strong>Шлях руху</strong> — стежка чи проїзд, що з’єднує об’єкти.</li>
+</ul>
+<h2 id="-перевір-себе"><a class="header" href="#-перевір-себе">✅ Перевір себе</a></h2>
+<ol>
+<li>Чому колодязь має бути вище за схилом від компосту?</li>
+<li>Де розташовують гараж і чому?</li>
+<li>На які три групи можна розділити причини, через які існують відстані між об’єктами?</li>
+<li>Як перевести реальну відстань 10 м у відстань на плані 1 : 200?</li>
+<li>Для чого потрібні «кола безпеки»?</li>
+<li>Які вимоги ставлять до шляхів руху на ділянці?</li>
+</ol>
+<h2 id="-коротко-запамятай"><a class="header" href="#-коротко-запамятай">📌 Коротко запам’ятай</a></h2>
+<p>Розміщення об’єктів — це відповідь на два питання: <strong>поруч із чим</strong> і <strong>на якій відстані</strong>. Відстані забезпечують безпеку, зручність і комфорт. Їх перевіряють за таблицею та кругами безпеки на плані в масштабі. Шляхи руху мають бути короткими й логічними, а помилки краще знайти на плані, ніж на місцевості.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../6/6-1/lesson-6-1-5.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
+                            </a>
+
+                            <a rel="next prefetch" href="../../6/6-1/lesson-6-1-7.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../6/6-1/lesson-6-1-5.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
+                    </a>
+
+                    <a rel="next prefetch" href="../../6/6-1/lesson-6-1-7.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
+                    </a>
+            </nav>
+
+        </div>
+
+        <template id=fa-eye><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z"/></svg></span></template>
+        <template id=fa-eye-slash><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7L525.6 386.7c39.6-40.6 66.4-86.1 79.9-118.4c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C465.5 68.8 400.8 32 320 32c-68.2 0-125 26.3-169.3 60.8L38.8 5.1zM223.1 149.5C248.6 126.2 282.7 112 320 112c79.5 0 144 64.5 144 144c0 24.9-6.3 48.3-17.4 68.7L408 294.5c5.2-11.8 8-24.8 8-38.5c0-53-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6c0 10.2-2.4 19.8-6.6 28.3l-90.3-70.8zm223.1 298L373 389.9c-16.4 6.5-34.3 10.1-53 10.1c-79.5 0-144-64.5-144-144c0-6.9 .5-13.6 1.4-20.2L83.1 161.5C60.3 191.2 44 220.8 34.5 243.7c-3.3 7.9-3.3 16.7 0 24.6c14.9 35.7 46.2 87.7 93 131.1C174.5 443.2 239.2 480 320 480c47.8 0 89.9-12.9 126.2-32.5z"/></svg></span></template>
+        <template id=fa-copy><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M502.6 70.63l-61.25-61.25C435.4 3.371 427.2 0 418.7 0H255.1c-35.35 0-64 28.66-64 64l.0195 256C192 355.4 220.7 384 256 384h192c35.2 0 64-28.8 64-64V93.25C512 84.77 508.6 76.63 502.6 70.63zM464 320c0 8.836-7.164 16-16 16H255.1c-8.838 0-16-7.164-16-16L239.1 64.13c0-8.836 7.164-16 16-16h128L384 96c0 17.67 14.33 32 32 32h47.1V320zM272 448c0 8.836-7.164 16-16 16H63.1c-8.838 0-16-7.164-16-16L47.98 192.1c0-8.836 7.164-16 16-16H160V128H63.99c-35.35 0-64 28.65-64 64l.0098 256C.002 483.3 28.66 512 64 512h192c35.2 0 64-28.8 64-64v-32h-47.1L272 448z"/></svg></span></template>
+        <template id=fa-play><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></span></template>
+        <template id=fa-clock-rotate-left><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9V168c0 13.3 10.7 24 24 24H134.1c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24V256c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65V152c0-13.3-10.7-24-24-24z"/></svg></span></template>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../../elasticlunr-ef4e11c1.min.js"></script>
+        <script src="../../mark-09e88c2c.min.js"></script>
+        <script src="../../searcher-09f2665d.js"></script>
+
+        <script src="../../clipboard-1626706a.min.js"></script>
+        <script src="../../highlight-abc7f01d.js"></script>
+        <script src="../../book-609e4cb8.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+
+    </div>
+    </body>
+</html>

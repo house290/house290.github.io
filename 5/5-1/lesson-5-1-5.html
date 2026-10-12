@@ -1,0 +1,399 @@
+<!DOCTYPE HTML>
+<html lang="uk" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>5-1-5 — Форма ділянки та її можливості - STEM-курс «Власний будинок»</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../../favicon-de23e50b.svg">
+        <link rel="shortcut icon" href="../../favicon-8114d1fc.png">
+        <link rel="stylesheet" href="../../css/variables-8adf115d.css">
+        <link rel="stylesheet" href="../../css/general-e96d0476.css">
+        <link rel="stylesheet" href="../../css/chrome-d279d366.css">
+        <link rel="stylesheet" href="../../css/print-9e4910d8.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../fonts/fonts-9644e21d.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="mdbook-highlight-css" href="../../highlight-493f70e1.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../../tomorrow-night-4c0ae647.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../../ayu-highlight-3fdfc3ac.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../../";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+            window.path_to_searchindex_js = "../../searchindex-0f1fee5c.js";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../../toc-c1e1addd.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="mdbook-body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="mdbook-sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("mdbook-sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+                sidebar_toggle.checked = false;
+            }
+            if (sidebar === 'visible') {
+                sidebar_toggle.checked = true;
+            } else {
+                html.classList.remove('sidebar-visible');
+            }
+        </script>
+
+        <nav id="mdbook-sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../../toc.html"></iframe>
+            </noscript>
+            <div id="mdbook-sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="mdbook-page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="mdbook-menu-bar-hover-placeholder"></div>
+                <div id="mdbook-menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="mdbook-sidebar-toggle" class="icon-button" for="mdbook-sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="mdbook-sidebar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg></span>
+                        </label>
+                        <button id="mdbook-theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="mdbook-theme-list">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M371.3 367.1c27.3-3.9 51.9-19.4 67.2-42.9L600.2 74.1c12.6-19.5 9.4-45.3-7.6-61.2S549.7-4.4 531.1 9.6L294.4 187.2c-24 18-38.2 46.1-38.4 76.1L371.3 367.1zm-19.6 25.4l-116-104.4C175.9 290.3 128 339.6 128 400c0 3.9 .2 7.8 .6 11.6c1.8 17.5-10.2 36.4-27.8 36.4H96c-17.7 0-32 14.3-32 32s14.3 32 32 32H240c61.9 0 112-50.1 112-112c0-2.5-.1-5-.2-7.5z"/></svg></span>
+                        </button>
+                        <ul id="mdbook-theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-ayu">Ayu</button></li>
+                        </ul>
+                        <button id="mdbook-search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="mdbook-searchbar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg></span>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">STEM-курс «Власний будинок»</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <span class=fa-svg id="print-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M128 0C92.7 0 64 28.7 64 64v96h64V64H354.7L384 93.3V160h64V93.3c0-17-6.7-33.3-18.7-45.3L400 18.7C388 6.7 371.7 0 354.7 0H128zM384 352v32 64H128V384 368 352H384zm64 32h32c17.7 0 32-14.3 32-32V256c0-35.3-28.7-64-64-64H64c-35.3 0-64 28.7-64 64v96c0 17.7 14.3 32 32 32H64v64c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V384zm-16-88c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z"/></svg></span>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="mdbook-search-wrapper" class="hidden">
+                    <form id="mdbook-searchbar-outer" class="searchbar-outer">
+                        <div class="search-wrapper">
+                            <input type="search" id="mdbook-searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="mdbook-searchresults-outer" aria-describedby="searchresults-header">
+                            <div class="spinner-wrapper">
+                                <span class=fa-svg id="fa-spin"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M304 48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zm0 416c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM48 304c26.5 0 48-21.5 48-48s-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48zm464-48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM142.9 437c18.7-18.7 18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zm0-294.2c18.7-18.7 18.7-49.1 0-67.9S93.7 56.2 75 75s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zM369.1 437c18.7 18.7 49.1 18.7 67.9 0s18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9z"/></svg></span>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="mdbook-searchresults-outer" class="searchresults-outer hidden">
+                        <div id="mdbook-searchresults-header" class="searchresults-header"></div>
+                        <ul id="mdbook-searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('mdbook-sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('mdbook-sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#mdbook-sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="mdbook-content" class="content">
+                    <main>
+                        <h1 id="5-1-5--форма-ділянки-та-її-можливості"><a class="header" href="#5-1-5--форма-ділянки-та-її-можливості">5-1-5 — Форма ділянки та її можливості</a></h1>
+<p><strong>У цьому уроці ти:</strong></p>
+<ul>
+<li>навчишся відрізняти просту й складну форму ділянки;</li>
+<li>дізнаєшся, як працювати зі складною формою, розбиваючи її на прості частини;</li>
+<li>зрозумієш, що саме можна розмістити на ділянці;</li>
+<li>спробуєш «примірювати» об’єкти до ділянки за допомогою паперових моделей.</li>
+</ul>
+<h2 id="-1-форма--це-не-просто-малюнок"><a class="header" href="#-1-форма--це-не-просто-малюнок">📖 1. Форма — це не просто малюнок</a></h2>
+<p>На минулих уроках ти вже малював план ділянки та вимірював її сторони. Тепер час зрозуміти, <strong>що з цього випливає</strong>. Форма ділянки впливає на все: де стоятиме будинок, як заїжджатиме машина, де буде город і чи вистачить місця для відпочинку.</p>
+<p>Уяви дві ділянки, які мають однаковий периметр, тобто для їхнього огородження знадобиться однакова кількість паркану. Одна з них схожа на квадрат, а друга — на довгу вузьку смужку. На першій можна розташувати все цікаво й вільно. На другій довелося б ставити всі об’єкти «в ряд», як вагони потяга. Так форма визначає можливості.</p>
+<h2 id="-2-проста-і-складна-форма"><a class="header" href="#-2-проста-і-складна-форма">📖 2. Проста і складна форма</a></h2>
+<p><strong>Проста форма</strong> — це квадрат або прямокутник. У такої ділянки чотири прямі кути, а протилежні сторони рівні. Її легко міряти, малювати та планувати: прямі стіни будинку, прямі стежки, прямі грядки.</p>
+<p><strong>Складна форма</strong> — усе інше. Ось найпоширеніші варіанти:</p>
+<ul>
+<li><strong>Г-подібна</strong> — прямокутник із «виступом» чи «кишенею» на одному боці;</li>
+<li><strong>Т-подібна</strong> — вузька смуга до вулиці, а за нею розширення;</li>
+<li><strong>трапеція</strong> — дві сторони паралельні, а дві інші розходяться;</li>
+<li><strong>трикутна</strong> — три сторони й три кути, з гострими «хвостиками»;</li>
+<li><strong>з вирізом</strong> — одну частину відрізали (наприклад, там проходить дорога, яр або сусідня ділянка);</li>
+<li><strong>з дугою</strong> — одна сторона не пряма, а вигнута (так буває вздовж річки чи на повороті вулиці).</li>
+</ul>
+<h3 id="переваги-й-недоліки"><a class="header" href="#переваги-й-недоліки">Переваги й недоліки</a></h3>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Форма</th><th>Що зручно</th><th>Що незручно</th></tr>
+</thead>
+<tbody>
+<tr><td>Квадрат, прямокутник</td><td>легко планувати, добре використовується весь простір</td><td>майже немає недоліків, але не всі ділянки такі</td></tr>
+<tr><td>Вузька й довга</td><td>можна розмістити будинок уздовж вулиці, є «глибина» для саду</td><td>мало простору збоку, важко розвернутися машині</td></tr>
+<tr><td>Широка й неглибока</td><td>вільний фасад, зручний вхід</td><td>мало місця для саду й городу позаду</td></tr>
+<tr><td>Трикутна</td><td>цікава форма, можна вигадати оригінальний двір</td><td>гострі кути важко використати, «пропадає» частина землі</td></tr>
+<tr><td>Г-подібна</td><td>утворюється затишний куточок, який можна відгородити</td><td>складніше зрозуміти, де що поставити, довший паркан</td></tr>
+<tr><td>Трапеція</td><td>деякі частини вільніші</td><td>кути не прямі, плани «ламаються»</td></tr>
+</tbody>
+</table>
+</div>
+<p>Не існує «поганої» ділянки. Є ділянки, до яких треба підібрати правильні рішення.</p>
+<h2 id="-3-як-працювати-зі-складною-формою"><a class="header" href="#-3-як-працювати-зі-складною-формою">📖 3. Як працювати зі складною формою</a></h2>
+<p>Складну форму можна <strong>розбити на прості частини</strong>. Наприклад, Г-подібну ділянку можна уявити як прямокутник, до якого додали ще один прямокутник. Тоді легше міряти, малювати й обчислювати.</p>
+<h3 id="приклад"><a class="header" href="#приклад">Приклад</a></h3>
+<p>Ділянка має форму літери «Г». Її вершини у порядку обходу позначені А, Б, В, Г, Д, Е. Сторони мають такі довжини:</p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Сторона</th><th>АБ</th><th>БВ</th><th>ВГ</th><th>ГД</th><th>ДЕ</th><th>ЕА</th></tr>
+</thead>
+<tbody>
+<tr><td>Довжина, м</td><td>30</td><td>15</td><td>15</td><td>20</td><td>15</td><td>35</td></tr>
+</tbody>
+</table>
+</div>
+<p><strong>Периметр:</strong> 30 + 15 + 15 + 20 + 15 + 35 = <strong>130 м</strong>.</p>
+<p>А тепер цікаве спостереження. Якщо навколо цієї «Г» намалювати найменший прямокутник, який її охоплює, то його розміри будуть 30 м × 35 м. Його периметр: 2 · (30 + 35) = <strong>130 м</strong>. Така сама цифра! Це не випадковість: «виріз» усередині прямого кута не змінює периметр. Гарний спосіб перевірити себе.</p>
+<h2 id="-4-скільки-місця-потрібно-порівняємо-ділянки"><a class="header" href="#-4-скільки-місця-потрібно-порівняємо-ділянки">📖 4. Скільки місця потрібно: порівняємо ділянки</a></h2>
+<p>Периметр показує, скільки потрібно паркану, але він не каже, скільки <strong>місця</strong> всередині. Спробуймо порахувати «місткість» ділянки за клітинками. Нехай одна клітинка дорівнює одному квадратному метру.</p>
+<p>Три прямокутні ділянки мають однаковий периметр — 24 м:</p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Розмір ділянки</th><th>Периметр</th><th>Скільки клітинок усередині</th></tr>
+</thead>
+<tbody>
+<tr><td>2 м × 10 м</td><td>24 м</td><td>20</td></tr>
+<tr><td>4 м × 8 м</td><td>24 м</td><td>32</td></tr>
+<tr><td>6 м × 6 м</td><td>24 м</td><td>36</td></tr>
+</tbody>
+</table>
+</div>
+<p>Паркану на кожну треба стільки ж, а місця всередині різна кількість! Чим більше ділянка схожа на квадрат, тим більше простору вона охоплює при тій самій довжині огорожі. Докладно про вимірювання цього «простору» (його називають <strong>площею</strong>) ти дізнаєшся наступного року, а поки що використовуй просте порівняння за клітинками.</p>
+<h2 id="-5-що-можна-розмістити-на-ділянці"><a class="header" href="#-5-що-можна-розмістити-на-ділянці">📖 5. Що можна розмістити на ділянці</a></h2>
+<p>Перш ніж розставляти об’єкти, треба знати, що взагалі може бути на приватній ділянці. Ось основні:</p>
+<ul>
+<li><strong>житловий будинок</strong>;</li>
+<li><strong>гараж</strong> або навіс для автомобіля;</li>
+<li><strong>господарські будівлі</strong>: сарай, комора, майстерня;</li>
+<li><strong>город</strong> і <strong>сад</strong>;</li>
+<li><strong>теплиця</strong>;</li>
+<li><strong>зона відпочинку</strong>: альтанка, мангал, місце для гойдалки чи столу;</li>
+<li><strong>дитячий або спортивний майданчик</strong>;</li>
+<li><strong>газон і квітники</strong>;</li>
+<li><strong>стежки, подвір’я, парковка</strong>;</li>
+<li><strong>брама й хвіртка</strong>.</li>
+</ul>
+<p>Щоб складати їх на плані, потрібні приблизні розміри. Для нашого навчального проєкту візьмемо такі:</p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Об’єкт</th><th>Розмір на плані</th></tr>
+</thead>
+<tbody>
+<tr><td>Будинок</td><td>10 м × 8 м</td></tr>
+<tr><td>Гараж на одну машину</td><td>3 м × 6 м</td></tr>
+<tr><td>Сарай</td><td>3 м × 4 м</td></tr>
+<tr><td>Теплиця</td><td>3 м × 6 м</td></tr>
+<tr><td>Альтанка або літній стіл</td><td>4 м × 4 м</td></tr>
+<tr><td>Дитячий майданчик</td><td>5 м × 5 м</td></tr>
+<tr><td>Автомобіль на парковці</td><td>3 м × 5 м</td></tr>
+<tr><td>Брама для автомобіля</td><td>ширина 4 м</td></tr>
+<tr><td>Стежка</td><td>ширина 1 м</td></tr>
+</tbody>
+</table>
+</div>
+<p>Ці розміри — лише орієнтир. Ти можеш змінити їх, якщо захочеш менший чи більший будинок, але запиши свої цифри у паспорт.</p>
+<h2 id="-6-корисні-й-слабкі-зони"><a class="header" href="#-6-корисні-й-слабкі-зони">📖 6. Корисні й «слабкі» зони</a></h2>
+<p>На будь-якій ділянці є місця, які використовувати легко, і місця, які важко.</p>
+<ul>
+<li><strong>Корисні зони</strong> — відкриті й рівні, з прямими кутами. Туди зручно ставити будинок, гараж чи майданчик.</li>
+<li><strong>Слабкі зони</strong> — гострі кути, вузькі смужки, «кишені». Це не марна земля: тут можна поставити сарай, компостну яму, посадити кущі чи квіти.</li>
+</ul>
+<p>Розумний проєктувальник не соромиться складних ділянок. Якщо вузький кут не підходить для будинку, він може знайти йому корисне застосування.</p>
+<h2 id="-7-приклад-міркування-вузька-ділянка"><a class="header" href="#-7-приклад-міркування-вузька-ділянка">📖 7. Приклад міркування: вузька ділянка</a></h2>
+<p>Розглянемо ділянку 12 м × 50 м і пошукаємо місце для будинку розміром 10 м × 8 м.</p>
+<p><strong>Спроба 1.</strong> Поставимо будинок довгою стороною (10 м) упоперек ділянки. З 12 м ширини залишається лише 2 м, тобто по 1 м з кожного боку. Це дуже вузько: не пройти, не поставити нічого поруч і не пройти з візком.</p>
+<p><strong>Спроба 2.</strong> Повернемо будинок на 90°: тепер упоперек стоїть коротка сторона (8 м). Із 12 м лишається 4 м, і з кожного боку по 2 м. Вже краще: можна прокласти стежку й посадити кущі.</p>
+<p><strong>Що ми помітили?</strong> Той самий будинок, лише повернутий інакше, дав зовсім різний результат. Тому під час «примірювання» моделей обов’язково <strong>повертай їх</strong>. Ще один висновок: на вузькій ділянці зручно розставляти об’єкти по черзі вздовж довгої сторони: спочатку подвір’я із в’їздом, за ним будинок, далі відпочинок і сад, на самому краю город.</p>
+<p>Так проєктувальник розв’язує завдання: пробує, порівнює, робить висновок і не боїться змінювати рішення.</p>
+<h2 id="-спробуй-сам-паперове-моделювання"><a class="header" href="#-спробуй-сам-паперове-моделювання">🧪 Спробуй сам: «Паперове моделювання»</a></h2>
+<p><strong>Тобі потрібно:</strong> аркуш у клітинку, ножиці, кольоровий папір (необов’язково), олівець.</p>
+<ol>
+<li>Прийми, що <strong>1 клітинка = 1 м</strong>. Намалюй на аркуші три ділянки:
+<ul>
+<li><strong>А</strong> — прямокутну, 20 м × 30 м;</li>
+<li><strong>Б</strong> — вузьку й довгу, 12 м × 50 м;</li>
+<li><strong>В</strong> — Г-подібну, розміри придумай самостійно (можна взяти ті, що з прикладу, у зменшеному вигляді).</li>
+</ul>
+</li>
+<li>З папера виріж <strong>моделі</strong> об’єктів у тому самому масштабі (за таблицею з розділу 5): будинок, гараж, сарай, теплицю, майданчик, автомобіль.</li>
+<li>Спробуй розмістити всі моделі на кожній ділянці. Передбач вільні проходи: стежки, місце під’їзду, подвір’я.</li>
+<li>Для кожної ділянки відповідай:
+<ul>
+<li>Що вмістилося без проблем?</li>
+<li>Що не вмістилося або виглядає незручно?</li>
+<li>Де лишилося вільне місце?</li>
+<li>Яка ділянка тобі сподобалась найбільше й чому?</li>
+</ul>
+</li>
+</ol>
+<h3 id="задачі-для-тренування"><a class="header" href="#задачі-для-тренування">Задачі для тренування</a></h3>
+<ol>
+<li>Який периметр має ділянка 12 м × 50 м?</li>
+<li>Ділянка Г-подібної форми зі сторонами 20, 10, 10, 15, 10, 25 м. Знайди її периметр і перевір результат за найменшим прямокутником (20 × 25).</li>
+<li>Яка з форм — квадрат 8 м × 8 м чи прямокутник 4 м × 12 м — охоплює більше місця за однакового периметра? Перевір, що периметри однакові.</li>
+</ol>
+<p><strong>Відповіді:</strong> 1) 124 м. 2) 20 + 10 + 10 + 15 + 10 + 25 = 90 м; 2 · (20 + 25) = 90 м ✔. 3) Периметр першої 2·(8+8) = 32 м, другої 2·(4+12) = 32 м, обидва однакові. Клітинок: 8 · 8 = 64 і 4 · 12 = 48, отже, квадрат охоплює більше.</p>
+<h2 id="-ключові-слова"><a class="header" href="#-ключові-слова">🔑 Ключові слова</a></h2>
+<ul>
+<li><strong>Проста форма</strong> — квадрат або прямокутник.</li>
+<li><strong>Складна форма</strong> — Г-подібна, трикутна, трапеція та інші.</li>
+<li><strong>Розбиття на прості частини</strong> — спосіб працювати зі складною формою.</li>
+<li><strong>Модель</strong> — зменшена копія об’єкта (тут — паперова).</li>
+<li><strong>Слабка зона</strong> — частина ділянки, яку складно використати (гострий кут, вузька смужка).</li>
+</ul>
+<h2 id="-перевір-себе"><a class="header" href="#-перевір-себе">✅ Перевір себе</a></h2>
+<ol>
+<li>Чим проста форма ділянки відрізняється від складної?</li>
+<li>Які переваги й недоліки має вузька й довга ділянка?</li>
+<li>Як можна знайти периметр Г-подібної ділянки?</li>
+<li>Чому ділянки з однаковим периметром можуть мати різну «місткість»?</li>
+<li>Назви п’ять об’єктів, які можна розмістити на ділянці.</li>
+<li>Для чого проєктувальник використовує паперові моделі?</li>
+</ol>
+<h2 id="-коротко-запамятай"><a class="header" href="#-коротко-запамятай">📌 Коротко запам’ятай</a></h2>
+<p>Форма визначає, що можна розмістити на ділянці й наскільки зручно нею користуватися. Складну форму розбивають на прості частини. Однакова довжина паркану не означає однакового простору всередині: найбільше місця дає форма, близька до квадрата. Паперові моделі допомагають «приміряти» об’єкти до ділянки ще до будівництва.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../5/5-1/lesson-5-1-4.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
+                            </a>
+
+                            <a rel="next prefetch" href="../../5/5-1/lesson-5-1-6.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../5/5-1/lesson-5-1-4.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
+                    </a>
+
+                    <a rel="next prefetch" href="../../5/5-1/lesson-5-1-6.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
+                    </a>
+            </nav>
+
+        </div>
+
+        <template id=fa-eye><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z"/></svg></span></template>
+        <template id=fa-eye-slash><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7L525.6 386.7c39.6-40.6 66.4-86.1 79.9-118.4c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C465.5 68.8 400.8 32 320 32c-68.2 0-125 26.3-169.3 60.8L38.8 5.1zM223.1 149.5C248.6 126.2 282.7 112 320 112c79.5 0 144 64.5 144 144c0 24.9-6.3 48.3-17.4 68.7L408 294.5c5.2-11.8 8-24.8 8-38.5c0-53-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6c0 10.2-2.4 19.8-6.6 28.3l-90.3-70.8zm223.1 298L373 389.9c-16.4 6.5-34.3 10.1-53 10.1c-79.5 0-144-64.5-144-144c0-6.9 .5-13.6 1.4-20.2L83.1 161.5C60.3 191.2 44 220.8 34.5 243.7c-3.3 7.9-3.3 16.7 0 24.6c14.9 35.7 46.2 87.7 93 131.1C174.5 443.2 239.2 480 320 480c47.8 0 89.9-12.9 126.2-32.5z"/></svg></span></template>
+        <template id=fa-copy><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M502.6 70.63l-61.25-61.25C435.4 3.371 427.2 0 418.7 0H255.1c-35.35 0-64 28.66-64 64l.0195 256C192 355.4 220.7 384 256 384h192c35.2 0 64-28.8 64-64V93.25C512 84.77 508.6 76.63 502.6 70.63zM464 320c0 8.836-7.164 16-16 16H255.1c-8.838 0-16-7.164-16-16L239.1 64.13c0-8.836 7.164-16 16-16h128L384 96c0 17.67 14.33 32 32 32h47.1V320zM272 448c0 8.836-7.164 16-16 16H63.1c-8.838 0-16-7.164-16-16L47.98 192.1c0-8.836 7.164-16 16-16H160V128H63.99c-35.35 0-64 28.65-64 64l.0098 256C.002 483.3 28.66 512 64 512h192c35.2 0 64-28.8 64-64v-32h-47.1L272 448z"/></svg></span></template>
+        <template id=fa-play><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></span></template>
+        <template id=fa-clock-rotate-left><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9V168c0 13.3 10.7 24 24 24H134.1c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24V256c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65V152c0-13.3-10.7-24-24-24z"/></svg></span></template>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../../elasticlunr-ef4e11c1.min.js"></script>
+        <script src="../../mark-09e88c2c.min.js"></script>
+        <script src="../../searcher-09f2665d.js"></script>
+
+        <script src="../../clipboard-1626706a.min.js"></script>
+        <script src="../../highlight-abc7f01d.js"></script>
+        <script src="../../book-609e4cb8.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+
+    </div>
+    </body>
+</html>

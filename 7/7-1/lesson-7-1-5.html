@@ -1,0 +1,428 @@
+<!DOCTYPE HTML>
+<html lang="uk" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>7-1-5 — Ґрунт і умови основи - STEM-курс «Власний будинок»</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../../favicon-de23e50b.svg">
+        <link rel="shortcut icon" href="../../favicon-8114d1fc.png">
+        <link rel="stylesheet" href="../../css/variables-8adf115d.css">
+        <link rel="stylesheet" href="../../css/general-e96d0476.css">
+        <link rel="stylesheet" href="../../css/chrome-d279d366.css">
+        <link rel="stylesheet" href="../../css/print-9e4910d8.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../fonts/fonts-9644e21d.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="mdbook-highlight-css" href="../../highlight-493f70e1.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../../tomorrow-night-4c0ae647.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../../ayu-highlight-3fdfc3ac.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../../";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+            window.path_to_searchindex_js = "../../searchindex-0f1fee5c.js";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../../toc-c1e1addd.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="mdbook-body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="mdbook-sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("mdbook-sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+                sidebar_toggle.checked = false;
+            }
+            if (sidebar === 'visible') {
+                sidebar_toggle.checked = true;
+            } else {
+                html.classList.remove('sidebar-visible');
+            }
+        </script>
+
+        <nav id="mdbook-sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../../toc.html"></iframe>
+            </noscript>
+            <div id="mdbook-sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="mdbook-page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="mdbook-menu-bar-hover-placeholder"></div>
+                <div id="mdbook-menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="mdbook-sidebar-toggle" class="icon-button" for="mdbook-sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="mdbook-sidebar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg></span>
+                        </label>
+                        <button id="mdbook-theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="mdbook-theme-list">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M371.3 367.1c27.3-3.9 51.9-19.4 67.2-42.9L600.2 74.1c12.6-19.5 9.4-45.3-7.6-61.2S549.7-4.4 531.1 9.6L294.4 187.2c-24 18-38.2 46.1-38.4 76.1L371.3 367.1zm-19.6 25.4l-116-104.4C175.9 290.3 128 339.6 128 400c0 3.9 .2 7.8 .6 11.6c1.8 17.5-10.2 36.4-27.8 36.4H96c-17.7 0-32 14.3-32 32s14.3 32 32 32H240c61.9 0 112-50.1 112-112c0-2.5-.1-5-.2-7.5z"/></svg></span>
+                        </button>
+                        <ul id="mdbook-theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-ayu">Ayu</button></li>
+                        </ul>
+                        <button id="mdbook-search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="mdbook-searchbar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg></span>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">STEM-курс «Власний будинок»</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <span class=fa-svg id="print-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M128 0C92.7 0 64 28.7 64 64v96h64V64H354.7L384 93.3V160h64V93.3c0-17-6.7-33.3-18.7-45.3L400 18.7C388 6.7 371.7 0 354.7 0H128zM384 352v32 64H128V384 368 352H384zm64 32h32c17.7 0 32-14.3 32-32V256c0-35.3-28.7-64-64-64H64c-35.3 0-64 28.7-64 64v96c0 17.7 14.3 32 32 32H64v64c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V384zm-16-88c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z"/></svg></span>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="mdbook-search-wrapper" class="hidden">
+                    <form id="mdbook-searchbar-outer" class="searchbar-outer">
+                        <div class="search-wrapper">
+                            <input type="search" id="mdbook-searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="mdbook-searchresults-outer" aria-describedby="searchresults-header">
+                            <div class="spinner-wrapper">
+                                <span class=fa-svg id="fa-spin"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M304 48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zm0 416c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM48 304c26.5 0 48-21.5 48-48s-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48zm464-48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM142.9 437c18.7-18.7 18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zm0-294.2c18.7-18.7 18.7-49.1 0-67.9S93.7 56.2 75 75s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zM369.1 437c18.7 18.7 49.1 18.7 67.9 0s18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9z"/></svg></span>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="mdbook-searchresults-outer" class="searchresults-outer hidden">
+                        <div id="mdbook-searchresults-header" class="searchresults-header"></div>
+                        <ul id="mdbook-searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('mdbook-sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('mdbook-sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#mdbook-sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="mdbook-content" class="content">
+                    <main>
+                        <h1 id="7-1-5--ґрунт-і-умови-основи"><a class="header" href="#7-1-5--ґрунт-і-умови-основи">7-1-5 — Ґрунт і умови основи</a></h1>
+<p><strong>У цьому уроці ти:</strong></p>
+<ul>
+<li>зрозумієш, що таке основа та фундамент і чим вони відрізняються;</li>
+<li>згадаєш тиск із фізики й застосуєш його до будинку;</li>
+<li>дізнаєшся, що таке несуча здатність ґрунту, осідання та морозне здимання;</li>
+<li>оціниш, чи витримає ґрунт твій будинок, і обереш тип фундаменту.</li>
+</ul>
+<h2 id="-1-на-чому-стоїть-будинок"><a class="header" href="#-1-на-чому-стоїть-будинок">📖 1. На чому стоїть будинок</a></h2>
+<p>Будинок — це десятки тонн каменю, дерева, бетону, скла й людей. Уся ця вага має кудись «подітися». Вона передається на землю. Те, що отримує вагу, — це <strong>основа</strong> (тобто сам ґрунт під будинком), а конструкція, яка передає навантаження на основу, називається <strong>фундаментом</strong>.</p>
+<p>Запам’ятай різницю:</p>
+<ul>
+<li><strong>Основа</strong> — це ґрунт. Її не будують, її <strong>вибирають</strong> і <strong>вивчають</strong>.</li>
+<li><strong>Фундамент</strong> — це споруда, яку будують під стінами: стрічка, плита, стовпи чи палі.</li>
+</ul>
+<p>Коли ґрунт слабкий або його властивості погані, фундамент доводиться робити складнішим. Саме тому в 6 класі ти досліджував ґрунт, адже сьогодні ці знання стануть у пригоді.</p>
+<h2 id="-2-тиск-згадаємо-фізику"><a class="header" href="#-2-тиск-згадаємо-фізику">📖 2. Тиск: згадаємо фізику</a></h2>
+<p>На уроках фізики ти вивчаєш <strong>тиск</strong> — величину, яка показує, наскільки сильно сила тисне на поверхню.</p>
+<blockquote>
+<p><strong>p = F : S</strong>, де <strong>F</strong> — сила, що діє перпендикулярно до поверхні, <strong>S</strong> — площа, на яку вона діє.</p>
+</blockquote>
+<ul>
+<li>Силу вимірюють у <strong>ньютонах (Н)</strong>, площу — у <strong>м²</strong>.</li>
+<li>Одиниця тиску — <strong>паскаль (Па)</strong>: 1 Па = 1 Н/м².</li>
+<li>Тисячу паскалів називають <strong>кілопаскалем</strong>: 1 кПа = 1000 Па.</li>
+<li>Силу ваги знаходять за формулою <strong>F = m · g</strong>, де m — маса, а g ≈ 10 Н/кг (для спрощення; точніше 9,8).</li>
+</ul>
+<h3 id="приклад-1-ти-на-піску"><a class="header" href="#приклад-1-ти-на-піску">Приклад 1. Ти на піску</a></h3>
+<p>Маса учня — 50 кг. Тоді F = 50 · 10 = 500 Н. Площа підошов двох черевиків — приблизно 0,04 м² (400 см²).</p>
+<p>p = 500 : 0,04 = 12 500 Па = <strong>12,5 кПа</strong>.</p>
+<h3 id="приклад-2-цеглина"><a class="header" href="#приклад-2-цеглина">Приклад 2. Цеглина</a></h3>
+<p>Маса цеглини 2 кг, F = 20 Н. Вона має різні грані:</p>
+<ul>
+<li>велика грань 20 см × 10 см = 200 см² = 0,02 м². Тиск p = 20 : 0,02 = 1000 Па = <strong>1 кПа</strong>;</li>
+<li>вузька грань 10 см × 5 см = 50 см² = 0,005 м². Тиск p = 20 : 0,005 = 4000 Па = <strong>4 кПа</strong>.</li>
+</ul>
+<p>Вага однакова, а тиск у чотири рази різний. Це дуже важливий висновок: <strong>щоб зменшити тиск, треба збільшити площу опори</strong>. Саме для цього фундамент роблять ширшим за стіни.</p>
+<h2 id="-3-несуча-здатність-ґрунту"><a class="header" href="#-3-несуча-здатність-ґрунту">📖 3. Несуча здатність ґрунту</a></h2>
+<p><strong>Несуча здатність ґрунту</strong> — це найбільший тиск, який ґрунт може витримувати без руйнування та надмірного осідання. Позначимо її літерою <strong>R</strong>.</p>
+<p>Різні ґрунти витримують різний тиск. Ось орієнтовні значення для <strong>навчальних розрахунків</strong>:</p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Ґрунт</th><th>Орієнтовна несуча здатність R, кПа</th></tr>
+</thead>
+<tbody>
+<tr><td>Щільний пісок</td><td>300</td></tr>
+<tr><td>Суглинок</td><td>200</td></tr>
+<tr><td>Глина (сира, у помірно зволоженому стані)</td><td>150</td></tr>
+<tr><td>Пухкий пісок, насипний ґрунт</td><td>100</td></tr>
+<tr><td>Торф, мул</td><td>менше 50 (не підходить як основа)</td></tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<p><strong>Увага.</strong> Це <strong>умовні значення</strong>, зручні для школи. У справжніх проєктах несучу здатність визначають фахівці за результатами спеціальних досліджень ґрунту, і вона залежить від вологості, щільності, глибини та багатьох інших чинників. Одна й та сама глина суха й сира може тримати зовсім по-різному.</p>
+</blockquote>
+<h2 id="-4-навантаження-від-будинку"><a class="header" href="#-4-навантаження-від-будинку">📖 4. Навантаження від будинку</a></h2>
+<p>Фундамент «несе» різні види навантаження:</p>
+<ul>
+<li><strong>постійні</strong>: вага стін, перекриттів, даху, самого фундаменту;</li>
+<li><strong>тимчасові</strong>: люди, меблі, сніг на даху, вітер.</li>
+</ul>
+<p>Точний розрахунок виконують інженери-конструктори. Для школи користуємося спрощеним правилом: <strong>маса будинку ≈ 1,1 т на кожен 1 м² загальної площі</strong> (для будинку з важких матеріалів; для легкого каркасного будинку значення менші).</p>
+<h3 id="приклад-3-ґрунт-витримає-чи-ні"><a class="header" href="#приклад-3-ґрунт-витримає-чи-ні">Приклад 3. Ґрунт витримає чи ні?</a></h3>
+<p>Двоповерховий будинок із «слідом» 10 м × 8 м. Загальна площа: 2 · 80 = 160 м².</p>
+<ol>
+<li>Маса: 160 · 1,1 ≈ 176 т, округлимо до <strong>180 т</strong>.</li>
+<li>Сила: F = 180 000 кг · 10 Н/кг = 1 800 000 Н = <strong>1800 кН</strong>.</li>
+<li><strong>Стрічковий фундамент</strong> (під зовнішніми стінами й однією внутрішньою): довжина стрічки ≈ 45 м, ширина підошви 0,4 м. Площа опори S = 45 · 0,4 = <strong>18 м²</strong>.</li>
+<li>Тиск: p = 1800 : 18 = <strong>100 кПа</strong>.</li>
+</ol>
+<p>Порівняємо з несучою здатністю та знайдемо <strong>запас надійності</strong> k = R : p:</p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Ґрунт</th><th>R, кПа</th><th>k = R : p</th><th>Висновок</th></tr>
+</thead>
+<tbody>
+<tr><td>Щільний пісок</td><td>300</td><td>3,0</td><td>запас великий, усе гаразд</td></tr>
+<tr><td>Суглинок</td><td>200</td><td>2,0</td><td>запас добрий</td></tr>
+<tr><td>Глина</td><td>150</td><td>1,5</td><td>запас невеликий, але допустимий</td></tr>
+<tr><td>Пухкий пісок</td><td>100</td><td>1,0</td><td>запасу немає, ризиковано</td></tr>
+<tr><td>Торф</td><td>&lt; 50</td><td>менше 0,5</td><td>не підходить</td></tr>
+</tbody>
+</table>
+</div>
+<p>Бачиш: той самий будинок на різних ґрунтах — це різні ситуації. Якщо k менше за 1, ґрунт не витримає. Зазвичай прагнуть мати запас у 1,5–2 рази й більше.</p>
+<h3 id="що-робити-якщо-ґрунт-слабкий"><a class="header" href="#що-робити-якщо-ґрунт-слабкий">Що робити, якщо ґрунт слабкий</a></h3>
+<p>Є три основні шляхи:</p>
+<ol>
+<li><strong>Збільшити площу опори.</strong> Зробити підошву ширшою або взагалі влаштувати <strong>суцільну плиту</strong> під усім будинком. Для плити S = 80 м², тиск p = 1800 : 80 = <strong>22,5 кПа</strong>. Це значно менше, ніж 100 кПа, тож навіть слабкий ґрунт із R = 60 кПа матиме запас.</li>
+<li><strong>Прорізати слабкий шар</strong> і спертися на міцніший, глибше. Наприклад, <strong>палі</strong>, які проходять крізь слабкий ґрунт.</li>
+<li><strong>Замінити або ущільнити ґрунт</strong> (наприклад, влаштувати піщану подушку з ущільненого піску).</li>
+</ol>
+<h2 id="-5-осідання-та-тріщини"><a class="header" href="#-5-осідання-та-тріщини">📖 5. Осідання та тріщини</a></h2>
+<p>Під вагою будинку ґрунт трохи стискується, і будинок <strong>осідає</strong>. Невелике рівномірне осідання не страшне. Найбільша небезпека — <strong>нерівномірне осідання</strong>, коли одна частина будинку опускається більше за іншу. Тоді стіни можуть розтріскатися.</p>
+<p>Причини нерівномірного осідання:</p>
+<ul>
+<li>під будинком різні ґрунти (з одного боку пісок, з іншого — торф);</li>
+<li>різне навантаження (важка частина будинку поруч із легкою);</li>
+<li>замокання ґрунту: вода розм’якшує його;</li>
+<li>наявність пухкого <strong>насипного</strong> ґрунту, який раніше засипали чимось випадковим.</li>
+</ul>
+<p>Тому будівельники прагнуть, щоб тиск на ґрунт був приблизно <strong>однаковим</strong> під усім будинком, а ґрунт — однорідним.</p>
+<h2 id="-6-морозне-здимання-і-глибина-закладання"><a class="header" href="#-6-морозне-здимання-і-глибина-закладання">📖 6. Морозне здимання і глибина закладання</a></h2>
+<p>Ти вже знаєш із 6 класу: вода в ґрунті при замерзанні розширюється, і ґрунт піднімається. Якщо фундамент закладено <strong>мілко</strong>, у зоні промерзання, то взимку ґрунт здимається й «виштовхує» його, а навесні знов опускається. Такі коливання руйнують будинок.</p>
+<p><strong>Глибина промерзання</strong> залежить від регіону: приблизно від 0,8 до 1,2 м, а місцями більше. Для навчальних розрахунків приймемо <strong>1,0 м</strong>.</p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Ґрунт</th><th>Чи здимається</th><th>Що це означає для фундаменту</th></tr>
+</thead>
+<tbody>
+<tr><td>Глина, суглинок, пилуваті ґрунти (особливо вологі)</td><td>так, помітно</td><td>закладають нижче глибини промерзання (наприклад, 1,2 м) або влаштовують плиту</td></tr>
+<tr><td>Крупний і середній пісок, сухий щебінь</td><td>майже ні</td><td>можна закладати неглибоко</td></tr>
+<tr><td>Ґрунти з високим рівнем води</td><td>сильно</td><td>потрібен ретельний захист від води й часто глибше закладання</td></tr>
+</tbody>
+</table>
+</div>
+<h2 id="-7-основні-типи-фундаментів"><a class="header" href="#-7-основні-типи-фундаментів">📖 7. Основні типи фундаментів</a></h2>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Тип</th><th>Що це</th><th>Коли доречний</th><th>Плюси і мінуси</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Стрічковий</strong></td><td>залізобетонна стрічка під усіма стінами</td><td>більшість невисоких будинків на надійному ґрунті</td><td>надійний, але потребує багато земляних робіт</td></tr>
+<tr><td><strong>Плитний</strong></td><td>суцільна плита під усім будинком</td><td>слабкі й здимні ґрунти</td><td>рівномірно розподіляє тиск, але витратний</td></tr>
+<tr><td><strong>Стовпчастий</strong></td><td>окремі стовпи (опори) під кутами та стінами</td><td>легкі будинки, схили</td><td>економний, але для важких стін не годиться</td></tr>
+<tr><td><strong>Пальовий</strong></td><td>палі, що йдуть до міцнішого шару ґрунту</td><td>дуже слабкі ґрунти, торф</td><td>дозволяє пройти слабкий шар, але потребує розрахунку</td></tr>
+</tbody>
+</table>
+</div>
+<h2 id="-8-як-ґрунт-впливає-на-хід-будівництва"><a class="header" href="#-8-як-ґрунт-впливає-на-хід-будівництва">📖 8. Як ґрунт впливає на хід будівництва</a></h2>
+<ul>
+<li><strong>Земляні роботи.</strong> Пісок осипається, і стінки траншеї треба кріпити або робити похилими. Глина липка й важка. Кам’янистий ґрунт важко копати.</li>
+<li><strong>Вода.</strong> Якщо ґрунтова вода близько, котлован затоплює, і будівництво ускладнюється: потрібне водовідведення та гідроізоляція.</li>
+<li><strong>Родючий шар.</strong> Його знімають і зберігають для саду (ти вже знаєш).</li>
+<li><strong>Насипний ґрунт і сміття</strong> потребують заміни.</li>
+<li><strong>Безпека.</strong> <strong>Ніколи</strong> не заходь у глибокі траншеї та котловани без нагляду й засобів захисту: стінки можуть обвалитися за секунди.</li>
+</ul>
+<h3 id="як-ґрунт-вивчають-професіонали"><a class="header" href="#як-ґрунт-вивчають-професіонали">Як ґрунт вивчають професіонали</a></h3>
+<p>Для цього проводять <strong>інженерно-геологічні вишукування</strong>: бурять свердловини чи копають <strong>шурфи</strong> (невеликі ями), беруть зразки ґрунту, визначають їхні властивості в лабораторії, вимірюють рівень ґрунтових вод. Результат — звіт, у якому написано, які шари є в основі, яка їхня несуча здатність та які ризики. Проєктувальник користується цим звітом.</p>
+<h2 id="-спробуй-сам"><a class="header" href="#-спробуй-сам">🧪 Спробуй сам</a></h2>
+<h3 id="дослід-тиск-на-пісок"><a class="header" href="#дослід-тиск-на-пісок">Дослід «Тиск на пісок»</a></h3>
+<p><strong>Потрібно:</strong> піддон або глибока таця з дрібним сухим піском, цеглина (або книга), лінійка, кухонні ваги.</p>
+<ol>
+<li>Вирівняй пісок у таці.</li>
+<li>Зважи цеглину. Обчисли її силу ваги F = m · 10.</li>
+<li>Обережно постав цеглину на <strong>широку</strong> грань. Обережно підніми її й виміряй лінійкою глибину відбитка.</li>
+<li>Вирівняй пісок і повтори, поставивши цеглину на <strong>вузьку</strong> грань.</li>
+<li>Заміряй розміри граней, обчисли площі та тиски: p = F : S.</li>
+</ol>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Грань</th><th>Площа, м²</th><th>Тиск, Па</th><th>Глибина відбитка, мм</th></tr>
+</thead>
+<tbody>
+<tr><td>Широка</td><td></td><td></td><td></td></tr>
+<tr><td>Вузька</td><td></td><td></td><td></td></tr>
+</tbody>
+</table>
+</div>
+<p>Зроби висновок: як пов’язані тиск і глибина відбитка? Що це означає для фундаменту?</p>
+<h3 id="задачі"><a class="header" href="#задачі">Задачі</a></h3>
+<ol>
+<li>Учень масою 60 кг стоїть на двох ногах; площа підошов 0,04 м². Який тиск він створює?</li>
+<li>Малий будинок масою 90 т стоїть на суцільній плиті 6 м × 10 м. Який тиск на ґрунт? Чи вистачить пухкого піску (R = 100 кПа)?</li>
+<li>Будинок масою 120 т стоїть на суглинку (R = 200 кПа). Яка мінімальна площа підошви фундаменту потрібна, щоб тиск не перевищував R? А якщо потрібен запас у 2 рази?</li>
+<li>Для кожної ситуації запропонуй тип фундаменту й поясни: а) глина, висока вологість, будинок важкий; б) крупний сухий пісок, легкий дерев’яний будинок на схилі; в) шар торфу 3 м, нижче щільний пісок.</li>
+</ol>
+<p><strong>Відповіді:</strong> 1) F = 600 Н, p = 600 : 0,04 = 15 000 Па = 15 кПа. 2) F = 900 кН, S = 60 м², p = 15 кПа, що значно менше за 100 кПа, тож вистачить із великим запасом. 3) F = 1200 кН; S = 1200 : 200 = 6 м² (без запасу); із запасом у 2 рази: p має бути не більше 100 кПа, S = 1200 : 100 = 12 м². 4) а) плитний чи стрічковий на глибині нижче промерзання з гідроізоляцією; б) стовпчастий чи неглибокий стрічковий; в) пальовий (палі через торф до піску).</p>
+<h2 id="-ключові-слова"><a class="header" href="#-ключові-слова">🔑 Ключові слова</a></h2>
+<ul>
+<li><strong>Основа</strong> — ґрунт під фундаментом.</li>
+<li><strong>Фундамент</strong> — конструкція, що передає навантаження на основу.</li>
+<li><strong>Тиск</strong> — відношення сили до площі опори (p = F : S).</li>
+<li><strong>Несуча здатність</strong> — найбільший тиск, який ґрунт витримує безпечно.</li>
+<li><strong>Осідання</strong> — стискання ґрунту під вагою будинку.</li>
+<li><strong>Глибина промерзання</strong> — глибина, на яку взимку промерзає ґрунт.</li>
+</ul>
+<h2 id="-перевір-себе"><a class="header" href="#-перевір-себе">✅ Перевір себе</a></h2>
+<ol>
+<li>Чим основа відрізняється від фундаменту?</li>
+<li>Яка формула тиску й в яких одиницях його вимірюють?</li>
+<li>Чому фундамент роблять ширшим за стіни?</li>
+<li>Що таке несуча здатність і запас надійності?</li>
+<li>Чому небезпечне нерівномірне осідання?</li>
+<li>Як морозне здимання впливає на глибину закладання фундаменту?</li>
+</ol>
+<h2 id="-коротко-запамятай"><a class="header" href="#-коротко-запамятай">📌 Коротко запам’ятай</a></h2>
+<p>Будинок передає свою вагу на ґрунт через фундамент. Тиск p = F : S показує, що збільшення площі опори зменшує тиск. Ґрунт має несучу здатність R, і тиск від будинку мусить бути значно меншим. Слабкі ґрунти потребують ширших підошов, плит чи паль, а ґрунти, що здимаються, — глибшого закладання. Остаточні висновки роблять фахівці за результатами досліджень ґрунту.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../7/7-1/lesson-7-1-4.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
+                            </a>
+
+                            <a rel="next prefetch" href="../../7/7-1/lesson-7-1-6.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../7/7-1/lesson-7-1-4.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
+                    </a>
+
+                    <a rel="next prefetch" href="../../7/7-1/lesson-7-1-6.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
+                    </a>
+            </nav>
+
+        </div>
+
+        <template id=fa-eye><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z"/></svg></span></template>
+        <template id=fa-eye-slash><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7L525.6 386.7c39.6-40.6 66.4-86.1 79.9-118.4c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C465.5 68.8 400.8 32 320 32c-68.2 0-125 26.3-169.3 60.8L38.8 5.1zM223.1 149.5C248.6 126.2 282.7 112 320 112c79.5 0 144 64.5 144 144c0 24.9-6.3 48.3-17.4 68.7L408 294.5c5.2-11.8 8-24.8 8-38.5c0-53-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6c0 10.2-2.4 19.8-6.6 28.3l-90.3-70.8zm223.1 298L373 389.9c-16.4 6.5-34.3 10.1-53 10.1c-79.5 0-144-64.5-144-144c0-6.9 .5-13.6 1.4-20.2L83.1 161.5C60.3 191.2 44 220.8 34.5 243.7c-3.3 7.9-3.3 16.7 0 24.6c14.9 35.7 46.2 87.7 93 131.1C174.5 443.2 239.2 480 320 480c47.8 0 89.9-12.9 126.2-32.5z"/></svg></span></template>
+        <template id=fa-copy><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M502.6 70.63l-61.25-61.25C435.4 3.371 427.2 0 418.7 0H255.1c-35.35 0-64 28.66-64 64l.0195 256C192 355.4 220.7 384 256 384h192c35.2 0 64-28.8 64-64V93.25C512 84.77 508.6 76.63 502.6 70.63zM464 320c0 8.836-7.164 16-16 16H255.1c-8.838 0-16-7.164-16-16L239.1 64.13c0-8.836 7.164-16 16-16h128L384 96c0 17.67 14.33 32 32 32h47.1V320zM272 448c0 8.836-7.164 16-16 16H63.1c-8.838 0-16-7.164-16-16L47.98 192.1c0-8.836 7.164-16 16-16H160V128H63.99c-35.35 0-64 28.65-64 64l.0098 256C.002 483.3 28.66 512 64 512h192c35.2 0 64-28.8 64-64v-32h-47.1L272 448z"/></svg></span></template>
+        <template id=fa-play><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></span></template>
+        <template id=fa-clock-rotate-left><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9V168c0 13.3 10.7 24 24 24H134.1c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24V256c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65V152c0-13.3-10.7-24-24-24z"/></svg></span></template>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../../elasticlunr-ef4e11c1.min.js"></script>
+        <script src="../../mark-09e88c2c.min.js"></script>
+        <script src="../../searcher-09f2665d.js"></script>
+
+        <script src="../../clipboard-1626706a.min.js"></script>
+        <script src="../../highlight-abc7f01d.js"></script>
+        <script src="../../book-609e4cb8.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+
+    </div>
+    </body>
+</html>

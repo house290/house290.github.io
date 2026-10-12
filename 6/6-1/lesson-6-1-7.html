@@ -1,0 +1,378 @@
+<!DOCTYPE HTML>
+<html lang="uk" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>6-1-7 — Вибір місця для будинку - STEM-курс «Власний будинок»</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../../favicon-de23e50b.svg">
+        <link rel="shortcut icon" href="../../favicon-8114d1fc.png">
+        <link rel="stylesheet" href="../../css/variables-8adf115d.css">
+        <link rel="stylesheet" href="../../css/general-e96d0476.css">
+        <link rel="stylesheet" href="../../css/chrome-d279d366.css">
+        <link rel="stylesheet" href="../../css/print-9e4910d8.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../fonts/fonts-9644e21d.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="mdbook-highlight-css" href="../../highlight-493f70e1.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../../tomorrow-night-4c0ae647.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../../ayu-highlight-3fdfc3ac.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../../";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+            window.path_to_searchindex_js = "../../searchindex-0f1fee5c.js";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../../toc-c1e1addd.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="mdbook-body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="mdbook-sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("mdbook-sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+                sidebar_toggle.checked = false;
+            }
+            if (sidebar === 'visible') {
+                sidebar_toggle.checked = true;
+            } else {
+                html.classList.remove('sidebar-visible');
+            }
+        </script>
+
+        <nav id="mdbook-sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../../toc.html"></iframe>
+            </noscript>
+            <div id="mdbook-sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="mdbook-page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="mdbook-menu-bar-hover-placeholder"></div>
+                <div id="mdbook-menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="mdbook-sidebar-toggle" class="icon-button" for="mdbook-sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="mdbook-sidebar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg></span>
+                        </label>
+                        <button id="mdbook-theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="mdbook-theme-list">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M371.3 367.1c27.3-3.9 51.9-19.4 67.2-42.9L600.2 74.1c12.6-19.5 9.4-45.3-7.6-61.2S549.7-4.4 531.1 9.6L294.4 187.2c-24 18-38.2 46.1-38.4 76.1L371.3 367.1zm-19.6 25.4l-116-104.4C175.9 290.3 128 339.6 128 400c0 3.9 .2 7.8 .6 11.6c1.8 17.5-10.2 36.4-27.8 36.4H96c-17.7 0-32 14.3-32 32s14.3 32 32 32H240c61.9 0 112-50.1 112-112c0-2.5-.1-5-.2-7.5z"/></svg></span>
+                        </button>
+                        <ul id="mdbook-theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-ayu">Ayu</button></li>
+                        </ul>
+                        <button id="mdbook-search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="mdbook-searchbar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg></span>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">STEM-курс «Власний будинок»</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <span class=fa-svg id="print-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M128 0C92.7 0 64 28.7 64 64v96h64V64H354.7L384 93.3V160h64V93.3c0-17-6.7-33.3-18.7-45.3L400 18.7C388 6.7 371.7 0 354.7 0H128zM384 352v32 64H128V384 368 352H384zm64 32h32c17.7 0 32-14.3 32-32V256c0-35.3-28.7-64-64-64H64c-35.3 0-64 28.7-64 64v96c0 17.7 14.3 32 32 32H64v64c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V384zm-16-88c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z"/></svg></span>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="mdbook-search-wrapper" class="hidden">
+                    <form id="mdbook-searchbar-outer" class="searchbar-outer">
+                        <div class="search-wrapper">
+                            <input type="search" id="mdbook-searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="mdbook-searchresults-outer" aria-describedby="searchresults-header">
+                            <div class="spinner-wrapper">
+                                <span class=fa-svg id="fa-spin"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M304 48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zm0 416c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM48 304c26.5 0 48-21.5 48-48s-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48zm464-48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM142.9 437c18.7-18.7 18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zm0-294.2c18.7-18.7 18.7-49.1 0-67.9S93.7 56.2 75 75s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zM369.1 437c18.7 18.7 49.1 18.7 67.9 0s18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9z"/></svg></span>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="mdbook-searchresults-outer" class="searchresults-outer hidden">
+                        <div id="mdbook-searchresults-header" class="searchresults-header"></div>
+                        <ul id="mdbook-searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('mdbook-sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('mdbook-sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#mdbook-sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="mdbook-content" class="content">
+                    <main>
+                        <h1 id="6-1-7--вибір-місця-для-будинку"><a class="header" href="#6-1-7--вибір-місця-для-будинку">6-1-7 — Вибір місця для будинку</a></h1>
+<p><strong>У цьому уроці ти:</strong></p>
+<ul>
+<li>об’єднаєш усі дані, зібрані протягом року;</li>
+<li>створиш кілька принципово різних варіантів розміщення будинку;</li>
+<li>порівняєш варіанти за зваженою таблицею оцінок;</li>
+<li>завершиш HOUSE 2.0 й обґрунтуєш свій вибір.</li>
+</ul>
+<h2 id="-1-те-саме-питання-але-з-новими-інструментами"><a class="header" href="#-1-те-саме-питання-але-з-новими-інструментами">📖 1. Те саме питання, але з новими інструментами</a></h2>
+<p>У 5 класі ти вже вибирав місце для будинку: оцінював варіанти за шкалою 0, 1, 2 і міркував переважно «на око». Це був хороший початок, але тепер у тебе набагато більше знань:</p>
+<ul>
+<li><strong>масштабний план</strong> і точна <strong>площа</strong> ділянки (6-1-1);</li>
+<li><strong>ухил</strong> і профіль рельєфу (6-1-2);</li>
+<li><strong>паспорт ґрунту</strong> (6-1-3);</li>
+<li><strong>водопроникність</strong> і напрямки стоку води (6-1-4);</li>
+<li><strong>функціональні зони</strong> та їхні площі (6-1-5);</li>
+<li><strong>таблиця відстаней</strong> і правила розміщення (6-1-6).</li>
+</ul>
+<p>Тепер вибір можна зробити по-справжньому обґрунтованим: з числами, розрахунками та перевіркою. Саме цим займаються проєктувальники, коли обирають місце для будівництва.</p>
+<h2 id="-2-збираємо-аркуш-даних-про-ділянку"><a class="header" href="#-2-збираємо-аркуш-даних-про-ділянку">📖 2. Збираємо «аркуш даних про ділянку»</a></h2>
+<p>Перш ніж створювати варіанти, зведи все, що ти знаєш, на <strong>одному аркуші</strong>. Це зручна «шпаргалка» для рішення.</p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Параметр</th><th>Що записати</th></tr>
+</thead>
+<tbody>
+<tr><td>Масштаб і площа</td><td>масштаб плану; площа ділянки в м² і сотках</td></tr>
+<tr><td>Орієнтація</td><td>де північ, яка сторона фасадна</td></tr>
+<tr><td>Рельєф</td><td>ухил, напрям схилу, найвище й найнижче місце</td></tr>
+<tr><td>Ґрунт</td><td>вид ґрунту, його особливості</td></tr>
+<tr><td>Вода</td><td>швидкість просочування, напрямки стоку, вологі місця</td></tr>
+<tr><td>Природні об’єкти</td><td>дерева, які варто зберегти, каміння, водойми</td></tr>
+<tr><td>Зони</td><td>розподіл за зонами, їхні площі</td></tr>
+<tr><td>Обмеження</td><td>таблиця відстаней, лінії електропередач, яри</td></tr>
+</tbody>
+</table>
+</div>
+<p>Коли все зібрано разом, помітні такі речі, які раніше губилися. Наприклад, найсухіше місце виявляється найбільш затіненим, а найкращий вигляд — на краю яру.</p>
+<h2 id="-3-як-створювати-варіанти"><a class="header" href="#-3-як-створювати-варіанти">📖 3. Як створювати варіанти</a></h2>
+<p>Часта помилка: три «різних» варіанти, де будинок просто посунули на півметра. Це не вибір, а ілюзія. Хороші варіанти відрізняються <strong>принципово</strong>. Ось ідеї:</p>
+<ul>
+<li><strong>А. Ближче до вулиці.</strong> Короткий під’їзд, багато місця для саду позаду, але менше тиші й приватності.</li>
+<li><strong>Б. Посередині ділянки.</strong> Рівноважне рішення: залишається простір зі всіх боків.</li>
+<li><strong>В. У глибині ділянки.</strong> Тихо та приватно, але довгий шлях від брами до дверей.</li>
+<li><strong>Г. На підвищенні.</strong> Сухо й гарний краєвид, але вітряно й, можливо, крутий схил.</li>
+<li><strong>Д. Іншою орієнтацією.</strong> Той самий будинок, повернутий на 90°, дає інші відстані й інше освітлення.</li>
+</ul>
+<p>Правило: створи <strong>щонайменше три</strong> варіанти. Для кожного накресли план у масштабі: контур будинку, шлях до входу, розташування зон і стрілки стоку води.</p>
+<h2 id="-4-два-фільтри-обовязково-і-бажано"><a class="header" href="#-4-два-фільтри-обовязково-і-бажано">📖 4. Два фільтри: «обов’язково» і «бажано»</a></h2>
+<p>Іноді задачу легше розв’язати у два етапи.</p>
+<p><strong>Фільтр 1. Обмеження («обов’язково»).</strong> Тут жорсткі вимоги, без яких будувати не можна:</p>
+<ul>
+<li>виконані відстані з таблиці (до меж, вулиці, дерев, яру, ЛЕП);</li>
+<li>місце не затоплюється й не лежить у найнижчій точці;</li>
+<li>схил не крутіший за 20 %;</li>
+<li>будинок вміщається на ділянці, а площа забудови не перевищує 30 %.</li>
+</ul>
+<p>Варіант, який порушує обов’язкову вимогу, або <strong>виправляють</strong>, або <strong>відкидають</strong>. Бали тут не допомагають: будинок, що стоїть під проводами, не стане безпечним лише тому, що в нього гарний краєвид.</p>
+<p><strong>Фільтр 2. Побажання («бажано»).</strong> Серед варіантів, які пройшли перший фільтр, обирають найкращий за <strong>зваженою оцінкою</strong>.</p>
+<h2 id="-5-зважена-таблиця-оцінок"><a class="header" href="#-5-зважена-таблиця-оцінок">📖 5. Зважена таблиця оцінок</a></h2>
+<p>У 5 класі всі критерії були однаково важливі. Але в житті це не так: сухість місця важливіша за красивий краєвид. Тому кожному критерію додають <strong>вагу</strong> — число, що показує його важливість.</p>
+<p><strong>Як працювати:</strong></p>
+<ol>
+<li>Склади список критеріїв.</li>
+<li>Постав кожному <strong>вагу</strong>: 3 — дуже важливо, 2 — важливо, 1 — бажано.</li>
+<li>Оціни кожен варіант за кожним критерієм від <strong>1 до 5</strong> (5 — найкраще).</li>
+<li>Для кожного критерію помнож оцінку на вагу.</li>
+<li>Додай результати: отримаєш <strong>суму балів</strong> варіанта.</li>
+<li>Щоб порівнювати зручніше, виразити суму у відсотках від максимуму можна так: <strong>сума : (сума ваг · 5) · 100 %</strong>.</li>
+</ol>
+<h3 id="приклад"><a class="header" href="#приклад">Приклад</a></h3>
+<p>Сума ваг: 3 + 3 + 2 + 2 + 2 + 1 = 13. Максимум балів: 13 · 5 = 65.</p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Критерій</th><th>Вага</th><th>А (ближче до вулиці)</th><th>Б (посередині)</th><th>В (у глибині)</th></tr>
+</thead>
+<tbody>
+<tr><td>Сухість і вода</td><td>3</td><td>4 → 12</td><td>5 → 15</td><td>4 → 12</td></tr>
+<tr><td>Світло й сонце</td><td>3</td><td>3 → 9</td><td>4 → 12</td><td>5 → 15</td></tr>
+<tr><td>Схил і земляні роботи</td><td>2</td><td>4 → 8</td><td>3 → 6</td><td>2 → 4</td></tr>
+<tr><td>Зручність входу й руху</td><td>2</td><td>5 → 10</td><td>3 → 6</td><td>2 → 4</td></tr>
+<tr><td>Простір для зон</td><td>2</td><td>2 → 4</td><td>4 → 8</td><td>3 → 6</td></tr>
+<tr><td>Збереження природних об’єктів</td><td>1</td><td>3 → 3</td><td>4 → 4</td><td>2 → 2</td></tr>
+<tr><td><strong>Сума балів</strong></td><td></td><td><strong>46</strong></td><td><strong>51</strong></td><td><strong>43</strong></td></tr>
+<tr><td><strong>У відсотках від 65</strong></td><td></td><td><strong>71 %</strong></td><td><strong>78 %</strong></td><td><strong>66 %</strong></td></tr>
+</tbody>
+</table>
+</div>
+<p>Переможець — варіант <strong>Б</strong>.</p>
+<h2 id="-6-перевірка-стійкості-вибору"><a class="header" href="#-6-перевірка-стійкості-вибору">📖 6. Перевірка стійкості вибору</a></h2>
+<p>Хороший проєктувальник не вірить результату сліпо. Він запитує себе: <em>а якщо я помилився у вагах?</em> Спробуємо змінити одну вагу. Нехай зручність входу й руху для сім’ї важливіша: вага 3 замість 2.</p>
+<ul>
+<li>А: було 10 за цим критерієм, стало 5 · 3 = 15, тобто +5. Сума <strong>51</strong>.</li>
+<li>Б: було 6, стало 3 · 3 = 9, тобто +3. Сума <strong>54</strong>.</li>
+<li>В: було 4, стало 2 · 3 = 6, тобто +2. Сума <strong>45</strong>.</li>
+</ul>
+<p>Переможцем знову став Б. Це означає, що вибір <strong>стійкий</strong>: невелика зміна ваги його не перевернула. Якби А і Б помінялися місцями, довелося б замислитися глибше й обговорити, що саме для тебе найважливіше.</p>
+<h2 id="-7-як-записати-обґрунтування"><a class="header" href="#-7-як-записати-обґрунтування">📖 7. Як записати обґрунтування</a></h2>
+<p>Результат не зводиться до слів «набрав більше балів». Хороше обґрунтування має <strong>чотири частини</strong>:</p>
+<ol>
+<li><strong>Що я обрав.</strong> «Будинок розташований посередині ділянки, довгою стороною вздовж фасаду, за 6 м від вулиці».</li>
+<li><strong>Чому.</strong> «Там найсухіше (швидкість просочування 25 мм/год, вода стікає повз), добре освітлено з півдня, зберігаються старі яблуні».</li>
+<li><strong>Які недоліки.</strong> «Шлях від брами до дверей довший, ніж у варіанті А, і частина городу потрапляє в тінь».</li>
+<li><strong>Як їх компенсую.</strong> «Вимощу прямий шлях від брами, а теплицю перенесу на вільне сонячне місце на півдні».</li>
+</ol>
+<p>Додай також: <strong>що змусило б мене змінити рішення?</strong> Наприклад: «Якби виявилося, що ґрунтова вода навесні піднімається вище, довелося б перенести будинок на пагорб».</p>
+<h2 id="-8-типові-помилки-під-час-вибору"><a class="header" href="#-8-типові-помилки-під-час-вибору">📖 8. Типові помилки під час вибору</a></h2>
+<ul>
+<li><strong>Вибір «за красою».</strong> Гарний краєвид не скасовує підтоплення чи крутого схилу. Спершу обов’язкові умови, потім побажання.</li>
+<li><strong>«Підгонка» ваг.</strong> Якщо ти вже вирішив, який варіант тобі подобається, і змінюєш ваги, щоб він переміг, то це самообман. Ваги треба призначати <strong>до</strong> підрахунку балів і пояснювати.</li>
+<li><strong>Ігнорування недоліків улюбленого варіанта.</strong> Чесно запиши мінуси кожного варіанта, у тому числі свого фаворита.</li>
+<li><strong>Забування про сезонність.</strong> Місце, яке влітку сухе, навесні може бути болотом. Згадай «водний щоденник» з уроку 6-1-4.</li>
+<li><strong>Неперевірені відстані.</strong> Одне порушення навчальної таблиці здатне перекреслити весь варіант.</li>
+</ul>
+<p>Якщо ти помітив таку помилку у своєму проєкті, це не поразка. Це саме те, що ти маєш записати на сторінці помилок: головне, щоб рішення ставали кращими.</p>
+<h2 id="-спробуй-сам"><a class="header" href="#-спробуй-сам">🧪 Спробуй сам</a></h2>
+<ol>
+<li><strong>Порахуй.</strong> Три варіанти оцінено за двома критеріями: «Сухість» (вага 3) і «Зручність» (вага 2). Оцінки: А — 5 і 2, Б — 3 і 4, В — 4 і 4. Знайди суми й переможця.</li>
+<li><strong>Стійкість.</strong> У попередній задачі зроби вагу «Зручності» рівною 3. Чи змінився переможець?</li>
+<li><strong>Критика.</strong> Прочитай приклад обґрунтування з розділу 7 і знайди слабке місце. Що ти додав би?</li>
+<li><strong>Обговорення.</strong> Двоє учнів оцінили однакові варіанти, але вибрали різні. Чому так могло статися? Чи можуть обидва мати рацію?</li>
+</ol>
+<p><strong>Відповіді:</strong> 1) А: 5·3 + 2·2 = 19; Б: 3·3 + 4·2 = 17; В: 4·3 + 4·2 = 20, тому переможець — В. 2) А: 15 + 6 = 21; Б: 9 + 12 = 21; В: 12 + 12 = 24, тому переможець знову В. 4) Вони могли поставити різні ваги: для одного найважливіше світло, для іншого зручність. Обидва можуть мати рацію, якщо пояснили вибір і врахували обов’язкові вимоги.</p>
+<h2 id="-ключові-слова"><a class="header" href="#-ключові-слова">🔑 Ключові слова</a></h2>
+<ul>
+<li><strong>Варіант розміщення</strong> — один з можливих способів розташувати будинок.</li>
+<li><strong>Обмеження</strong> — обов’язкова умова, яку не можна порушити.</li>
+<li><strong>Вага критерію</strong> — число, що показує важливість критерію.</li>
+<li><strong>Зважена оцінка</strong> — сума оцінок, помножених на ваги.</li>
+<li><strong>Стійкість вибору</strong> — незмінність результату за невеликих змін умов.</li>
+</ul>
+<h2 id="-перевір-себе"><a class="header" href="#-перевір-себе">✅ Перевір себе</a></h2>
+<ol>
+<li>Які дані ти збираєш на «аркуш даних про ділянку»?</li>
+<li>Чим принципово різні варіанти відрізняються від ілюзорно різних?</li>
+<li>Чим обмеження відрізняються від побажань?</li>
+<li>Що таке вага критерію і навіщо вона потрібна?</li>
+<li>Як перевірити, що вибір стійкий?</li>
+<li>З яких чотирьох частин складається обґрунтування вибору?</li>
+</ol>
+<h2 id="-коротко-запамятай"><a class="header" href="#-коротко-запамятай">📌 Коротко запам’ятай</a></h2>
+<p>Вибір місця для будинку ґрунтується на даних: масштабному плані, площі, ухилі, ґрунті, воді, зонах і відстанях. Спочатку відсівають варіанти, що порушують обов’язкові умови, потім порівнюють решту за зваженою таблицею оцінок і перевіряють стійкість результату. Рішення завжди пояснюють: що обрано, чому, які недоліки й чим вони компенсуються.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../6/6-1/lesson-6-1-6.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
+                            </a>
+
+                            <a rel="next prefetch" href="../../7/7.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../6/6-1/lesson-6-1-6.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
+                    </a>
+
+                    <a rel="next prefetch" href="../../7/7.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
+                    </a>
+            </nav>
+
+        </div>
+
+        <template id=fa-eye><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z"/></svg></span></template>
+        <template id=fa-eye-slash><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7L525.6 386.7c39.6-40.6 66.4-86.1 79.9-118.4c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C465.5 68.8 400.8 32 320 32c-68.2 0-125 26.3-169.3 60.8L38.8 5.1zM223.1 149.5C248.6 126.2 282.7 112 320 112c79.5 0 144 64.5 144 144c0 24.9-6.3 48.3-17.4 68.7L408 294.5c5.2-11.8 8-24.8 8-38.5c0-53-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6c0 10.2-2.4 19.8-6.6 28.3l-90.3-70.8zm223.1 298L373 389.9c-16.4 6.5-34.3 10.1-53 10.1c-79.5 0-144-64.5-144-144c0-6.9 .5-13.6 1.4-20.2L83.1 161.5C60.3 191.2 44 220.8 34.5 243.7c-3.3 7.9-3.3 16.7 0 24.6c14.9 35.7 46.2 87.7 93 131.1C174.5 443.2 239.2 480 320 480c47.8 0 89.9-12.9 126.2-32.5z"/></svg></span></template>
+        <template id=fa-copy><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M502.6 70.63l-61.25-61.25C435.4 3.371 427.2 0 418.7 0H255.1c-35.35 0-64 28.66-64 64l.0195 256C192 355.4 220.7 384 256 384h192c35.2 0 64-28.8 64-64V93.25C512 84.77 508.6 76.63 502.6 70.63zM464 320c0 8.836-7.164 16-16 16H255.1c-8.838 0-16-7.164-16-16L239.1 64.13c0-8.836 7.164-16 16-16h128L384 96c0 17.67 14.33 32 32 32h47.1V320zM272 448c0 8.836-7.164 16-16 16H63.1c-8.838 0-16-7.164-16-16L47.98 192.1c0-8.836 7.164-16 16-16H160V128H63.99c-35.35 0-64 28.65-64 64l.0098 256C.002 483.3 28.66 512 64 512h192c35.2 0 64-28.8 64-64v-32h-47.1L272 448z"/></svg></span></template>
+        <template id=fa-play><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></span></template>
+        <template id=fa-clock-rotate-left><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9V168c0 13.3 10.7 24 24 24H134.1c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24V256c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65V152c0-13.3-10.7-24-24-24z"/></svg></span></template>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../../elasticlunr-ef4e11c1.min.js"></script>
+        <script src="../../mark-09e88c2c.min.js"></script>
+        <script src="../../searcher-09f2665d.js"></script>
+
+        <script src="../../clipboard-1626706a.min.js"></script>
+        <script src="../../highlight-abc7f01d.js"></script>
+        <script src="../../book-609e4cb8.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+
+    </div>
+    </body>
+</html>
